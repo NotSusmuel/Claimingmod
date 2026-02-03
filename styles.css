@@ -1,0 +1,1046 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root,
+:root[theme=light],
+:root[theme=dark],
+html.dark {
+    --isy-primary: #2f5ea9;
+    --isy-primary-glow: rgba(47, 94, 169, 0.32);
+    --isy-bg-gradient: linear-gradient(150deg, #02040a 0%, #040816 35%, #0b1630 72%, #122346 100%);
+    --isy-card-bg: rgba(7, 11, 22, 0.9);
+    --isy-text-dark: #dbe7ff;
+    --isy-text-light: #8ea4c5;
+    --isy-radius-lg: 20px;
+    --isy-radius-md: 12px;
+    --isy-shadow-sm: 0 12px 30px -20px rgba(0, 0, 0, 0.9);
+    --isy-shadow-hover: 0 18px 35px -18px rgba(16, 44, 94, 0.95), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
+    --glass-border: 1px solid rgba(125, 148, 184, 0.26);
+    --isy-border-subtle: rgba(125, 148, 184, 0.22);
+    --backdrop-blur: blur(12px);
+    --isy-header-bg: rgba(2, 4, 10, 0.88);
+    --isy-input-bg: rgba(9, 13, 25, 0.8);
+    --isy-item-hover-bg: rgba(45, 83, 150, 0.18);
+    --isy-panel-bg: rgba(10, 14, 26, 0.86);
+    --isy-timetable-card-border: rgba(109, 154, 225, 0.34);
+    --isy-timetable-card-bg: linear-gradient(145deg, rgba(9, 18, 36, 0.97), rgba(22, 44, 84, 0.94));
+    --isy-timetable-card-shadow: 0 10px 22px -16px rgba(0, 0, 0, 0.95);
+    --isy-timetable-card-hover-shadow: 0 14px 26px -14px rgba(20, 53, 109, 0.95);
+    --isy-indicator-glow: rgba(98, 153, 238, 0.35);
+
+    /* Align original ISY vars from style_original.css with the same dark palette */
+    --background: #060a14;
+    --background-contrast: #0d1526;
+    --background-contrast-hover: #15203a;
+    --background-primary-weak: #0e1627;
+    --font-color: var(--isy-text-dark);
+    --font-passive: var(--isy-text-light);
+    --font-color-inverse: #02040a;
+    --font-color-inverse-passive: #212d47;
+    --primary-color: var(--isy-primary);
+    --primary-color-dark: var(--isy-primary);
+    --primary-contrast: #1d2b42;
+    --primary-secondary-color: #173e78;
+    --primary-weak-color: rgba(47, 94, 169, 0.18);
+    --primary-passive-color: #4575bf;
+    --primary-passive-color-background: rgba(47, 94, 169, 0.32);
+    --primary-passive-color-background-dark: rgba(47, 94, 169, 0.32);
+    --primary-passive-color-background-white: rgba(47, 94, 169, 0.2);
+    --tt-lesson-normal: #1b345c;
+    --tt-exam-normal: #6a2131;
+    --tt-exam-partly: #7d2a3c;
+    --tt-absence-normal: #522a5f;
+    --tt-lesson-shifted-normal: #8c4c08;
+    --tt-informative-appointment: #1f4c59;
+    --tt-lesson-canceled: #0f1219;
+    --tt-appointment-manually-created: #45396f;
+    --tt-appointment-registration: #264f86;
+    --tt-room-reserved-open: #273955;
+    --tt-appointment-manually-created-muted: #343d61;
+    --raw-dark-background: #060a14;
+    --raw-dark-background-contrast: #0d1526;
+    --raw-dark-background-contrast-hover: #15203a;
+    --raw-white-background: #060a14;
+    --raw-white-background-contrast: #0d1526;
+    --raw-white-background-contrast-hover: #15203a;
+    --raw-font-color-black: #dbe7ff;
+    --raw-font-color-black-passive: #8ea4c5;
+    --raw-font-color-white: #dbe7ff;
+    --raw-font-color-white-passive: #8ea4c5;
+    --raw-white-box-shadow: -3px 10px 20px -2px rgba(0, 0, 0, 0.88);
+    --raw-black-box-shadow: -3px 10px 20px -2px rgba(0, 0, 0, 0.94);
+    --raw-white-weak-box-shadow: -3px 5px 14px -2px rgba(0, 0, 0, 0.82);
+    --raw-black-weak-box-shadow: -3px 5px 14px -2px rgba(0, 0, 0, 0.9);
+    --equal-box-shadow: 0 16px 30px -16px rgba(0, 0, 0, 0.95);
+    color-scheme: dark;
+}
+
+/* Dark Mode Overrides (Explicit Class) */
+html.dark {
+    --isy-bg-gradient: linear-gradient(150deg, #02040a 0%, #040816 35%, #0b1630 72%, #122346 100%);
+    --isy-card-bg: rgba(7, 11, 22, 0.9);
+    --isy-text-dark: #dbe7ff;
+    --isy-text-light: #8ea4c5;
+    --glass-border: 1px solid rgba(125, 148, 184, 0.26);
+    --isy-shadow-sm: 0 12px 30px -20px rgba(0, 0, 0, 0.9);
+    --isy-shadow-hover: 0 18px 35px -18px rgba(16, 44, 94, 0.95), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
+    --isy-header-bg: rgba(2, 4, 10, 0.88);
+    --isy-input-bg: rgba(9, 13, 25, 0.8);
+    --isy-item-hover-bg: rgba(45, 83, 150, 0.18);
+}
+
+/* Dark Mode Overrides (System Preference) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --isy-bg-gradient: linear-gradient(150deg, #02040a 0%, #040816 35%, #0b1630 72%, #122346 100%);
+        --isy-card-bg: rgba(7, 11, 22, 0.9);
+        --isy-text-dark: #dbe7ff;
+        --isy-text-light: #8ea4c5;
+        --glass-border: 1px solid rgba(125, 148, 184, 0.26);
+        --isy-shadow-sm: 0 12px 30px -20px rgba(0, 0, 0, 0.9);
+        --isy-shadow-hover: 0 18px 35px -18px rgba(16, 44, 94, 0.95), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
+        --isy-header-bg: rgba(2, 4, 10, 0.88);
+        --isy-input-bg: rgba(9, 13, 25, 0.8);
+        --isy-item-hover-bg: rgba(45, 83, 150, 0.18);
+    }
+}
+
+/* 1. Global Reset & Body */
+body {
+    font-family: 'Outfit', 'Inter', sans-serif !important;
+    background: var(--isy-bg-gradient) !important;
+    background-attachment: fixed !important;
+    color: var(--isy-text-dark) !important;
+    line-height: 1.45 !important;
+}
+
+/* 2. Header Transformation - Floating & Glass */
+.header {
+    background: var(--isy-header-bg) !important;
+    backdrop-filter: var(--backdrop-blur) !important;
+    border-bottom: var(--glass-border) !important;
+    border-left: var(--glass-border) !important;
+    border-right: var(--glass-border) !important;
+    border-bottom-left-radius: 14px !important;
+    border-bottom-right-radius: 14px !important;
+    box-shadow: var(--isy-shadow-sm) !important;
+    margin-bottom: 16px !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
+}
+
+.header-bottom {
+    background: transparent !important;
+    border-top: none !important;
+    padding-bottom: 10px !important;
+}
+
+/* Navigation Buttons */
+.navbar-button {
+    border-radius: var(--isy-radius-md) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.navbar-button:hover {
+    background: rgba(69, 117, 191, 0.18) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 16px -12px var(--isy-primary) !important;
+}
+
+.navbar-button .text-lg {
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    color: var(--isy-text-dark) !important;
+}
+
+.navbar-button-number {
+    background-color: var(--isy-primary) !important;
+    box-shadow: 0 0 10px var(--isy-primary-glow) !important;
+    animation: pulse 2s infinite;
+}
+
+/* Glowing indicator bars (replaces flat primary bars from original styles) */
+.navbar-button .navbar-button-border-container .navbar-button-border,
+.navbar-button .navbar-button-border,
+.navbar-button-border {
+    background: linear-gradient(90deg, rgba(146, 186, 247, 0.7), rgba(70, 126, 215, 0.96), rgba(146, 186, 247, 0.7)) !important;
+    border: none !important;
+    border-radius: 999px !important;
+    box-shadow: 0 0 8px -1px var(--isy-indicator-glow), 0 0 16px -5px rgba(70, 126, 215, 0.95) !important;
+    opacity: 1 !important;
+}
+
+.message-info,
+.form-info {
+    border-left-color: rgba(78, 133, 220, 0.95) !important;
+    box-shadow: inset 2px 0 0 rgba(157, 191, 244, 0.42), 0 0 12px -7px var(--isy-indicator-glow) !important;
+}
+
+.response-thread-item__content {
+    border-left-color: rgba(78, 133, 220, 0.9) !important;
+    box-shadow: inset 1px 0 0 rgba(157, 191, 244, 0.35), 0 0 10px -7px var(--isy-indicator-glow) !important;
+}
+
+.message-metadata-container .metadata-element .metadata-value {
+    border-bottom-color: rgba(78, 133, 220, 0.85) !important;
+    box-shadow: inset 0 -1px 0 rgba(78, 133, 220, 0.85), 0 2px 8px -8px var(--isy-indicator-glow) !important;
+}
+
+.calendar-week-day-header.today,
+.calendar-week-day .today {
+    border-radius: 10px !important;
+    box-shadow: inset 0 -2px 0 rgba(118, 171, 246, 0.85), 0 6px 14px -12px rgba(58, 110, 191, 0.95) !important;
+}
+
+/* 3. Dashboard Container Cards */
+.dashboard__container {
+    background: var(--isy-card-bg) !important;
+    backdrop-filter: var(--backdrop-blur) !important;
+    border: var(--glass-border) !important;
+    border-radius: var(--isy-radius-lg) !important;
+    box-shadow: var(--isy-shadow-sm) !important;
+    overflow: hidden !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    margin: 8px !important;
+    height: calc(100% - 16px) !important;
+    transform: translateY(0) !important;
+}
+
+.dashboard__container:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: var(--isy-shadow-hover) !important;
+    border-color: rgba(69, 117, 191, 0.35) !important;
+}
+
+.container-header {
+    background: transparent !important;
+    border-bottom: 1px solid var(--isy-border-subtle) !important;
+    padding: 16px 20px !important;
+}
+
+.container-header-title {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+    color: var(--isy-primary) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* 4. Timetable Entries */
+.calendar-week-element-inner {
+    border-radius: var(--isy-radius-md, 12px) !important;
+    border: 1px solid var(--isy-tt-entry-border, var(--isy-timetable-card-border)) !important;
+    background: var(--isy-tt-entry-bg, var(--isy-timetable-card-bg)) !important;
+    box-shadow: var(--isy-tt-entry-shadow, var(--isy-timetable-card-shadow)) !important;
+    color: var(--isy-tt-entry-text, #eaf1ff) !important;
+    transition: all 0.2s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Timetable special states from original `calendar-coloring--*` classes */
+.calendar-week-element-inner.calendar-coloring--isExam,
+.calendar-week-element.calendar-coloring--isExam .calendar-week-element-inner,
+.calendar-week-element-inner:has(.calendar-coloring--isExam),
+.calendar-week-element[data-type*="exam" i] .calendar-week-element-inner,
+.calendar-week-element[class*="exam"] .calendar-week-element-inner,
+.calendar-week-element[style*="--background: var(--tt-exam-normal)"] .calendar-week-element-inner,
+.calendar-week-element[style*="--background:var(--tt-exam-normal)"] .calendar-week-element-inner,
+.calendar-week-element-inner[class*="bg-ttExamNormal"],
+.calendar-week-element-inner[class*="ttExamNormal"],
+.calendar-week-element-inner[class*="tt-exam-normal"],
+.calendar-week-element-inner[class*="isExam"],
+.calendar-week-element-inner[class*="exam"],
+.calendar-week-element-inner[style*="tt-exam-normal"] {
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(88, 24, 37, 0.97), rgba(132, 38, 58, 0.95));
+    --isy-tt-entry-border: rgba(243, 137, 154, 0.55);
+    --isy-tt-entry-hover-shadow: 0 14px 28px -13px rgba(132, 38, 58, 0.96);
+}
+
+.calendar-week-element-inner[class*="bg-ttExamPartly"],
+.calendar-week-element-inner[class*="ttExamPartly"],
+.calendar-week-element-inner[class*="tt-exam-partly"],
+.calendar-week-element-inner[style*="tt-exam-partly"] {
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(102, 31, 46, 0.97), rgba(151, 49, 70, 0.94));
+    --isy-tt-entry-border: rgba(251, 157, 174, 0.55);
+    --isy-tt-entry-hover-shadow: 0 14px 28px -13px rgba(151, 49, 70, 0.96);
+}
+
+.calendar-week-element-inner.calendar-coloring--isCanceled,
+.calendar-week-element.calendar-coloring--isCanceled .calendar-week-element-inner,
+.calendar-week-element-inner:has(.calendar-coloring--isCanceled),
+.calendar-week-element[style*="--background: var(--tt-lesson-canceled)"] .calendar-week-element-inner,
+.calendar-week-element[style*="--background:var(--tt-lesson-canceled)"] .calendar-week-element-inner,
+.calendar-week-element-inner[class*="ttLessonCanceled"],
+.calendar-week-element-inner[class*="tt-lesson-canceled"],
+.calendar-week-element-inner[class*="lesson-canceled"],
+.calendar-week-element-inner[class*="lesson-cancelled"],
+.calendar-week-element-inner[class*="cancelled"],
+.calendar-week-element-inner[class*="canceled"],
+.calendar-week-element-inner[class*="entfall"],
+.calendar-week-element-inner[class*="entfaell"],
+.calendar-week-element-inner[style*="tt-lesson-canceled"],
+.calendar-week-element-inner:has(.line-through),
+.calendar-week-element-inner:has([class*="line-through"]),
+.calendar-week-element-inner:has([style*="line-through"]) {
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(6, 8, 12, 0.98), rgba(18, 22, 31, 0.94));
+    --isy-tt-entry-border: rgba(88, 98, 118, 0.5);
+    --isy-tt-entry-text: #8e99ac;
+    --isy-tt-entry-hover-shadow: 0 12px 24px -14px rgba(4, 6, 10, 0.98);
+    --isy-tt-entry-sheen: linear-gradient(to bottom, rgba(144, 154, 173, 0.1), rgba(11, 14, 22, 0.08));
+    border-style: dashed !important;
+    filter: saturate(0.45) brightness(0.9) !important;
+}
+
+.calendar-week-element-inner.isy-tt-canceled-task-text,
+.calendar-week-element-inner.calendar-coloring--isCanceled.calendar-coloring--hasRegistration,
+.calendar-week-element.calendar-coloring--isCanceled.calendar-coloring--hasRegistration .calendar-week-element-inner,
+.calendar-week-element-inner.calendar-coloring[style*="253, 242, 141"],
+.calendar-week-element-inner.calendar-coloring[style*="253,242,141"],
+.calendar-week-element-inner.calendar-coloring[style*="31, 161, 219"]:has(.line-through),
+.calendar-week-element-inner.calendar-coloring[style*="31,161,219"]:has(.line-through),
+.calendar-week-element-inner.calendar-coloring[style*="31, 161, 219"]:has([style*="line-through"]),
+.calendar-week-element-inner.calendar-coloring[style*="31,161,219"]:has([style*="line-through"]) {
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(15, 44, 82, 0.98), rgba(27, 74, 133, 0.95));
+    --isy-tt-entry-border: rgba(122, 177, 243, 0.56);
+    --isy-tt-entry-text: #dbe9ff;
+    --isy-tt-entry-hover-shadow: 0 14px 27px -15px rgba(15, 43, 81, 0.96);
+    --isy-tt-entry-sheen: linear-gradient(to bottom, rgba(168, 205, 252, 0.17), rgba(8, 24, 45, 0.1));
+    border-style: dashed !important;
+}
+
+.calendar-week-element-inner.calendar-coloring--isAbsence,
+.calendar-week-element.calendar-coloring--isAbsence .calendar-week-element-inner,
+.calendar-week-element-inner:has(.calendar-coloring--isAbsence),
+.calendar-week-element[style*="--background: var(--tt-absence-normal)"] .calendar-week-element-inner,
+.calendar-week-element[style*="--background:var(--tt-absence-normal)"] .calendar-week-element-inner,
+.calendar-week-element-inner[class*="tt-absence-normal"],
+.calendar-week-element-inner[class*="absence"],
+.calendar-week-element-inner[style*="tt-absence-normal"] {
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(72, 36, 86, 0.96), rgba(92, 42, 107, 0.92));
+    --isy-tt-entry-border: rgba(210, 132, 233, 0.42);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(92, 42, 107, 0.95);
+}
+
+.calendar-week-element-inner.calendar-coloring--isShifted,
+.calendar-week-element-inner.calendar-coloring--isPredecessorShifted,
+.calendar-week-element.calendar-coloring--isShifted .calendar-week-element-inner,
+.calendar-week-element.calendar-coloring--isPredecessorShifted .calendar-week-element-inner,
+.calendar-week-element-inner:has(.calendar-coloring--isShifted),
+.calendar-week-element-inner:has(.calendar-coloring--isPredecessorShifted),
+.calendar-week-element[style*="--background: var(--tt-lesson-shifted-normal)"] .calendar-week-element-inner,
+.calendar-week-element[style*="--background:var(--tt-lesson-shifted-normal)"] .calendar-week-element-inner,
+.calendar-week-element-inner[class*="tt-lesson-shifted-normal"],
+.calendar-week-element-inner[class*="shifted"],
+.calendar-week-element-inner[style*="tt-lesson-shifted-normal"],
+.calendar-week-element-inner.calendar-coloring[style*="253, 146, 0"],
+.calendar-week-element-inner.calendar-coloring[style*="253,146,0"] {
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(95, 52, 8, 0.98), rgba(138, 77, 16, 0.95));
+    --isy-tt-entry-border: rgba(255, 171, 85, 0.58);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(122, 67, 12, 0.96);
+}
+
+.calendar-week-element-inner.calendar-coloring--isInformativeAppointment,
+.calendar-week-element.calendar-coloring--isInformativeAppointment .calendar-week-element-inner,
+.calendar-week-element-inner:has(.calendar-coloring--isInformativeAppointment),
+.calendar-week-element[style*="--background: var(--tt-informative-appointment)"] .calendar-week-element-inner,
+.calendar-week-element[style*="--background:var(--tt-informative-appointment)"] .calendar-week-element-inner,
+.calendar-week-element-inner[class*="tt-informative-appointment"],
+.calendar-week-element-inner[style*="tt-informative-appointment"] {
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(24, 66, 79, 0.96), rgba(31, 89, 104, 0.93));
+    --isy-tt-entry-border: rgba(125, 196, 218, 0.44);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(31, 89, 104, 0.95);
+}
+
+.calendar-week-element-inner.calendar-coloring--isManuallyCreated,
+.calendar-week-element.calendar-coloring--isManuallyCreated .calendar-week-element-inner,
+.calendar-week-element-inner:has(.calendar-coloring--isManuallyCreated),
+.calendar-week-element-inner.calendar-coloring--roomReservedButNotConfirmed,
+.calendar-week-element.calendar-coloring--roomReservedButNotConfirmed .calendar-week-element-inner,
+.calendar-week-element-inner:has(.calendar-coloring--roomReservedButNotConfirmed),
+.calendar-week-element[style*="--background: var(--tt-appointment-manually-created)"] .calendar-week-element-inner,
+.calendar-week-element[style*="--background:var(--tt-appointment-manually-created)"] .calendar-week-element-inner,
+.calendar-week-element-inner[class*="tt-appointment-manually-created"],
+.calendar-week-element-inner[style*="tt-appointment-manually-created"] {
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(62, 49, 103, 0.95), rgba(83, 61, 129, 0.93));
+    --isy-tt-entry-border: rgba(184, 157, 246, 0.42);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(83, 61, 129, 0.95);
+}
+
+.calendar-week-element[style*="--background: var(--tt-appointment-manually-created-muted)"] .calendar-week-element-inner,
+.calendar-week-element[style*="--background:var(--tt-appointment-manually-created-muted)"] .calendar-week-element-inner,
+.calendar-week-element-inner[class*="tt-appointment-manually-created-muted"],
+.calendar-week-element-inner[style*="tt-appointment-manually-created-muted"] {
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(47, 56, 92, 0.95), rgba(60, 72, 111, 0.91));
+    --isy-tt-entry-border: rgba(135, 154, 204, 0.4);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(60, 72, 111, 0.95);
+}
+
+.calendar-week-element-inner.calendar-coloring--hasRegistration,
+.calendar-week-element.calendar-coloring--hasRegistration .calendar-week-element-inner,
+.calendar-week-element-inner:has(.calendar-coloring--hasRegistration),
+.calendar-week-element[style*="--background: var(--tt-appointment-registration)"] .calendar-week-element-inner,
+.calendar-week-element[style*="--background:var(--tt-appointment-registration)"] .calendar-week-element-inner,
+.calendar-week-element-inner[class*="tt-appointment-registration"],
+.calendar-week-element-inner[style*="tt-appointment-registration"] {
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(73, 67, 39, 0.95), rgba(95, 88, 50, 0.92));
+    --isy-tt-entry-border: rgba(207, 190, 121, 0.45);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(95, 88, 50, 0.95);
+}
+
+.calendar-week-element[style*="--background: var(--tt-room-reserved-open)"] .calendar-week-element-inner,
+.calendar-week-element[style*="--background:var(--tt-room-reserved-open)"] .calendar-week-element-inner,
+.calendar-week-element-inner[class*="tt-room-reserved-open"],
+.calendar-week-element-inner[style*="tt-room-reserved-open"] {
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(33, 51, 77, 0.95), rgba(42, 65, 98, 0.92));
+    --isy-tt-entry-border: rgba(126, 160, 208, 0.42);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(42, 65, 98, 0.95);
+}
+
+.calendar-week-element-inner.calendar-coloring--isCollection,
+.calendar-week-element.calendar-coloring--isCollection .calendar-week-element-inner,
+.calendar-week-element-inner:has(.calendar-coloring--isCollection),
+.calendar-week-element[style*="--background: var(--background)"] .calendar-week-element-inner,
+.calendar-week-element-inner.isy-tt-special-text,
+.calendar-week-element-inner.calendar-coloring[style*="211, 211, 211"],
+.calendar-week-element-inner.calendar-coloring[style*="211,211,211"] {
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(44, 49, 60, 0.96), rgba(61, 68, 82, 0.93));
+    --isy-tt-entry-border: rgba(168, 177, 194, 0.48);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(39, 45, 56, 0.96);
+    --isy-tt-entry-text: #d7dde8;
+}
+
+.calendar-week-element-inner.calendar-coloring--muted,
+.calendar-week-element.calendar-coloring--muted .calendar-week-element-inner,
+.calendar-week-element-inner:has(.calendar-coloring--muted),
+.calendar-week-element[data-render-type="line"] .calendar-week-element-inner {
+    --isy-tt-entry-border: rgba(114, 135, 171, 0.32);
+    --isy-tt-entry-text: #c4d2e8;
+    --isy-tt-entry-sheen: linear-gradient(to bottom, rgba(160, 183, 220, 0.14), rgba(10, 17, 31, 0.1));
+    filter: saturate(0.8) brightness(0.94) !important;
+}
+
+/* Homework line labels: force cyan instead of transparent */
+.calendar-week-element[data-render-type="line"] .calendar-week-element-inner.single-appointment,
+.calendar-week-element[data-render-type="line"] .calendar-week-element-inner.calendar-coloring.single-appointment {
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(0, 255, 255, 0.9), rgba(0, 228, 255, 0.9)) !important;
+    background: linear-gradient(145deg, rgba(0, 255, 255, 0.9), rgba(0, 228, 255, 0.9)) !important;
+    border: 1px solid rgba(130, 255, 255, 0.9) !important;
+    filter: none !important;
+}
+
+/* Fallback: color the original calendar-coloring state classes directly */
+.calendar-week-element {
+    --background: transparent !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    padding: 0 0.08rem !important;
+}
+
+.calendar-week-element[data-v-0b402b41],
+.calendar-week-element[data-scope="day"],
+.calendar-week-element[data-scope="allDay"],
+.calendar-week-element[data-scope="collection"] {
+    --background: transparent !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    padding: 0 0.08rem !important;
+}
+
+.calendar-week-element .calendar-week-element-inner,
+.calendar-week-element .calendar-coloring,
+.calendar-week-element.calendar-coloring,
+.calendar-week-element[class*="calendar-coloring--"] {
+    border-radius: var(--isy-radius-md, 12px) !important;
+}
+
+.time-table-scaffold .calendar-coloring--isExam,
+.calendar-week-element.calendar-coloring--isExam,
+.calendar-week-element .calendar-coloring--isExam,
+.calendar-week-element-inner.isy-tt-exam-text,
+.calendar-week-element-inner.calendar-coloring[style*="31, 161, 219"],
+.calendar-week-element-inner.calendar-coloring[style*="31,161,219"],
+.calendar-week-element-inner.calendar-coloring[style*="173, 226, 252"],
+.calendar-week-element-inner.calendar-coloring[style*="173,226,252"] {
+    background: linear-gradient(145deg, rgba(88, 24, 37, 0.97), rgba(132, 38, 58, 0.95)) !important;
+    border: 1px solid rgba(243, 137, 154, 0.55) !important;
+    color: #ffe8ec !important;
+}
+
+.time-table-scaffold .calendar-coloring--isAbsence,
+.calendar-week-element.calendar-coloring--isAbsence,
+.calendar-week-element .calendar-coloring--isAbsence,
+.calendar-week-element-inner.isy-tt-absence-text {
+    background: linear-gradient(145deg, rgba(72, 36, 86, 0.96), rgba(92, 42, 107, 0.92)) !important;
+    border: 1px solid rgba(210, 132, 233, 0.42) !important;
+}
+
+.time-table-scaffold .calendar-coloring--isCanceled,
+.calendar-week-element.calendar-coloring--isCanceled,
+.calendar-week-element .calendar-coloring--isCanceled,
+.calendar-week-element-inner.isy-tt-canceled-text,
+.calendar-week-element-inner.calendar-coloring[style*="242, 242, 242"],
+.calendar-week-element-inner.calendar-coloring[style*="242,242,242"] {
+    background: linear-gradient(145deg, rgba(6, 8, 12, 0.98), rgba(18, 22, 31, 0.94)) !important;
+    border: 1px dashed rgba(88, 98, 118, 0.5) !important;
+    color: #8e99ac !important;
+}
+
+.calendar-week-element-inner.isy-tt-canceled-task-text,
+.calendar-week-element.calendar-coloring--isCanceled.calendar-coloring--hasRegistration .calendar-week-element-inner,
+.calendar-week-element .calendar-coloring--isCanceled.calendar-coloring--hasRegistration,
+.calendar-week-element-inner.calendar-coloring[style*="253, 242, 141"],
+.calendar-week-element-inner.calendar-coloring[style*="253,242,141"],
+.calendar-week-element-inner.calendar-coloring[style*="31, 161, 219"]:has(.line-through),
+.calendar-week-element-inner.calendar-coloring[style*="31,161,219"]:has(.line-through),
+.calendar-week-element-inner.calendar-coloring[style*="31, 161, 219"]:has([style*="line-through"]),
+.calendar-week-element-inner.calendar-coloring[style*="31,161,219"]:has([style*="line-through"]) {
+    background: linear-gradient(145deg, rgba(15, 44, 82, 0.98), rgba(27, 74, 133, 0.95)) !important;
+    border: 1px dashed rgba(122, 177, 243, 0.56) !important;
+    color: #dbe9ff !important;
+}
+
+.time-table-scaffold .calendar-coloring--isShifted,
+.time-table-scaffold .calendar-coloring--isPredecessorShifted,
+.calendar-week-element.calendar-coloring--isShifted,
+.calendar-week-element.calendar-coloring--isPredecessorShifted,
+.calendar-week-element .calendar-coloring--isShifted,
+.calendar-week-element .calendar-coloring--isPredecessorShifted,
+.calendar-week-element-inner.isy-tt-shifted-text,
+.calendar-week-element-inner.calendar-coloring[style*="253, 146, 0"],
+.calendar-week-element-inner.calendar-coloring[style*="253,146,0"] {
+    background: linear-gradient(145deg, rgba(95, 52, 8, 0.98), rgba(138, 77, 16, 0.95)) !important;
+    border: 1px solid rgba(255, 171, 85, 0.58) !important;
+}
+
+.time-table-scaffold .calendar-coloring--isInformativeAppointment,
+.calendar-week-element.calendar-coloring--isInformativeAppointment,
+.calendar-week-element .calendar-coloring--isInformativeAppointment {
+    background: linear-gradient(145deg, rgba(24, 66, 79, 0.96), rgba(31, 89, 104, 0.93)) !important;
+    border: 1px solid rgba(125, 196, 218, 0.44) !important;
+}
+
+.time-table-scaffold .calendar-coloring--isManuallyCreated,
+.time-table-scaffold .calendar-coloring--roomReservedButNotConfirmed,
+.calendar-week-element.calendar-coloring--isManuallyCreated,
+.calendar-week-element.calendar-coloring--roomReservedButNotConfirmed,
+.calendar-week-element .calendar-coloring--isManuallyCreated,
+.calendar-week-element .calendar-coloring--roomReservedButNotConfirmed {
+    background: linear-gradient(145deg, rgba(62, 49, 103, 0.95), rgba(83, 61, 129, 0.93)) !important;
+    border: 1px solid rgba(184, 157, 246, 0.42) !important;
+}
+
+.time-table-scaffold .calendar-coloring--hasRegistration,
+.calendar-week-element.calendar-coloring--hasRegistration,
+.calendar-week-element .calendar-coloring--hasRegistration {
+    background: linear-gradient(145deg, rgba(73, 67, 39, 0.95), rgba(95, 88, 50, 0.92)) !important;
+    border: 1px solid rgba(207, 190, 121, 0.45) !important;
+}
+
+.time-table-scaffold .calendar-coloring--isCollection,
+.calendar-week-element.calendar-coloring--isCollection,
+.calendar-week-element .calendar-coloring--isCollection,
+.calendar-week-element-inner.isy-tt-special-text,
+.calendar-week-element-inner.calendar-coloring[style*="211, 211, 211"],
+.calendar-week-element-inner.calendar-coloring[style*="211,211,211"] {
+    background: linear-gradient(145deg, rgba(44, 49, 60, 0.96), rgba(61, 68, 82, 0.93)) !important;
+    border: 1px solid rgba(168, 177, 194, 0.48) !important;
+    color: #d7dde8 !important;
+}
+
+.calendar-week-element-inner.isy-tt-canceled-text .content-container span,
+.calendar-week-element-inner.isy-tt-canceled-text .content-container div,
+.calendar-week-element-inner.isy-tt-canceled-task-text .content-container span,
+.calendar-week-element-inner.isy-tt-canceled-task-text .content-container div,
+.calendar-week-element-inner.calendar-coloring--isCanceled .content-container span,
+.calendar-week-element-inner.calendar-coloring--isCanceled .content-container div,
+.calendar-week-element.calendar-coloring--isCanceled .content-container span,
+.calendar-week-element.calendar-coloring--isCanceled .content-container div {
+    text-decoration: line-through !important;
+    text-decoration-thickness: 2px !important;
+    text-decoration-color: rgba(193, 206, 230, 0.7) !important;
+}
+
+.calendar-week-element .calendar-week-element-inner.isy-tt-past-lesson,
+.calendar-week-element-inner.calendar-coloring.isy-tt-past-lesson,
+.calendar-week-element-inner.calendar-coloring.isy-tt-past-lesson[style] {
+    --isy-tt-entry-hover-shadow: 0 10px 18px -14px rgba(0, 0, 0, 0.98) !important;
+    filter: saturate(0.38) grayscale(0.22) brightness(0.68) contrast(0.9) !important;
+}
+
+.calendar-week-element .calendar-week-element-inner.isy-tt-past-lesson::after,
+.calendar-week-element-inner.calendar-coloring.isy-tt-past-lesson::after,
+.calendar-week-element-inner.calendar-coloring.isy-tt-past-lesson[style]::after {
+    background: linear-gradient(to bottom, rgba(150, 158, 172, 0.1), rgba(6, 8, 11, 0.36)) !important;
+}
+
+.calendar-week-element .calendar-week-element-inner.isy-tt-past-lesson:hover,
+.calendar-week-element-inner.calendar-coloring.isy-tt-past-lesson:hover,
+.calendar-week-element-inner.calendar-coloring.isy-tt-past-lesson[style]:hover {
+    filter: saturate(0.42) grayscale(0.2) brightness(0.74) contrast(0.92) !important;
+}
+
+.calendar-week-element-inner:hover {
+    transform: scale(1.02) !important;
+    z-index: 10 !important;
+    box-shadow: var(--isy-tt-entry-hover-shadow, var(--isy-timetable-card-hover-shadow)) !important;
+    cursor: pointer !important;
+}
+
+.calendar-week-element-inner::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: var(--isy-tt-entry-sheen, linear-gradient(to bottom, rgba(127, 164, 224, 0.2), rgba(8, 14, 27, 0.1))) !important;
+    pointer-events: none !important;
+}
+
+/* 5. Messages & Campus Life List Items */
+.message-preview,
+.cl-preview {
+    border: 1px solid transparent !important;
+    border-bottom: 1px solid var(--isy-border-subtle) !important;
+    padding: 16px !important;
+    transition: background 0.2s ease !important;
+    border-radius: 8px !important;
+    margin: 4px 8px !important;
+}
+
+.message-preview:hover,
+.cl-preview:hover {
+    background: var(--isy-item-hover-bg) !important;
+    transform: translateX(4px) !important;
+    border-color: rgba(69, 117, 191, 0.32) !important;
+    box-shadow: 0 8px 16px -14px rgba(0, 0, 0, 0.78) !important;
+}
+
+.message-title p,
+.cl-preview-title {
+    font-weight: 600 !important;
+    color: var(--isy-text-dark) !important;
+    font-size: 1rem !important;
+}
+
+.message-author span,
+.cl-preview-author-container span {
+    font-size: 0.8rem !important;
+    color: var(--isy-text-light) !important;
+}
+
+/* 6. Inputs & Search */
+.searchbar {
+    background: var(--isy-input-bg) !important;
+    border: 1px solid var(--isy-border-subtle) !important;
+    border-radius: 50px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.55) !important;
+}
+
+.searchbar:focus-within {
+    background: var(--isy-card-bg) !important;
+    color: var(--isy-text-dark) !important;
+    box-shadow: 0 0 0 4px var(--isy-primary-glow) !important;
+    border-color: var(--isy-primary) !important;
+    width: 300px !important;
+    /* Expansion effect */
+}
+
+/* 6b. Klassen / Raeume / Personen surfaces */
+.top-filter,
+.sidebar-page .top-filter {
+    background: var(--isy-header-bg) !important;
+    backdrop-filter: var(--backdrop-blur) !important;
+    border-bottom: 1px solid var(--isy-border-subtle) !important;
+}
+
+.top-filter .filter-icon,
+.sidebar-page .top-filter .filter-icon,
+.sidebar-button-icon,
+.sidebar-page .sidebar-button-icon,
+.sidebar-button-icon i,
+.sidebar-page .sidebar-button-icon i {
+    color: var(--isy-text-light) !important;
+}
+
+.top-filter .filter-input,
+.sidebar-page .top-filter .filter-input,
+.sidebar-button-input,
+.sidebar-page .sidebar-button-input {
+    background: var(--isy-input-bg) !important;
+    border: 1px solid var(--isy-border-subtle) !important;
+    border-radius: 10px !important;
+    color: var(--isy-text-dark) !important;
+    padding: 0.45rem 0.65rem !important;
+}
+
+.top-filter .filter-input::placeholder,
+.sidebar-page .top-filter .filter-input::placeholder,
+.sidebar-button-input::placeholder,
+.sidebar-page .sidebar-button-input::placeholder {
+    color: var(--isy-text-light) !important;
+}
+
+div[class~="flex"][class~="items-center"][class~="box-border"][class~="p-6"][class~="border-b-2"][class~="border-b-backgroundContrast"][class~="bg-background"]:has(> .sidebar-button-input),
+.sidebar-page div[class~="flex"][class~="items-center"][class~="box-border"][class~="p-6"][class~="border-b-2"][class~="border-b-backgroundContrast"][class~="bg-background"]:has(> .sidebar-button-input),
+.w-full.h-sidebarTitleHeight.border-b-2.border-b-backgroundContrast.box-border.p-6.flex.justify-between.items-center,
+.sidebar-page .w-full.h-sidebarTitleHeight.border-b-2.border-b-backgroundContrast.box-border.p-6.flex.justify-between.items-center {
+    background: var(--isy-header-bg) !important;
+    backdrop-filter: var(--backdrop-blur) !important;
+    border-bottom: 1px solid var(--isy-border-subtle) !important;
+}
+
+.header-icon,
+.sidebar-page .header-icon {
+    color: var(--isy-text-light) !important;
+}
+
+.header-icon-active,
+.sidebar-page .header-icon-active,
+.text-primaryColor,
+.sidebar-page .text-primaryColor {
+    color: var(--isy-primary) !important;
+}
+
+[data-reka-scroll-area-viewport],
+.sidebar-page [data-reka-scroll-area-viewport] {
+    background: var(--isy-panel-bg) !important;
+}
+
+[data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"],
+.sidebar-page [data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"] {
+    background: var(--isy-card-bg) !important;
+    border: 1px solid var(--isy-border-subtle) !important;
+    border-radius: var(--isy-radius-md) !important;
+    box-shadow: var(--isy-shadow-sm) !important;
+    overflow: hidden !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
+}
+
+[data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"]:hover,
+.sidebar-page [data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"]:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(125, 169, 236, 0.45) !important;
+    box-shadow: var(--isy-shadow-hover) !important;
+}
+
+[data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"] img,
+.sidebar-page [data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"] img {
+    border-radius: calc(var(--isy-radius-md) - 4px) !important;
+    border: 1px solid rgba(125, 148, 184, 0.28) !important;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--isy-primary) !important;
+    outline-offset: 2px !important;
+    border-radius: 8px !important;
+}
+
+/* 7. Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(69, 117, 191, 0.45);
+    }
+
+    70% {
+        box-shadow: 0 0 0 6px rgba(69, 117, 191, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(69, 117, 191, 0);
+    }
+}
+
+/* Apply staggered animation to main columns */
+.dashboard-column {
+    animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) backwards !important;
+}
+
+.dashboard-column:nth-child(1) {
+    animation-delay: 0.1s !important;
+}
+
+.dashboard-column:nth-child(2) {
+    animation-delay: 0.2s !important;
+}
+
+.dashboard-column:nth-child(3) {
+    animation-delay: 0.3s !important;
+}
+
+/* Scrollbar beautification */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(45, 83, 150, 0.75);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(69, 117, 191, 0.95);
+}
+
+/* 8. Hide "Aufgaben" Dashboard Container */
+.dashboard__container.todo-container {
+    display: none !important;
+}
+
+/* 9. Timetable Styling */
+.time-table-scaffold {
+    background: linear-gradient(180deg, rgba(4, 9, 20, 0.9), rgba(10, 22, 44, 0.88)) !important;
+    border: none !important;
+}
+
+.calendar-week-day-header {
+    background: var(--isy-panel-bg) !important;
+    backdrop-filter: var(--backdrop-blur) !important;
+    border-bottom: var(--glass-border) !important;
+    color: var(--isy-text-dark) !important;
+}
+
+.calendar-week-day-header.today {
+    background: linear-gradient(160deg, rgba(52, 96, 170, 0.32), rgba(26, 54, 104, 0.38)) !important;
+    border: 1px solid rgba(126, 171, 238, 0.45) !important;
+    border-bottom-color: rgba(126, 171, 238, 0.45) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 16px -12px rgba(39, 78, 146, 0.9) !important;
+}
+
+.calendar-week-day-header.today .cwd-header-label > span,
+.calendar-week-day .today .cwd-header-label > span {
+    color: #e7f1ff !important;
+    font-weight: 700 !important;
+}
+
+.calendar-week-day .today::before,
+.calendar-week-day .today::after {
+    display: none !important;
+    content: none !important;
+}
+
+.time-strip-label span {
+    color: var(--isy-text-light) !important;
+    font-weight: 500 !important;
+}
+
+.time-strip-label.current-time span {
+    color: red !important;
+}
+
+.time-line {
+    border-color: rgba(125, 148, 184, 0.18) !important;
+}
+
+.time-background .current-time {
+    color: red !important;
+}
+
+.time-background .current-time::before,
+.time-background .current-time::after {
+    color: red !important;
+    border-color: red !important;
+    border-left-color: red !important;
+    border-right-color: red !important;
+    border-top-color: red !important;
+    border-bottom-color: red !important;
+}
+
+.time-background .current-time svg,
+.time-background .current-time path,
+.time-background .current-time polygon {
+    fill: red !important;
+    stroke: red !important;
+}
+
+.time-background .time-line.current-time,
+.time-line.current-time {
+    border-color: red !important;
+}
+
+/* 10. Whole-site dark surface pass */
+html,
+body,
+#app,
+.app,
+.desktop-wrapper,
+.routing-view,
+.mobile-wrapper,
+.inner-page,
+.sidebar-page {
+    background: var(--isy-bg-gradient) !important;
+    color: var(--isy-text-dark) !important;
+}
+
+.side-slide-container,
+.popup-window,
+.calendarlist__wrapper,
+.calendarlist__list,
+.actionbar,
+.message-display .message-body,
+.message-display .message-container .message-body-container .message-body,
+.form-container,
+.calendar-element,
+.notification,
+.time-table-scaffold .tts-header,
+.time-table-scaffold .tts-footer,
+.day-all-wrapper,
+.day-all-column,
+.day-view-scaffold,
+.time-background {
+    background-color: var(--isy-panel-bg) !important;
+    border-color: var(--isy-border-subtle) !important;
+}
+
+.popup-container {
+    background: rgba(2, 4, 10, 0.78) !important;
+}
+
+.notification {
+    color: var(--isy-text-dark) !important;
+    border: 1px solid var(--isy-border-subtle) !important;
+    box-shadow: var(--isy-shadow-sm) !important;
+}
+
+.notification__action {
+    border-left: 1px solid var(--isy-border-subtle) !important;
+}
+
+.notification__action:hover {
+    background-color: var(--isy-item-hover-bg) !important;
+}
+
+.message-old-school-form-body form {
+    background-color: var(--isy-card-bg) !important;
+    border-color: var(--isy-border-subtle) !important;
+}
+
+.day-all-wrapper {
+    border-top-color: var(--isy-border-subtle) !important;
+    border-bottom-color: var(--isy-border-subtle) !important;
+}
+
+.day-all-column {
+    border-left-width: 0.5px !important;
+    border-left-color: var(--isy-border-subtle) !important;
+}
+
+.day-view-scaffold::before {
+    background-image: repeating-linear-gradient(
+        to right,
+        rgba(125, 148, 184, 0.22) 0,
+        rgba(125, 148, 184, 0.22) 0.06rem,
+        transparent 0.06rem,
+        transparent calc(100% / var(--calendar-week-number-of-days))
+    ) !important;
+}
+
+.scroll-indicator {
+    background: var(--isy-input-bg) !important;
+    color: var(--isy-text-dark) !important;
+    border: 1px solid var(--isy-border-subtle) !important;
+}
+
+/* 11. Footer */
+.footer,
+.footer.isy-footer-themed {
+    background: linear-gradient(160deg, rgba(8, 16, 32, 0.96), rgba(18, 36, 68, 0.95)) !important;
+    border-top: 1px solid var(--isy-border-subtle) !important;
+    color: var(--isy-text-dark) !important;
+    box-shadow: 0 -10px 22px -18px rgba(0, 0, 0, 0.95) !important;
+}
+
+.footer .declaration-label,
+.footer .declaration-label:link,
+.footer .declaration-label:visited {
+    color: var(--isy-text-dark) !important;
+}
+
+.footer .declaration-label:hover {
+    color: #b8d5ff !important;
+}
+
+.footer .declaration-separator {
+    background: rgba(184, 213, 255, 0.45) !important;
+}
+
+.footer .font-semibold[title] {
+    background: rgba(23, 47, 91, 0.65) !important;
+    border: 1px solid rgba(145, 182, 241, 0.35) !important;
+    border-radius: 999px !important;
+    color: #dcebff !important;
+}
+
+.footer .arthasmod-version {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin-right: 0.45rem !important;
+    padding: 0.22rem 0.55rem !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(145, 182, 241, 0.4) !important;
+    background: rgba(23, 47, 91, 0.55) !important;
+    color: #dcebff !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+}
+
+/* Cached Timetable Overlay */
+#isy-cached-timetable {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.6;
+    pointer-events: none;
+    filter: blur(2px) grayscale(0.5);
+    transition: opacity 0.3s ease;
+}
+
+/* Person profile detail view */
+[data-v-cab99d68],
+[data-v-cab99d68].bg-background,
+[data-v-cab99d68] .bg-background {
+    background-color: var(--isy-panel-bg) !important;
+    color: var(--isy-text-dark) !important;
+}
+
+[data-v-cab99d68] a {
+    color: var(--isy-primary) !important;
+}
+
+.footer .arthasmod-version:hover {
+    color: #ffffff !important;
+    border-color: rgba(186, 217, 255, 0.7) !important;
+}
