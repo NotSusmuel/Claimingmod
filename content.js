@@ -11,7 +11,21 @@ let suppressThemeSelectionHandling = false;
 const ABSENCE_TABLE_FIX_STYLE_ID = 'claimingmod-absence-table-fix';
 const CLAIMING_BRIGHTNESS_STYLE_ID = 'claimingmod-lesson-brightness-style';
 const CLAIMING_LESSON_BRIGHTNESS_VAR = '--claiming-lesson-brightness';
+
 const CLAIMING_LESSON_BRIGHTNESS_VALUE_KEY = 'claimingmod-lesson-brightness-value';
+
+const CLAIMING_PALETTE_KEY = 'claimingmod-palette';
+const DEFAULT_PALETTE = 'green';
+const PALETTES = ['green', 'violet', 'red', 'blue', 'orange', 'pink', 'yellow'];
+const PALETTE_COLORS = {
+    'green': '#43a92f',
+    'violet': '#8a2be2',
+    'red': '#e22b2b',
+    'blue': '#2f5ea9',
+    'orange': '#e28a2b',
+    'pink': '#e22b8a',
+    'yellow': '#dbe22b'
+};
 
 function ensureBaseAbsenceTableFixStyles() {
     if (document.getElementById(ABSENCE_TABLE_FIX_STYLE_ID)) return;
@@ -147,8 +161,18 @@ function toggleClaimingStylesheet(enabled) {
         }
     });
 
-    const injectedNode = ensureClaimingStylesheetNode();
-    injectedNode.disabled = !enabled;
+
+
+    if (enabled) {
+        const injectedNode = ensureClaimingStylesheetNode();
+        injectedNode.disabled = false;
+    } else {
+        const injectedNode = document.getElementById(CLAIMING_STYLESHEET_ID);
+        if (injectedNode) {
+            injectedNode.disabled = true;
+        }
+    }
+
 }
 
 function removeClaimingFooterDecorations() {
@@ -188,6 +212,9 @@ function applyClaimingModeStateToDom(enabled) {
         removeClaimingFooterDecorations();
         removeCachedTimetableOverlay();
         removeClaimingTimetableClasses();
+        PALETTES.forEach(p => document.documentElement.classList.remove(`palette-${p}`));
+    } else {
+        applyPaletteToDom();
     }
 }
 
@@ -909,8 +936,97 @@ function handleThemeModeSelectionEvent(event) {
     }
 }
 
+function buildPaletteSelector() {
+    const container = document.createElement('div');
+    container.className = 'claiming-palette-selector flex flex-wrap items-center mt-3 ml-2 gap-2';
+    // Initially hidden if mode not enabled, but sync will handle it.
+
+    PALETTES.forEach(palette => {
+        const circle = document.createElement('div');
+        circle.className = `palette-circle palette-circle-${palette}`;
+        circle.title = palette.charAt(0).toUpperCase() + palette.slice(1);
+        circle.style.width = '24px';
+        circle.style.height = '24px';
+        circle.style.borderRadius = '50%';
+        circle.style.backgroundColor = PALETTE_COLORS[palette];
+        circle.style.cursor = 'pointer';
+        circle.style.border = '2px solid transparent';
+        circle.style.transition = 'transform 0.2s, border-color 0.2s';
+
+        // Selection indicator style handled by updatePaletteUI
+
+        circle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            setPalette(palette);
+        });
+
+        container.appendChild(circle);
+    });
+
+    return container;
+}
+
+function getSavedPalette() {
+    return localStorage.getItem(CLAIMING_PALETTE_KEY) || DEFAULT_PALETTE;
+}
+
+function setPalette(paletteName) {
+    localStorage.setItem(CLAIMING_PALETTE_KEY, paletteName);
+    applyPaletteToDom(paletteName);
+    updatePaletteUI(paletteName);
+}
+
+function applyPaletteToDom(paletteName) {
+    if (!paletteName) paletteName = getSavedPalette();
+    PALETTES.forEach(p => document.documentElement.classList.remove(`palette-${p}`));
+    document.documentElement.classList.add(`palette-${paletteName}`);
+}
+
+function updatePaletteUI(activePalette) {
+    if (!activePalette) activePalette = getSavedPalette();
+
+    document.querySelectorAll('.palette-circle').forEach(circle => {
+        if (circle.classList.contains(`palette-circle-${activePalette}`)) {
+            circle.style.borderColor = 'var(--isy-text-dark, #fff)';
+            circle.style.transform = 'scale(1.15)';
+            circle.style.boxShadow = '0 0 8px rgba(0,0,0,0.5)';
+        } else {
+            circle.style.borderColor = 'transparent';
+            circle.style.transform = 'scale(1)';
+            circle.style.boxShadow = 'none';
+        }
+    });
+
+    // Also toggle visibility based on claiming enabled
+    const selector = document.querySelector('.claiming-palette-selector');
+    if (selector) {
+        selector.style.display = isClaimingModeEnabled() ? 'flex' : 'none';
+    }
+}
+
+function ensurePaletteSelector() {
+    const option = document.querySelector('.claimingmod-theme-option');
+    if (!option) return;
+
+    // Check if selector exists nearby. We want it probably inside the display-mode-container or appended to the parent of option
+    // The option is a wrapper div. Let's append it to the parent container of the radio options.
+    const parentContainer = option.closest('.display-mode-container');
+    if (!parentContainer) return;
+
+    if (!parentContainer.querySelector('.claiming-palette-selector')) {
+        const selector = buildPaletteSelector();
+        parentContainer.appendChild(selector);
+        updatePaletteUI();
+    } else {
+        // Just likely sync visibility
+        updatePaletteUI();
+    }
+}
+
 function startClaimingModeOptionObserver() {
     ensureClaimingModeOption();
+    ensurePaletteSelector();
 
     document.addEventListener('click', handleThemeModeSelectionEvent, true);
     document.addEventListener('change', handleThemeModeSelectionEvent, true);
@@ -918,6 +1034,7 @@ function startClaimingModeOptionObserver() {
 
     const modeObserver = new MutationObserver(() => {
         ensureClaimingModeOption();
+        ensurePaletteSelector();
     });
 
     if (document.body) {
@@ -927,6 +1044,7 @@ function startClaimingModeOptionObserver() {
     // Fallback for views that reuse hidden DOM without mutation events.
     window.setInterval(() => {
         ensureClaimingModeOption();
+        ensurePaletteSelector();
         if (isClaimingModeEnabled()) {
             setClaimingLessonBrightnessFromSlider(getDisplayModeSlider());
         }

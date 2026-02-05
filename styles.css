@@ -1,71 +1,71 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 :root,
 :root[theme=light],
 :root[theme=dark],
 html.dark {
-    --isy-primary: #43a92f;
-    --isy-primary-glow: rgba(67, 169, 47, 0.32);
-    --isy-bg-gradient: linear-gradient(150deg, #030a02 0%, #071604 35%, #11300b 72%, #1b4612 100%);
-    --isy-card-bg: rgba(10, 22, 7, 0.9);
-    --isy-text-dark: #e1ffdb;
-    --isy-text-light: #97c58e;
+    --isy-primary: var(--tc-172);
+    --isy-primary-glow: var(--tc-16);
+    --isy-bg-gradient: linear-gradient(150deg, var(--tc-173) 0%, var(--tc-174) 35%, var(--tc-175) 72%, var(--tc-176) 100%);
+    --isy-card-bg: var(--tc-17);
+    --isy-text-dark: var(--tc-177);
+    --isy-text-light: var(--tc-178);
     --isy-radius-lg: 20px;
     --isy-radius-md: 12px;
     --isy-shadow-sm: 0 12px 30px -20px rgba(0, 0, 0, 0.9);
-    --isy-shadow-hover: 0 18px 35px -18px rgba(29, 94, 16, 0.95), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
-    --glass-border: 1px solid rgba(81, 126, 72, 0.16);
-    --isy-border-subtle: rgba(79, 126, 70, 0.13);
+    --isy-shadow-hover: 0 18px 35px -18px var(--tc-18), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
+    --glass-border: 1px solid var(--tc-19);
+    --isy-border-subtle: var(--tc-20);
     --backdrop-blur: blur(12px);
-    --isy-header-bg: linear-gradient(180deg, rgba(12, 34, 8, 0.95), rgba(14, 39, 9, 0.90));
-    --isy-input-bg: rgba(12, 25, 9, 0.8);
-    --isy-item-hover-bg: rgba(63, 150, 45, 0.18);
-    --isy-panel-bg: rgba(13, 26, 10, 0.86);
-    --isy-timetable-card-border: rgba(128, 225, 109, 0.34);
-    --isy-timetable-card-bg: linear-gradient(145deg, rgba(13, 36, 9, 0.97), rgba(32, 84, 22, 0.94));
+    --isy-header-bg: linear-gradient(180deg, var(--tc-21), var(--tc-22));
+    --isy-input-bg: var(--tc-23);
+    --isy-item-hover-bg: var(--tc-24);
+    --isy-panel-bg: var(--tc-25);
+    --isy-timetable-card-border: var(--tc-26);
+    --isy-timetable-card-bg: linear-gradient(145deg, var(--tc-27), var(--tc-28));
     --isy-timetable-card-shadow: 0 10px 22px -16px rgba(0, 0, 0, 0.95);
-    --isy-timetable-card-hover-shadow: 0 14px 26px -14px rgba(35, 109, 20, 0.95);
-    --isy-indicator-glow: rgba(121, 238, 98, 0.35);
+    --isy-timetable-card-hover-shadow: 0 14px 26px -14px var(--tc-29);
+    --isy-indicator-glow: var(--tc-30);
 
     /* Align original ISY vars from style_original.css with the same dark palette */
-    --background: #081406;
-    --background-contrast: #11260d;
-    --background-contrast-hover: #1b3a15;
-    --background-primary-weak: #12270e;
+    --background: var(--tc-179);
+    --background-contrast: var(--tc-180);
+    --background-contrast-hover: var(--tc-181);
+    --background-primary-weak: var(--tc-182);
     --font-color: var(--isy-text-dark);
     --font-passive: var(--isy-text-light);
-    --font-color-inverse: #030a02;
-    --font-color-inverse-passive: #274721;
+    --font-color-inverse: var(--tc-173);
+    --font-color-inverse-passive: var(--tc-183);
     --primary-color: var(--isy-primary);
     --primary-color-dark: var(--isy-primary);
-    --primary-contrast: #23421d;
-    --primary-secondary-color: #277817;
-    --primary-weak-color: rgba(67, 169, 47, 0.18);
-    --primary-passive-color: #59bf45;
-    --primary-passive-color-background: rgba(67, 169, 47, 0.32);
-    --primary-passive-color-background-dark: rgba(67, 169, 47, 0.32);
-    --primary-passive-color-background-white: rgba(67, 169, 47, 0.2);
-    --tt-lesson-normal: #265c1b;
+    --primary-contrast: var(--tc-184);
+    --primary-secondary-color: var(--tc-185);
+    --primary-weak-color: var(--tc-31);
+    --primary-passive-color: var(--tc-186);
+    --primary-passive-color-background: var(--tc-16);
+    --primary-passive-color-background-dark: var(--tc-16);
+    --primary-passive-color-background-white: var(--tc-32);
+    --tt-lesson-normal: var(--tc-187);
     --tt-exam-normal: #6a2131;
     --tt-exam-partly: #7d2a3c;
     --tt-absence-normal: #522a5f;
     --tt-lesson-shifted-normal: #8c4c08;
-    --tt-informative-appointment: #29591f;
-    --tt-lesson-canceled: #11190f;
-    --tt-appointment-manually-created: #426f39;
-    --tt-appointment-registration: #368626;
-    --tt-room-reserved-open: #2f5527;
-    --tt-appointment-manually-created-muted: #3b6134;
-    --raw-dark-background: #081406;
-    --raw-dark-background-contrast: #11260d;
-    --raw-dark-background-contrast-hover: #1b3a15;
-    --raw-white-background: #081406;
-    --raw-white-background-contrast: #11260d;
-    --raw-white-background-contrast-hover: #1b3a15;
-    --raw-font-color-black: #e1ffdb;
-    --raw-font-color-black-passive: #97c58e;
-    --raw-font-color-white: #e1ffdb;
-    --raw-font-color-white-passive: #97c58e;
+    --tt-informative-appointment: var(--tc-188);
+    --tt-lesson-canceled: var(--tc-189);
+    --tt-appointment-manually-created: var(--tc-190);
+    --tt-appointment-registration: var(--tc-191);
+    --tt-room-reserved-open: var(--tc-192);
+    --tt-appointment-manually-created-muted: var(--tc-193);
+    --raw-dark-background: var(--tc-179);
+    --raw-dark-background-contrast: var(--tc-180);
+    --raw-dark-background-contrast-hover: var(--tc-181);
+    --raw-white-background: var(--tc-179);
+    --raw-white-background-contrast: var(--tc-180);
+    --raw-white-background-contrast-hover: var(--tc-181);
+    --raw-font-color-black: var(--tc-177);
+    --raw-font-color-black-passive: var(--tc-178);
+    --raw-font-color-white: var(--tc-177);
+    --raw-font-color-white-passive: var(--tc-178);
     --raw-white-box-shadow: -3px 10px 20px -2px rgba(0, 0, 0, 0.88);
     --raw-black-box-shadow: -3px 10px 20px -2px rgba(0, 0, 0, 0.94);
     --raw-white-weak-box-shadow: -3px 5px 14px -2px rgba(0, 0, 0, 0.82);
@@ -76,31 +76,31 @@ html.dark {
 
 /* Dark Mode Overrides (Explicit Class) */
 html.dark {
-    --isy-bg-gradient: linear-gradient(150deg, #030a02 0%, #071604 35%, #11300b 72%, #1b4612 100%);
-    --isy-card-bg: rgba(10, 22, 7, 0.9);
-    --isy-text-dark: #e1ffdb;
-    --isy-text-light: #97c58e;
-    --glass-border: 1px solid rgba(81, 126, 72, 0.16);
+    --isy-bg-gradient: linear-gradient(150deg, var(--tc-173) 0%, var(--tc-174) 35%, var(--tc-175) 72%, var(--tc-176) 100%);
+    --isy-card-bg: var(--tc-17);
+    --isy-text-dark: var(--tc-177);
+    --isy-text-light: var(--tc-178);
+    --glass-border: 1px solid var(--tc-19);
     --isy-shadow-sm: 0 12px 30px -20px rgba(0, 0, 0, 0.9);
-    --isy-shadow-hover: 0 18px 35px -18px rgba(29, 94, 16, 0.95), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
-    --isy-header-bg: linear-gradient(180deg, rgba(12, 34, 8, 0.95), rgba(14, 39, 9, 0.90));
-    --isy-input-bg: rgba(12, 25, 9, 0.8);
-    --isy-item-hover-bg: rgba(63, 150, 45, 0.18);
+    --isy-shadow-hover: 0 18px 35px -18px var(--tc-18), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
+    --isy-header-bg: linear-gradient(180deg, var(--tc-21), var(--tc-22));
+    --isy-input-bg: var(--tc-23);
+    --isy-item-hover-bg: var(--tc-24);
 }
 
 /* Dark Mode Overrides (System Preference) */
 @media (prefers-color-scheme: dark) {
     :root {
-        --isy-bg-gradient: linear-gradient(150deg, #030a02 0%, #071604 35%, #11300b 72%, #1b4612 100%);
-        --isy-card-bg: rgba(10, 22, 7, 0.9);
-        --isy-text-dark: #e1ffdb;
-        --isy-text-light: #97c58e;
-        --glass-border: 1px solid rgba(81, 126, 72, 0.16);
+        --isy-bg-gradient: linear-gradient(150deg, var(--tc-173) 0%, var(--tc-174) 35%, var(--tc-175) 72%, var(--tc-176) 100%);
+        --isy-card-bg: var(--tc-17);
+        --isy-text-dark: var(--tc-177);
+        --isy-text-light: var(--tc-178);
+        --glass-border: 1px solid var(--tc-19);
         --isy-shadow-sm: 0 12px 30px -20px rgba(0, 0, 0, 0.9);
-        --isy-shadow-hover: 0 18px 35px -18px rgba(29, 94, 16, 0.95), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
-        --isy-header-bg: linear-gradient(180deg, rgba(12, 34, 8, 0.95), rgba(14, 39, 9, 0.90));
-        --isy-input-bg: rgba(12, 25, 9, 0.8);
-        --isy-item-hover-bg: rgba(63, 150, 45, 0.18);
+        --isy-shadow-hover: 0 18px 35px -18px var(--tc-18), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
+        --isy-header-bg: linear-gradient(180deg, var(--tc-21), var(--tc-22));
+        --isy-input-bg: var(--tc-23);
+        --isy-item-hover-bg: var(--tc-24);
     }
 }
 
@@ -144,7 +144,7 @@ body {
 }
 
 .navbar-button:hover {
-    background: rgba(89, 191, 69, 0.18) !important;
+    background: var(--tc-33) !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 8px 16px -12px var(--isy-primary) !important;
 }
@@ -165,33 +165,33 @@ body {
 .navbar-button .navbar-button-border-container .navbar-button-border,
 .navbar-button .navbar-button-border,
 .navbar-button-border {
-    background: linear-gradient(90deg, rgba(163, 247, 146, 0.7), rgba(94, 215, 70, 0.96), rgba(163, 247, 146, 0.7)) !important;
+    background: linear-gradient(90deg, var(--tc-34), var(--tc-35), var(--tc-34)) !important;
     border: none !important;
     border-radius: 999px !important;
-    box-shadow: 0 0 8px -1px var(--isy-indicator-glow), 0 0 16px -5px rgba(94, 215, 70, 0.95) !important;
+    box-shadow: 0 0 8px -1px var(--isy-indicator-glow), 0 0 16px -5px var(--tc-36) !important;
     opacity: 1 !important;
 }
 
 .message-info,
 .form-info {
-    border-left-color: rgba(102, 220, 78, 0.95) !important;
-    box-shadow: inset 2px 0 0 rgba(172, 244, 157, 0.42), 0 0 12px -7px var(--isy-indicator-glow) !important;
+    border-left-color: var(--tc-37) !important;
+    box-shadow: inset 2px 0 0 var(--tc-38), 0 0 12px -7px var(--isy-indicator-glow) !important;
 }
 
 .response-thread-item__content {
-    border-left-color: rgba(102, 220, 78, 0.9) !important;
-    box-shadow: inset 1px 0 0 rgba(172, 244, 157, 0.35), 0 0 10px -7px var(--isy-indicator-glow) !important;
+    border-left-color: var(--tc-39) !important;
+    box-shadow: inset 1px 0 0 var(--tc-40), 0 0 10px -7px var(--isy-indicator-glow) !important;
 }
 
 .message-metadata-container .metadata-element .metadata-value {
-    border-bottom-color: rgba(102, 220, 78, 0.85) !important;
-    box-shadow: inset 0 -1px 0 rgba(102, 220, 78, 0.85), 0 2px 8px -8px var(--isy-indicator-glow) !important;
+    border-bottom-color: var(--tc-41) !important;
+    box-shadow: inset 0 -1px 0 var(--tc-41), 0 2px 8px -8px var(--isy-indicator-glow) !important;
 }
 
 .calendar-week-day-header.today,
 .calendar-week-day .today {
     border-radius: 10px !important;
-    box-shadow: inset 0 -2px 0 rgba(139, 246, 118, 0.85), 0 6px 14px -12px rgba(80, 191, 58, 0.95) !important;
+    box-shadow: inset 0 -2px 0 var(--tc-42), 0 6px 14px -12px var(--tc-43) !important;
 }
 
 /* 3. Dashboard Container Cards */
@@ -211,7 +211,7 @@ body {
 .dashboard__container:hover {
     transform: translateY(-3px) !important;
     box-shadow: var(--isy-shadow-hover) !important;
-    border-color: rgba(89, 191, 69, 0.35) !important;
+    border-color: var(--tc-44) !important;
 }
 
 .container-header {
@@ -235,7 +235,7 @@ body {
     border: 1px solid var(--isy-tt-entry-border, var(--isy-timetable-card-border)) !important;
     background: var(--isy-tt-entry-bg, var(--isy-timetable-card-bg)) !important;
     box-shadow: var(--isy-tt-entry-shadow, var(--isy-timetable-card-shadow)) !important;
-    color: var(--isy-tt-entry-text, #edffea) !important;
+    color: var(--isy-tt-entry-text, var(--tc-194)) !important;
     transition: all 0.2s ease !important;
     position: relative !important;
     overflow: hidden !important;
@@ -286,11 +286,11 @@ body {
 .calendar-week-element-inner:has(.line-through),
 .calendar-week-element-inner:has([class*="line-through"]),
 .calendar-week-element-inner:has([style*="line-through"]) {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(7, 12, 6, 0.98), rgba(20, 31, 18, 0.94));
-    --isy-tt-entry-border: rgba(93, 118, 88, 0.5);
-    --isy-tt-entry-text: #93ac8e;
-    --isy-tt-entry-hover-shadow: 0 12px 24px -14px rgba(5, 10, 4, 0.98);
-    --isy-tt-entry-sheen: linear-gradient(to bottom, rgba(149, 173, 144, 0.1), rgba(13, 22, 11, 0.08));
+    --isy-tt-entry-bg: linear-gradient(145deg, var(--tc-45), var(--tc-46));
+    --isy-tt-entry-border: var(--tc-47);
+    --isy-tt-entry-text: var(--tc-195);
+    --isy-tt-entry-hover-shadow: 0 12px 24px -14px var(--tc-48);
+    --isy-tt-entry-sheen: linear-gradient(to bottom, var(--tc-49), var(--tc-50));
     border-style: dashed !important;
     filter: saturate(0.45) brightness(0.9) !important;
 }
@@ -304,11 +304,11 @@ body {
 .calendar-week-element-inner.calendar-coloring[style*="31,161,219"]:has(.line-through),
 .calendar-week-element-inner.calendar-coloring[style*="31, 161, 219"]:has([style*="line-through"]),
 .calendar-week-element-inner.calendar-coloring[style*="31,161,219"]:has([style*="line-through"]) {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(26, 82, 15, 0.98), rgba(45, 133, 27, 0.95));
-    --isy-tt-entry-border: rgba(142, 243, 122, 0.56);
-    --isy-tt-entry-text: #e1ffdb;
-    --isy-tt-entry-hover-shadow: 0 14px 27px -15px rgba(26, 81, 15, 0.96);
-    --isy-tt-entry-sheen: linear-gradient(to bottom, rgba(182, 252, 168, 0.17), rgba(14, 45, 8, 0.1));
+    --isy-tt-entry-bg: linear-gradient(145deg, var(--tc-51), var(--tc-52));
+    --isy-tt-entry-border: var(--tc-53);
+    --isy-tt-entry-text: var(--tc-177);
+    --isy-tt-entry-hover-shadow: 0 14px 27px -15px var(--tc-54);
+    --isy-tt-entry-sheen: linear-gradient(to bottom, var(--tc-55), var(--tc-56));
     border-style: dashed !important;
 }
 
@@ -350,9 +350,9 @@ body {
 .calendar-week-element[style*="--background:var(--tt-informative-appointment)"] .calendar-week-element-inner,
 .calendar-week-element-inner[class*="tt-informative-appointment"],
 .calendar-week-element-inner[style*="tt-informative-appointment"] {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(33, 79, 24, 0.96), rgba(43, 104, 31, 0.93));
-    --isy-tt-entry-border: rgba(140, 218, 125, 0.44);
-    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(43, 104, 31, 0.95);
+    --isy-tt-entry-bg: linear-gradient(145deg, var(--tc-57), var(--tc-58));
+    --isy-tt-entry-border: var(--tc-59);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px var(--tc-60);
 }
 
 .calendar-week-element-inner.calendar-coloring--isManuallyCreated,
@@ -365,18 +365,18 @@ body {
 .calendar-week-element[style*="--background:var(--tt-appointment-manually-created)"] .calendar-week-element-inner,
 .calendar-week-element-inner[class*="tt-appointment-manually-created"],
 .calendar-week-element-inner[style*="tt-appointment-manually-created"] {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(58, 103, 49, 0.95), rgba(72, 129, 61, 0.93));
-    --isy-tt-entry-border: rgba(172, 246, 157, 0.42);
-    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(72, 129, 61, 0.95);
+    --isy-tt-entry-bg: linear-gradient(145deg, var(--tc-61), var(--tc-62));
+    --isy-tt-entry-border: var(--tc-63);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px var(--tc-64);
 }
 
 .calendar-week-element[style*="--background: var(--tt-appointment-manually-created-muted)"] .calendar-week-element-inner,
 .calendar-week-element[style*="--background:var(--tt-appointment-manually-created-muted)"] .calendar-week-element-inner,
 .calendar-week-element-inner[class*="tt-appointment-manually-created-muted"],
 .calendar-week-element-inner[style*="tt-appointment-manually-created-muted"] {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(55, 92, 47, 0.95), rgba(69, 111, 60, 0.91));
-    --isy-tt-entry-border: rgba(147, 204, 135, 0.4);
-    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(69, 111, 60, 0.95);
+    --isy-tt-entry-bg: linear-gradient(145deg, var(--tc-65), var(--tc-66));
+    --isy-tt-entry-border: var(--tc-67);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px var(--tc-68);
 }
 
 .calendar-week-element-inner.calendar-coloring--hasRegistration,
@@ -395,9 +395,9 @@ body {
 .calendar-week-element[style*="--background:var(--tt-room-reserved-open)"] .calendar-week-element-inner,
 .calendar-week-element-inner[class*="tt-room-reserved-open"],
 .calendar-week-element-inner[style*="tt-room-reserved-open"] {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(40, 77, 33, 0.95), rgba(51, 98, 42, 0.92));
-    --isy-tt-entry-border: rgba(140, 208, 126, 0.42);
-    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(51, 98, 42, 0.95);
+    --isy-tt-entry-bg: linear-gradient(145deg, var(--tc-69), var(--tc-70));
+    --isy-tt-entry-border: var(--tc-71);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px var(--tc-72);
 }
 
 .calendar-week-element-inner.calendar-coloring--isCollection,
@@ -407,28 +407,28 @@ body {
 .calendar-week-element-inner.isy-tt-special-text,
 .calendar-week-element-inner.calendar-coloring[style*="211, 211, 211"],
 .calendar-week-element-inner.calendar-coloring[style*="211,211,211"] {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(47, 60, 44, 0.96), rgba(64, 82, 61, 0.93));
-    --isy-tt-entry-border: rgba(102, 130, 96, 0.28);
-    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(42, 56, 39, 0.96);
-    --isy-tt-entry-text: #dae8d7;
+    --isy-tt-entry-bg: linear-gradient(145deg, var(--tc-73), var(--tc-74));
+    --isy-tt-entry-border: var(--tc-75);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px var(--tc-76);
+    --isy-tt-entry-text: var(--tc-196);
 }
 
 .calendar-week-element-inner.calendar-coloring--muted,
 .calendar-week-element.calendar-coloring--muted .calendar-week-element-inner,
 .calendar-week-element-inner:has(.calendar-coloring--muted),
 .calendar-week-element[data-render-type="line"] .calendar-week-element-inner {
-    --isy-tt-entry-border: rgba(124, 171, 114, 0.32);
-    --isy-tt-entry-text: #cae8c4;
-    --isy-tt-entry-sheen: linear-gradient(to bottom, rgba(170, 220, 160, 0.14), rgba(14, 31, 10, 0.1));
+    --isy-tt-entry-border: var(--tc-77);
+    --isy-tt-entry-text: var(--tc-197);
+    --isy-tt-entry-sheen: linear-gradient(to bottom, var(--tc-78), var(--tc-79));
     filter: saturate(0.8) brightness(0.94) !important;
 }
 
 /* Homework line labels: force cyan instead of transparent */
 .calendar-week-element[data-render-type="line"] .calendar-week-element-inner.single-appointment,
 .calendar-week-element[data-render-type="line"] .calendar-week-element-inner.calendar-coloring.single-appointment {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(43, 255, 0, 0.9), rgba(43, 255, 0, 0.9)) !important;
-    background: linear-gradient(145deg, rgba(43, 255, 0, 0.9), rgba(43, 255, 0, 0.9)) !important;
-    border: 1px solid rgba(151, 255, 130, 0.9) !important;
+    --isy-tt-entry-bg: linear-gradient(145deg, var(--tc-80), var(--tc-80)) !important;
+    background: linear-gradient(145deg, var(--tc-80), var(--tc-80)) !important;
+    border: 1px solid var(--tc-81) !important;
     filter: none !important;
 }
 
@@ -484,9 +484,9 @@ body {
 .calendar-week-element-inner.isy-tt-canceled-text,
 .calendar-week-element-inner.calendar-coloring[style*="242, 242, 242"],
 .calendar-week-element-inner.calendar-coloring[style*="242,242,242"] {
-    background: linear-gradient(145deg, rgba(55, 67, 52, 0.96), rgba(78, 95, 74, 0.93)) !important;
-    border: 1px dashed rgba(171, 196, 166, 0.62) !important;
-    color: #e6f2e4 !important;
+    background: linear-gradient(145deg, var(--tc-82), var(--tc-83)) !important;
+    border: 1px dashed var(--tc-84) !important;
+    color: var(--tc-198) !important;
 }
 
 .calendar-week-element-inner.isy-tt-canceled-task-text,
@@ -498,9 +498,9 @@ body {
 .calendar-week-element-inner.calendar-coloring[style*="31,161,219"]:has(.line-through),
 .calendar-week-element-inner.calendar-coloring[style*="31, 161, 219"]:has([style*="line-through"]),
 .calendar-week-element-inner.calendar-coloring[style*="31,161,219"]:has([style*="line-through"]) {
-    background: linear-gradient(145deg, rgba(65, 80, 62, 0.97), rgba(90, 110, 86, 0.94)) !important;
-    border: 1px dashed rgba(180, 205, 175, 0.62) !important;
-    color: #eff8ed !important;
+    background: linear-gradient(145deg, var(--tc-85), var(--tc-86)) !important;
+    border: 1px dashed var(--tc-87) !important;
+    color: var(--tc-199) !important;
 }
 
 .time-table-scaffold .calendar-coloring--isShifted,
@@ -519,8 +519,8 @@ body {
 .time-table-scaffold .calendar-coloring--isInformativeAppointment,
 .calendar-week-element.calendar-coloring--isInformativeAppointment,
 .calendar-week-element .calendar-coloring--isInformativeAppointment {
-    background: linear-gradient(145deg, rgba(33, 79, 24, 0.96), rgba(43, 104, 31, 0.93)) !important;
-    border: 1px solid rgba(140, 218, 125, 0.44) !important;
+    background: linear-gradient(145deg, var(--tc-57), var(--tc-58)) !important;
+    border: 1px solid var(--tc-59) !important;
 }
 
 .time-table-scaffold .calendar-coloring--isManuallyCreated,
@@ -529,8 +529,8 @@ body {
 .calendar-week-element.calendar-coloring--roomReservedButNotConfirmed,
 .calendar-week-element .calendar-coloring--isManuallyCreated,
 .calendar-week-element .calendar-coloring--roomReservedButNotConfirmed {
-    background: linear-gradient(145deg, rgba(58, 103, 49, 0.95), rgba(72, 129, 61, 0.93)) !important;
-    border: 1px solid rgba(172, 246, 157, 0.42) !important;
+    background: linear-gradient(145deg, var(--tc-61), var(--tc-62)) !important;
+    border: 1px solid var(--tc-63) !important;
 }
 
 .time-table-scaffold .calendar-coloring--hasRegistration,
@@ -546,9 +546,9 @@ body {
 .calendar-week-element-inner.isy-tt-special-text,
 .calendar-week-element-inner.calendar-coloring[style*="211, 211, 211"],
 .calendar-week-element-inner.calendar-coloring[style*="211,211,211"] {
-    background: linear-gradient(145deg, rgba(47, 60, 44, 0.96), rgba(64, 82, 61, 0.93)) !important;
-    border: 1px solid rgba(102, 130, 96, 0.28) !important;
-    color: #dae8d7 !important;
+    background: linear-gradient(145deg, var(--tc-73), var(--tc-74)) !important;
+    border: 1px solid var(--tc-75) !important;
+    color: var(--tc-196) !important;
 }
 
 .calendar-week-element-inner.isy-tt-canceled-text .content-container span,
@@ -561,7 +561,7 @@ body {
 .calendar-week-element.calendar-coloring--isCanceled .content-container div {
     text-decoration: line-through !important;
     text-decoration-thickness: 2px !important;
-    text-decoration-color: rgba(199, 230, 193, 0.7) !important;
+    text-decoration-color: var(--tc-88) !important;
 }
 
 .calendar-week-element .calendar-week-element-inner.isy-tt-past-lesson,
@@ -574,7 +574,7 @@ body {
 .calendar-week-element .calendar-week-element-inner.isy-tt-past-lesson::after,
 .calendar-week-element-inner.calendar-coloring.isy-tt-past-lesson::after,
 .calendar-week-element-inner.calendar-coloring.isy-tt-past-lesson[style]::after {
-    background: linear-gradient(to bottom, rgba(154, 172, 150, 0.1), rgba(7, 11, 6, 0.36)) !important;
+    background: linear-gradient(to bottom, var(--tc-89), var(--tc-90)) !important;
 }
 
 .calendar-week-element .calendar-week-element-inner.isy-tt-past-lesson:hover,
@@ -597,7 +597,7 @@ body {
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    background: var(--isy-tt-entry-sheen, linear-gradient(to bottom, rgba(143, 224, 127, 0.2), rgba(11, 27, 8, 0.1))) !important;
+    background: var(--isy-tt-entry-sheen, linear-gradient(to bottom, var(--tc-91), var(--tc-92))) !important;
     pointer-events: none !important;
 }
 
@@ -616,7 +616,7 @@ body {
 .cl-preview:hover {
     background: var(--isy-item-hover-bg) !important;
     transform: translateY(-2px) !important;
-    border-color: rgba(89, 191, 69, 0.32) !important;
+    border-color: var(--tc-93) !important;
     box-shadow: 0 8px 16px -14px rgba(0, 0, 0, 0.78) !important;
 }
 
@@ -729,14 +729,14 @@ div[class~="flex"][class~="items-center"][class~="box-border"][class~="p-6"][cla
 [data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"]:hover,
 .sidebar-page [data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"]:hover {
     transform: translateY(-2px) !important;
-    border-color: rgba(144, 236, 125, 0.45) !important;
+    border-color: var(--tc-94) !important;
     box-shadow: var(--isy-shadow-hover) !important;
 }
 
 [data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"] img,
 .sidebar-page [data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"] img {
     border-radius: calc(var(--isy-radius-md) - 4px) !important;
-    border: 1px solid rgba(135, 184, 125, 0.28) !important;
+    border: 1px solid var(--tc-95) !important;
 }
 
 a:focus-visible,
@@ -764,15 +764,15 @@ textarea:focus-visible {
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(89, 191, 69, 0.45);
+        box-shadow: 0 0 0 0 var(--tc-96);
     }
 
     70% {
-        box-shadow: 0 0 0 6px rgba(89, 191, 69, 0);
+        box-shadow: 0 0 0 6px var(--tc-97);
     }
 
     100% {
-        box-shadow: 0 0 0 0 rgba(89, 191, 69, 0);
+        box-shadow: 0 0 0 0 var(--tc-97);
     }
 }
 
@@ -804,12 +804,12 @@ textarea:focus-visible {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(63, 150, 45, 0.75);
+    background: var(--tc-98);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(89, 191, 69, 0.95);
+    background: var(--tc-99);
 }
 
 /* 8. Hide "Aufgaben" Dashboard Container */
@@ -819,7 +819,7 @@ textarea:focus-visible {
 
 /* 9. Timetable Styling */
 .time-table-scaffold {
-    background: linear-gradient(180deg, rgba(7, 20, 4, 0.9), rgba(16, 44, 10, 0.88)) !important;
+    background: linear-gradient(180deg, var(--tc-100), var(--tc-101)) !important;
     border: none !important;
 }
 
@@ -831,16 +831,16 @@ textarea:focus-visible {
 }
 
 .calendar-week-day-header.today {
-    background: linear-gradient(160deg, rgba(72, 170, 52, 0.32), rgba(39, 104, 26, 0.38)) !important;
-    border: 1px solid rgba(145, 238, 126, 0.45) !important;
-    border-bottom-color: rgba(145, 238, 126, 0.45) !important;
+    background: linear-gradient(160deg, var(--tc-102), var(--tc-103)) !important;
+    border: 1px solid var(--tc-104) !important;
+    border-bottom-color: var(--tc-104) !important;
     border-radius: 10px !important;
-    box-shadow: 0 8px 16px -12px rgba(57, 146, 39, 0.9) !important;
+    box-shadow: 0 8px 16px -12px var(--tc-105) !important;
 }
 
 .calendar-week-day-header.today .cwd-header-label>span,
 .calendar-week-day .today .cwd-header-label>span {
-    color: #ebffe7 !important;
+    color: var(--tc-200) !important;
     font-weight: 700 !important;
 }
 
@@ -860,7 +860,7 @@ textarea:focus-visible {
 }
 
 .time-line {
-    border-color: rgba(135, 184, 125, 0.18) !important;
+    border-color: var(--tc-106) !important;
 }
 
 .time-background .current-time {
@@ -924,7 +924,7 @@ body,
 }
 
 .popup-container {
-    background: rgba(3, 10, 2, 0.78) !important;
+    background: var(--tc-107) !important;
 }
 
 .notification {
@@ -958,8 +958,8 @@ body,
 
 .day-view-scaffold::before {
     background-image: repeating-linear-gradient(to right,
-            rgba(79, 126, 70, 0.13) 0,
-            rgba(79, 126, 70, 0.13) 0.06rem,
+            var(--tc-20) 0,
+            var(--tc-20) 0.06rem,
             transparent 0.06rem,
             transparent calc(100% / var(--calendar-week-number-of-days))) !important;
 }
@@ -973,7 +973,7 @@ body,
 /* 11. Footer */
 .footer,
 .footer.isy-footer-themed {
-    background: linear-gradient(150deg, #030a02 0%, #071604 35%, #11300b 72%, #1b4612 100%) !important;
+    background: linear-gradient(150deg, var(--tc-173) 0%, var(--tc-174) 35%, var(--tc-175) 72%, var(--tc-176) 100%) !important;
     border-top: 1px solid var(--isy-border-subtle) !important;
     color: var(--isy-text-dark) !important;
     box-shadow: 0 -10px 22px -18px rgba(0, 0, 0, 0.95) !important;
@@ -986,18 +986,18 @@ body,
 }
 
 .footer .declaration-label:hover {
-    color: #c4ffb8 !important;
+    color: var(--tc-201) !important;
 }
 
 .footer .declaration-separator {
-    background: rgba(196, 255, 184, 0.45) !important;
+    background: var(--tc-108) !important;
 }
 
 .footer .font-semibold[title] {
-    background: rgba(34, 91, 23, 0.65) !important;
-    border: 1px solid rgba(161, 241, 145, 0.35) !important;
+    background: var(--tc-109) !important;
+    border: 1px solid var(--tc-110) !important;
     border-radius: 999px !important;
-    color: #e2ffdc !important;
+    color: var(--tc-202) !important;
 }
 
 .footer .claimingmod-version {
@@ -1006,9 +1006,9 @@ body,
     margin-right: 0.45rem !important;
     padding: 0.22rem 0.55rem !important;
     border-radius: 999px !important;
-    border: 1px solid rgba(161, 241, 145, 0.4) !important;
-    background: rgba(34, 91, 23, 0.55) !important;
-    color: #e2ffdc !important;
+    border: 1px solid var(--tc-111) !important;
+    background: var(--tc-112) !important;
+    color: var(--tc-202) !important;
     font-size: 1rem !important;
     font-weight: 600 !important;
     letter-spacing: 0.02em !important;
@@ -1036,7 +1036,7 @@ body,
 }
 
 [data-v-cab99d68].w-full.h-full.relative.bg-background {
-    background: linear-gradient(180deg, rgba(11, 26, 8, 0.94), rgba(11, 26, 8, 0.94)) !important;
+    background: linear-gradient(180deg, var(--tc-113), var(--tc-113)) !important;
     border: 1px solid var(--isy-border-subtle) !important;
     border-radius: var(--isy-radius-lg) !important;
     overflow: hidden !important;
@@ -1122,7 +1122,7 @@ body,
 
 .footer .claimingmod-version:hover {
     color: #ffffff !important;
-    border-color: rgba(198, 255, 186, 0.7) !important;
+    border-color: var(--tc-114) !important;
 }
 
 
@@ -1131,9 +1131,9 @@ body,
 .calendar-week-element-inner.calendar-coloring[style*="144, 172, 47"],
 .calendar-week-element-inner.calendar-coloring[style*="144,172,47"],
 .calendar-week-element-inner[class*="tt-lesson-normal"] {
-    background: linear-gradient(145deg, rgba(21, 70, 11, 0.98), rgba(36, 110, 21, 0.95)) !important;
-    border: 1px solid rgba(152, 244, 133, 0.55) !important;
-    color: #ebffe7 !important;
+    background: linear-gradient(145deg, var(--tc-115), var(--tc-116)) !important;
+    border: 1px solid var(--tc-117) !important;
+    color: var(--tc-200) !important;
 }
 
 /* Pr?fung (turquoise gradient) */
@@ -1141,9 +1141,9 @@ body,
 .calendar-week-element-inner.isy-tt-exam-text,
 .calendar-week-element-inner.calendar-coloring[style*="31, 161, 219"],
 .calendar-week-element-inner.calendar-coloring[style*="31,161,219"] {
-    background: linear-gradient(145deg, rgba(35, 118, 18, 0.97), rgba(48, 169, 24, 0.94)) !important;
-    border: 1px solid rgba(160, 247, 143, 0.6) !important;
-    color: #edffea !important;
+    background: linear-gradient(145deg, var(--tc-118), var(--tc-119)) !important;
+    border: 1px solid var(--tc-120) !important;
+    color: var(--tc-194) !important;
 }
 
 /* Absenz (red gradient) */
@@ -1173,9 +1173,9 @@ body,
 .calendar-week-element-inner.isy-tt-canceled-task-text,
 .calendar-week-element-inner.calendar-coloring[style*="242, 242, 242"],
 .calendar-week-element-inner.calendar-coloring[style*="242,242,242"] {
-    background: linear-gradient(145deg, rgba(81, 95, 78, 0.96), rgba(108, 129, 104, 0.93)) !important;
-    border: 1px dashed rgba(146, 175, 140, 0.40) !important;
-    color: #f4fcf3 !important;
+    background: linear-gradient(145deg, var(--tc-121), var(--tc-122)) !important;
+    border: 1px dashed var(--tc-123) !important;
+    color: var(--tc-203) !important;
     position: relative !important;
 }
 
@@ -1212,9 +1212,9 @@ body,
 .time-table-scaffold .calendar-coloring--isManuallyCreated,
 .calendar-week-element.calendar-coloring--isManuallyCreated,
 .calendar-week-element-inner.calendar-coloring[style*="213, 166, 228"] {
-    background: linear-gradient(145deg, rgba(136, 236, 116, 0.97), rgba(165, 246, 149, 0.94)) !important;
-    border: 1px solid rgba(228, 255, 223, 0.74) !important;
-    color: #1b570f !important;
+    background: linear-gradient(145deg, var(--tc-124), var(--tc-125)) !important;
+    border: 1px solid var(--tc-126) !important;
+    color: var(--tc-204) !important;
 }
 
 /* Termin mit Registrierung (light blue gradient + dotted outline) */
@@ -1222,9 +1222,9 @@ body,
 .calendar-week-element.calendar-coloring--hasRegistration,
 .calendar-week-element-inner.calendar-coloring[style*="253, 242, 141"],
 .calendar-week-element-inner.calendar-coloring[style*="253,242,141"] {
-    background: linear-gradient(145deg, rgba(133, 236, 112, 0.97), rgba(160, 245, 143, 0.94)) !important;
-    border: 2px dotted rgba(229, 255, 224, 0.8) !important;
-    color: #19520e !important;
+    background: linear-gradient(145deg, var(--tc-127), var(--tc-128)) !important;
+    border: 2px dotted var(--tc-129) !important;
+    color: var(--tc-205) !important;
 }
 
 /* Raum reserviert, aber noch nicht best?tigt (light blue gradient) */
@@ -1232,9 +1232,9 @@ body,
 .calendar-week-element.calendar-coloring--roomReservedButNotConfirmed,
 .calendar-week-element-inner.calendar-coloring[style*="211, 211, 211"],
 .calendar-week-element-inner.calendar-coloring[style*="211,211,211"] {
-    background: linear-gradient(145deg, rgba(140, 240, 120, 0.96), rgba(166, 248, 150, 0.93)) !important;
-    border: 1px solid rgba(230, 255, 225, 0.72) !important;
-    color: #1c5d0f !important;
+    background: linear-gradient(145deg, var(--tc-130), var(--tc-131)) !important;
+    border: 1px solid var(--tc-132) !important;
+    color: var(--tc-206) !important;
 }
 
 /* Termin zur Kenntnis (brown gradient) */
@@ -1262,25 +1262,25 @@ body,
 .calendar-week-element-inner.calendar-coloring[style*="0,255,255"],
 .calendar-week-element-inner[class*="task"],
 .calendar-week-element-inner[class*="aufgabe"] {
-    background: linear-gradient(145deg, rgba(37, 159, 13, 0.97), rgba(56, 214, 24, 0.94)) !important;
-    border: 1px solid rgba(178, 255, 163, 0.72) !important;
-    color: #0d3305 !important;
+    background: linear-gradient(145deg, var(--tc-133), var(--tc-134)) !important;
+    border: 1px solid var(--tc-135) !important;
+    color: var(--tc-207) !important;
 }
 
 /* Offener Unterricht icon */
 .color-key-popup .color-key-element .icon,
 .color-key-popup .color-key-element .icon svg {
-    color: #ecffe8 !important;
-    fill: #ecffe8 !important;
+    color: var(--tc-208) !important;
+    fill: var(--tc-208) !important;
 }
 
 /* Legend remap (same order as ISY list) */
 .color-key-popup .color-key-list .color-key-element:nth-child(1) .color {
-    background: linear-gradient(145deg, rgba(21, 70, 11, 0.98), rgba(36, 110, 21, 0.95)) !important;
+    background: linear-gradient(145deg, var(--tc-115), var(--tc-116)) !important;
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(2) .color {
-    background: linear-gradient(145deg, rgba(35, 118, 18, 0.97), rgba(48, 169, 24, 0.94)) !important;
+    background: linear-gradient(145deg, var(--tc-118), var(--tc-119)) !important;
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(3) .color {
@@ -1292,8 +1292,8 @@ body,
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(5) .custom-element {
-    background: linear-gradient(145deg, rgba(81, 95, 78, 0.96), rgba(108, 129, 104, 0.93)) !important;
-    border: 1px dashed rgba(146, 175, 140, 0.40) !important;
+    background: linear-gradient(145deg, var(--tc-121), var(--tc-122)) !important;
+    border: 1px dashed var(--tc-123) !important;
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(5) .diagonal1,
@@ -1302,16 +1302,16 @@ body,
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(6) .color {
-    background: linear-gradient(145deg, rgba(136, 236, 116, 0.97), rgba(165, 246, 149, 0.94)) !important;
+    background: linear-gradient(145deg, var(--tc-124), var(--tc-125)) !important;
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(7) .color {
-    background: linear-gradient(145deg, rgba(133, 236, 112, 0.97), rgba(160, 245, 143, 0.94)) !important;
-    border: 2px dotted rgba(229, 255, 224, 0.8) !important;
+    background: linear-gradient(145deg, var(--tc-127), var(--tc-128)) !important;
+    border: 2px dotted var(--tc-129) !important;
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(8) .color {
-    background: linear-gradient(145deg, rgba(140, 240, 120, 0.96), rgba(166, 248, 150, 0.93)) !important;
+    background: linear-gradient(145deg, var(--tc-130), var(--tc-131)) !important;
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(9) .color {
@@ -1324,7 +1324,7 @@ body,
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(11) .color {
-    background: linear-gradient(145deg, rgba(37, 159, 13, 0.97), rgba(56, 214, 24, 0.94)) !important;
+    background: linear-gradient(145deg, var(--tc-133), var(--tc-134)) !important;
 }
 
 
@@ -1364,8 +1364,8 @@ body.ClaimingMod-enabled .icon-button,
 body.ClaimingMod-enabled .seamless,
 body.ClaimingMod-enabled button,
 body.ClaimingMod-enabled [role="button"] {
-    background: linear-gradient(145deg, rgba(19, 44, 14, 0.94), rgba(32, 74, 24, 0.92)) !important;
-    border-color: rgba(88, 146, 76, 0.22) !important;
+    background: linear-gradient(145deg, var(--tc-136), var(--tc-137)) !important;
+    border-color: var(--tc-138) !important;
     color: var(--isy-text-dark) !important;
 }
 
@@ -1374,8 +1374,8 @@ body.ClaimingMod-enabled select,
 body.ClaimingMod-enabled textarea,
 body.ClaimingMod-enabled .text-input,
 body.ClaimingMod-enabled .range-slider {
-    background: rgba(13, 30, 10, 0.88) !important;
-    border-color: rgba(88, 146, 76, 0.20) !important;
+    background: var(--tc-139) !important;
+    border-color: var(--tc-140) !important;
     color: var(--isy-text-dark) !important;
 }
 
@@ -1387,21 +1387,21 @@ body.ClaimingMod-enabled .calendar-element,
 body.ClaimingMod-enabled .calendarlist__wrapper,
 body.ClaimingMod-enabled .calendarlist__list,
 body.ClaimingMod-enabled .side-slide-container {
-    background: linear-gradient(160deg, rgba(11, 28, 8, 0.96), rgba(23, 56, 16, 0.94)) !important;
-    border-color: rgba(88, 146, 76, 0.20) !important;
+    background: linear-gradient(160deg, var(--tc-141), var(--tc-142)) !important;
+    border-color: var(--tc-140) !important;
     color: var(--isy-text-dark) !important;
 }
 
 body.ClaimingMod-enabled i.isy,
 body.ClaimingMod-enabled .material-symbols-outlined,
 body.ClaimingMod-enabled svg {
-    color: #e2ffdc !important;
+    color: var(--tc-202) !important;
 }
 
 /* Keep status icons meaningful */
 body.ClaimingMod-enabled i.isy_absences_check,
 body.ClaimingMod-enabled .isy_absences_check {
-    color: #8de1b3 !important;
+    color: var(--tc-209) !important;
 }
 
 body.ClaimingMod-enabled .isy_absences_cross,
@@ -1423,7 +1423,7 @@ body.ClaimingMod-enabled [class*="bg-white"],
 body.ClaimingMod-enabled [class*="background-white"],
 body.ClaimingMod-enabled [style*="background: rgb(255"],
 body.ClaimingMod-enabled [style*="background-color: rgb(255"] {
-    background-color: rgba(13, 30, 10, 0.9) !important;
+    background-color: var(--tc-143) !important;
     color: var(--isy-text-dark) !important;
 }
 
@@ -1431,33 +1431,33 @@ body.ClaimingMod-enabled [style*="background-color: rgb(255"] {
 /* ClaimingMod token bridge for UI parts still using default utility tokens */
 body.ClaimingMod-enabled {
     /* Utility classes in original ISY css use hsl(var(--token)); keep tokens in HSL triplet format */
-    --background: 110 47% 9% !important;
-    --foreground: 110 100% 94% !important;
-    --card: 110 44% 13% !important;
-    --card-foreground: 110 100% 94% !important;
-    --popover: 110 44% 13% !important;
-    --popover-foreground: 110 100% 94% !important;
-    --primary: 110 70% 56% !important;
-    --primary-foreground: 110 100% 97% !important;
-    --secondary: 110 46% 23% !important;
-    --secondary-foreground: 110 100% 95% !important;
-    --muted: 110 47% 20% !important;
-    --muted-foreground: 110 58% 79% !important;
-    --accent: 110 45% 28% !important;
-    --accent-foreground: 110 100% 96% !important;
+    --background: var(--tc-1) !important;
+    --foreground: var(--tc-2) !important;
+    --card: var(--tc-3) !important;
+    --card-foreground: var(--tc-2) !important;
+    --popover: var(--tc-3) !important;
+    --popover-foreground: var(--tc-2) !important;
+    --primary: var(--tc-4) !important;
+    --primary-foreground: var(--tc-5) !important;
+    --secondary: var(--tc-6) !important;
+    --secondary-foreground: var(--tc-7) !important;
+    --muted: var(--tc-8) !important;
+    --muted-foreground: var(--tc-9) !important;
+    --accent: var(--tc-10) !important;
+    --accent-foreground: var(--tc-11) !important;
     --destructive: 353 52% 47% !important;
     --destructive-foreground: 345 100% 97% !important;
-    --border: 110 24% 24% !important;
-    --input: 110 28% 22% !important;
-    --ring: 110 70% 71% !important;
+    --border: var(--tc-12) !important;
+    --input: var(--tc-13) !important;
+    --ring: var(--tc-14) !important;
 }
 
 /* Specific side filter sheet (Zeitraum- und Filterauswahl) */
 body.ClaimingMod-enabled [data-v-d18ebabc].bg-backgroundContrast {
-    background: linear-gradient(160deg, rgba(13, 30, 9, 0.98), rgba(26, 61, 19, 0.96)) !important;
+    background: linear-gradient(160deg, var(--tc-144), var(--tc-145)) !important;
     color: var(--isy-text-dark) !important;
-    border-left: 1px solid rgba(92, 154, 80, 0.20) !important;
-    box-shadow: -10px 0 24px -16px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(92, 154, 80, 0.10) inset !important;
+    border-left: 1px solid var(--tc-146) !important;
+    box-shadow: -10px 0 24px -16px rgba(0, 0, 0, 0.95), 0 0 0 1px var(--tc-147) inset !important;
 }
 
 body.ClaimingMod-enabled [data-v-d18ebabc] [data-v-98694fd9],
@@ -1470,36 +1470,36 @@ body.ClaimingMod-enabled [data-v-d18ebabc] .inline-flex,
 body.ClaimingMod-enabled [data-v-d18ebabc] [class*="bg-background"],
 body.ClaimingMod-enabled [data-v-d18ebabc] [class*="bg-secondary"],
 body.ClaimingMod-enabled [data-v-d18ebabc] [class*="bg-primary"] {
-    border-color: rgba(92, 154, 80, 0.20) !important;
+    border-color: var(--tc-146) !important;
 }
 
 body.ClaimingMod-enabled [data-v-d18ebabc] .bg-background,
 body.ClaimingMod-enabled [data-v-d18ebabc] [class~="bg-background"] {
-    background: rgba(19, 42, 14, 0.92) !important;
+    background: var(--tc-148) !important;
 }
 
 body.ClaimingMod-enabled [data-v-d18ebabc] .bg-secondary,
 body.ClaimingMod-enabled [data-v-d18ebabc] [class~="bg-secondary"] {
-    background: rgba(40, 82, 31, 0.9) !important;
-    color: #edffea !important;
+    background: var(--tc-149) !important;
+    color: var(--tc-194) !important;
 }
 
 body.ClaimingMod-enabled [data-v-d18ebabc] .bg-primary,
 body.ClaimingMod-enabled [data-v-d18ebabc] [class~="bg-primary"] {
-    background: linear-gradient(145deg, rgba(61, 146, 44, 0.96), rgba(78, 184, 57, 0.94)) !important;
-    color: #f0ffed !important;
+    background: linear-gradient(145deg, var(--tc-150), var(--tc-151)) !important;
+    color: var(--tc-210) !important;
 }
 
 body.ClaimingMod-enabled [data-v-d18ebabc] .hover\:bg-accent:hover,
 body.ClaimingMod-enabled [data-v-d18ebabc] [class*="hover:bg-accent"]:hover,
 body.ClaimingMod-enabled [data-v-d18ebabc] .hover\:bg-primary\/90:hover {
-    background: rgba(57, 117, 45, 0.9) !important;
-    color: #f3fff1 !important;
+    background: var(--tc-152) !important;
+    color: var(--tc-211) !important;
 }
 
 body.ClaimingMod-enabled [data-v-d18ebabc] .bg-border,
 body.ClaimingMod-enabled [data-v-d18ebabc] [class~="bg-border"] {
-    background: rgba(96, 158, 84, 0.20) !important;
+    background: var(--tc-153) !important;
 }
 
 
@@ -1522,7 +1522,7 @@ body.ClaimingMod-enabled .bg-muted {
 }
 
 body.ClaimingMod-enabled .bg-primary {
-    background: linear-gradient(145deg, rgba(61, 146, 44, 0.96), rgba(78, 184, 57, 0.94)) !important;
+    background: linear-gradient(145deg, var(--tc-150), var(--tc-151)) !important;
 }
 
 body.ClaimingMod-enabled .text-foreground,
@@ -1615,12 +1615,12 @@ body.ClaimingMod-enabled .header-bottom {
 /* Absence/appointment preview cards: darken bright gray reservation-like entries */
 body.ClaimingMod-enabled .appointment-preview,
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring {
-    --background: 110 46% 11% !important;
-    background: linear-gradient(150deg, rgba(13, 30, 9, 0.98), rgba(18, 44, 13, 0.96)) !important;
-    background-color: rgba(14, 34, 10, 0.97) !important;
-    border: 1px solid rgba(123, 198, 108, 0.34) !important;
-    box-shadow: 0 16px 34px -18px rgba(4, 15, 2, 0.95) !important;
-    color: #e8ffe4 !important;
+    --background: var(--tc-15) !important;
+    background: linear-gradient(150deg, var(--tc-144), var(--tc-154)) !important;
+    background-color: var(--tc-155) !important;
+    border: 1px solid var(--tc-156) !important;
+    box-shadow: 0 16px 34px -18px var(--tc-157) !important;
+    color: var(--tc-212) !important;
 }
 
 body.ClaimingMod-enabled .appointment-preview *,
@@ -1628,21 +1628,21 @@ body.ClaimingMod-enabled .appointment-preview .text-xl,
 body.ClaimingMod-enabled .appointment-preview p,
 body.ClaimingMod-enabled .appointment-preview span,
 body.ClaimingMod-enabled .appointment-preview div {
-    color: #e8ffe4 !important;
+    color: var(--tc-212) !important;
 }
 
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211, 211, 211"],
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211,211,211"] {
-    background: linear-gradient(145deg, rgba(62, 80, 58, 0.96), rgba(81, 104, 76, 0.93)) !important;
-    border-color: rgba(109, 141, 102, 0.35) !important;
-    color: #ddf1d9 !important;
+    background: linear-gradient(145deg, var(--tc-158), var(--tc-159)) !important;
+    border-color: var(--tc-160) !important;
+    color: var(--tc-213) !important;
 }
 
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211, 211, 211"] .text-xl,
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211,211,211"] .text-xl,
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211, 211, 211"] p,
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211,211,211"] p {
-    color: #ddf1d9 !important;
+    color: var(--tc-213) !important;
 }
 
 
@@ -1709,7 +1709,7 @@ body.ClaimingMod-enabled .priority__circle[data-v-83289acc] {
 }
 
 body.ClaimingMod-enabled .priority__circle.circle--normal[data-v-83289acc] {
-    border-color: var(--priority-color-normal, #8ce87a) !important;
+    border-color: var(--priority-color-normal, var(--tc-214)) !important;
 }
 
 body.ClaimingMod-enabled .priority__circle.circle--high[data-v-83289acc] {
@@ -1725,7 +1725,7 @@ body.ClaimingMod-enabled .priority__circle.circle--exception[data-v-83289acc] {
 }
 
 body.ClaimingMod-enabled .priority__circle.circle--filled-normal[data-v-83289acc] {
-    background-color: var(--priority-color-normal, #8ce87a) !important;
+    background-color: var(--priority-color-normal, var(--tc-214)) !important;
 }
 
 body.ClaimingMod-enabled .priority__circle.circle--filled-high[data-v-83289acc] {
@@ -1749,20 +1749,20 @@ body.ClaimingMod-enabled .header {
 
 /* Split header and timetable menu with distinct gradients */
 body.ClaimingMod-enabled .header-top {
-    background: linear-gradient(180deg, rgba(11, 34, 7, 0.97), rgba(16, 44, 10, 0.93)) !important;
+    background: linear-gradient(180deg, var(--tc-161), var(--tc-162)) !important;
 }
 
 body.ClaimingMod-enabled .header-bottom {
-    background: linear-gradient(180deg, rgba(18, 50, 11, 0.96), rgba(21, 58, 14, 0.93)) !important;
-    border-top: 1px solid rgba(77, 132, 66, 0.24) !important;
-    border-bottom: 1px solid rgba(66, 119, 55, 0.20) !important;
+    background: linear-gradient(180deg, var(--tc-163), var(--tc-164)) !important;
+    border-top: 1px solid var(--tc-165) !important;
+    border-bottom: 1px solid var(--tc-166) !important;
 }
 
 
 /* Top menu: subtle bottom border + soft glow */
 body.ClaimingMod-enabled .header-bottom {
-    border-bottom: 1px solid rgba(113, 196, 96, 0.32) !important;
-    box-shadow: 0 1px 0 rgba(148, 228, 132, 0.16), 0 8px 18px -16px rgba(106, 196, 88, 0.55) !important;
+    border-bottom: 1px solid var(--tc-167) !important;
+    box-shadow: 0 1px 0 var(--tc-168), 0 8px 18px -16px var(--tc-169) !important;
 }
 
 
@@ -1832,16 +1832,1583 @@ body.ClaimingMod-enabled [data-v-cab99d68] .flex.print\:hidden>div {
 
 /* Timetable hover tooltip (tippy) */
 body.ClaimingMod-enabled .tippy-box[data-theme~="isy"] {
-    background: linear-gradient(150deg, rgba(13, 30, 9, 0.98), rgba(18, 44, 13, 0.96)) !important;
-    border: 1px solid rgba(123, 198, 108, 0.36) !important;
-    color: #eaffe6 !important;
-    box-shadow: 0 16px 34px -18px rgba(4, 15, 2, 0.95) !important;
+    background: linear-gradient(150deg, var(--tc-144), var(--tc-154)) !important;
+    border: 1px solid var(--tc-170) !important;
+    color: var(--tc-215) !important;
+    box-shadow: 0 16px 34px -18px var(--tc-157) !important;
 }
 
 body.ClaimingMod-enabled .tippy-box[data-theme~="isy"] .tippy-content {
-    color: #eaffe6 !important;
+    color: var(--tc-215) !important;
 }
 
 body.ClaimingMod-enabled .tippy-box[data-theme~="isy"]>.tippy-arrow {
-    color: rgba(15, 37, 11, 0.98) !important;
+    color: var(--tc-171) !important;
+}
+
+/*Fixes for Mobile Version*/
+[data-v-e69c0a82].bg-primaryColor.rounded-full {
+    border-radius: 10px !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+a.rounded-full.border-primaryColor.bg-primaryWeakColor,
+a.rounded-full.border-primaryColor.dark\:bg-primarySecondaryColor {
+    border-radius: 10px !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 1px solid rgba(76, 103, 146, 0.22) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: inline-flex !important;
+}
+
+a.rounded-full.border-primaryColor:hover {
+    background: var(--isy-item-hover-bg) !important;
+    transform: translateY(-1px) !important;
+    border-color: rgba(69, 117, 191, 0.35) !important;
+    box-shadow: var(--isy-shadow-hover) !important;
+}
+
+a.rounded-full.border-primaryColor button {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+div.flex.items-center.bg-backgroundContrast.rounded-full.h-20:has(input.bg-transparent) {
+    background: var(--isy-input-bg) !important;
+    border: 1px solid var(--isy-border-subtle) !important;
+    border-radius: 50px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.55) !important;
+}
+
+/* --- ClaimingMod Palette Definitions (Python generated) --- */
+:root {
+    --tc-1: 110 47% 9%;
+    --tc-2: 110 100% 94%;
+    --tc-3: 110 44% 13%;
+    --tc-4: 110 70% 56%;
+    --tc-5: 110 100% 97%;
+    --tc-6: 110 46% 23%;
+    --tc-7: 110 100% 95%;
+    --tc-8: 110 47% 20%;
+    --tc-9: 110 58% 79%;
+    --tc-10: 110 45% 28%;
+    --tc-11: 110 100% 96%;
+    --tc-12: 110 24% 24%;
+    --tc-13: 110 28% 22%;
+    --tc-14: 110 70% 71%;
+    --tc-15: 110 46% 11%;
+    --tc-16: rgba(67, 169, 47, 0.32);
+    --tc-17: rgba(10, 22, 7, 0.9);
+    --tc-18: rgba(29, 94, 16, 0.95);
+    --tc-19: rgba(81, 126, 72, 0.16);
+    --tc-20: rgba(79, 126, 70, 0.13);
+    --tc-21: rgba(12, 34, 8, 0.95);
+    --tc-22: rgba(14, 39, 9, 0.9);
+    --tc-23: rgba(12, 25, 9, 0.8);
+    --tc-24: rgba(63, 150, 45, 0.18);
+    --tc-25: rgba(13, 26, 10, 0.86);
+    --tc-26: rgba(128, 225, 109, 0.34);
+    --tc-27: rgba(13, 36, 9, 0.97);
+    --tc-28: rgba(32, 84, 22, 0.94);
+    --tc-29: rgba(35, 109, 20, 0.95);
+    --tc-30: rgba(121, 238, 98, 0.35);
+    --tc-31: rgba(67, 169, 47, 0.18);
+    --tc-32: rgba(67, 169, 47, 0.2);
+    --tc-33: rgba(89, 191, 69, 0.18);
+    --tc-34: rgba(163, 247, 146, 0.7);
+    --tc-35: rgba(94, 215, 70, 0.96);
+    --tc-36: rgba(94, 215, 70, 0.95);
+    --tc-37: rgba(102, 220, 78, 0.95);
+    --tc-38: rgba(172, 244, 157, 0.42);
+    --tc-39: rgba(102, 220, 78, 0.9);
+    --tc-40: rgba(172, 244, 157, 0.35);
+    --tc-41: rgba(102, 220, 78, 0.85);
+    --tc-42: rgba(139, 246, 118, 0.85);
+    --tc-43: rgba(80, 191, 58, 0.95);
+    --tc-44: rgba(89, 191, 69, 0.35);
+    --tc-45: rgba(7, 12, 6, 0.98);
+    --tc-46: rgba(20, 31, 18, 0.94);
+    --tc-47: rgba(93, 118, 88, 0.5);
+    --tc-48: rgba(5, 10, 4, 0.98);
+    --tc-49: rgba(149, 173, 144, 0.1);
+    --tc-50: rgba(13, 22, 11, 0.08);
+    --tc-51: rgba(26, 82, 15, 0.98);
+    --tc-52: rgba(45, 133, 27, 0.95);
+    --tc-53: rgba(142, 243, 122, 0.56);
+    --tc-54: rgba(26, 81, 15, 0.96);
+    --tc-55: rgba(182, 252, 168, 0.17);
+    --tc-56: rgba(14, 45, 8, 0.1);
+    --tc-57: rgba(33, 79, 24, 0.96);
+    --tc-58: rgba(43, 104, 31, 0.93);
+    --tc-59: rgba(140, 218, 125, 0.44);
+    --tc-60: rgba(43, 104, 31, 0.95);
+    --tc-61: rgba(58, 103, 49, 0.95);
+    --tc-62: rgba(72, 129, 61, 0.93);
+    --tc-63: rgba(172, 246, 157, 0.42);
+    --tc-64: rgba(72, 129, 61, 0.95);
+    --tc-65: rgba(55, 92, 47, 0.95);
+    --tc-66: rgba(69, 111, 60, 0.91);
+    --tc-67: rgba(147, 204, 135, 0.4);
+    --tc-68: rgba(69, 111, 60, 0.95);
+    --tc-69: rgba(40, 77, 33, 0.95);
+    --tc-70: rgba(51, 98, 42, 0.92);
+    --tc-71: rgba(140, 208, 126, 0.42);
+    --tc-72: rgba(51, 98, 42, 0.95);
+    --tc-73: rgba(47, 60, 44, 0.96);
+    --tc-74: rgba(64, 82, 61, 0.93);
+    --tc-75: rgba(102, 130, 96, 0.28);
+    --tc-76: rgba(42, 56, 39, 0.96);
+    --tc-77: rgba(124, 171, 114, 0.32);
+    --tc-78: rgba(170, 220, 160, 0.14);
+    --tc-79: rgba(14, 31, 10, 0.1);
+    --tc-80: rgba(43, 255, 0, 0.9);
+    --tc-81: rgba(151, 255, 130, 0.9);
+    --tc-82: rgba(55, 67, 52, 0.96);
+    --tc-83: rgba(78, 95, 74, 0.93);
+    --tc-84: rgba(171, 196, 166, 0.62);
+    --tc-85: rgba(65, 80, 62, 0.97);
+    --tc-86: rgba(90, 110, 86, 0.94);
+    --tc-87: rgba(180, 205, 175, 0.62);
+    --tc-88: rgba(199, 230, 193, 0.7);
+    --tc-89: rgba(154, 172, 150, 0.1);
+    --tc-90: rgba(7, 11, 6, 0.36);
+    --tc-91: rgba(143, 224, 127, 0.2);
+    --tc-92: rgba(11, 27, 8, 0.1);
+    --tc-93: rgba(89, 191, 69, 0.32);
+    --tc-94: rgba(144, 236, 125, 0.45);
+    --tc-95: rgba(135, 184, 125, 0.28);
+    --tc-96: rgba(89, 191, 69, 0.45);
+    --tc-97: rgba(89, 191, 69, 0.0);
+    --tc-98: rgba(63, 150, 45, 0.75);
+    --tc-99: rgba(89, 191, 69, 0.95);
+    --tc-100: rgba(7, 20, 4, 0.9);
+    --tc-101: rgba(16, 44, 10, 0.88);
+    --tc-102: rgba(72, 170, 52, 0.32);
+    --tc-103: rgba(39, 104, 26, 0.38);
+    --tc-104: rgba(145, 238, 126, 0.45);
+    --tc-105: rgba(57, 146, 39, 0.9);
+    --tc-106: rgba(135, 184, 125, 0.18);
+    --tc-107: rgba(3, 10, 2, 0.78);
+    --tc-108: rgba(196, 255, 184, 0.45);
+    --tc-109: rgba(34, 91, 23, 0.65);
+    --tc-110: rgba(161, 241, 145, 0.35);
+    --tc-111: rgba(161, 241, 145, 0.4);
+    --tc-112: rgba(34, 91, 23, 0.55);
+    --tc-113: rgba(11, 26, 8, 0.94);
+    --tc-114: rgba(198, 255, 186, 0.7);
+    --tc-115: rgba(21, 70, 11, 0.98);
+    --tc-116: rgba(36, 110, 21, 0.95);
+    --tc-117: rgba(152, 244, 133, 0.55);
+    --tc-118: rgba(35, 118, 18, 0.97);
+    --tc-119: rgba(48, 169, 24, 0.94);
+    --tc-120: rgba(160, 247, 143, 0.6);
+    --tc-121: rgba(81, 95, 78, 0.96);
+    --tc-122: rgba(108, 129, 104, 0.93);
+    --tc-123: rgba(146, 175, 140, 0.4);
+    --tc-124: rgba(136, 236, 116, 0.97);
+    --tc-125: rgba(165, 246, 149, 0.94);
+    --tc-126: rgba(228, 255, 223, 0.74);
+    --tc-127: rgba(133, 236, 112, 0.97);
+    --tc-128: rgba(160, 245, 143, 0.94);
+    --tc-129: rgba(229, 255, 224, 0.8);
+    --tc-130: rgba(140, 240, 120, 0.96);
+    --tc-131: rgba(166, 248, 150, 0.93);
+    --tc-132: rgba(230, 255, 225, 0.72);
+    --tc-133: rgba(37, 159, 13, 0.97);
+    --tc-134: rgba(56, 214, 24, 0.94);
+    --tc-135: rgba(178, 255, 163, 0.72);
+    --tc-136: rgba(19, 44, 14, 0.94);
+    --tc-137: rgba(32, 74, 24, 0.92);
+    --tc-138: rgba(88, 146, 76, 0.22);
+    --tc-139: rgba(13, 30, 10, 0.88);
+    --tc-140: rgba(88, 146, 76, 0.2);
+    --tc-141: rgba(11, 28, 8, 0.96);
+    --tc-142: rgba(23, 56, 16, 0.94);
+    --tc-143: rgba(13, 30, 10, 0.9);
+    --tc-144: rgba(13, 30, 9, 0.98);
+    --tc-145: rgba(26, 61, 19, 0.96);
+    --tc-146: rgba(92, 154, 80, 0.2);
+    --tc-147: rgba(92, 154, 80, 0.1);
+    --tc-148: rgba(19, 42, 14, 0.92);
+    --tc-149: rgba(40, 82, 31, 0.9);
+    --tc-150: rgba(61, 146, 44, 0.96);
+    --tc-151: rgba(78, 184, 57, 0.94);
+    --tc-152: rgba(57, 117, 45, 0.9);
+    --tc-153: rgba(96, 158, 84, 0.2);
+    --tc-154: rgba(18, 44, 13, 0.96);
+    --tc-155: rgba(14, 34, 10, 0.97);
+    --tc-156: rgba(123, 198, 108, 0.34);
+    --tc-157: rgba(4, 15, 2, 0.95);
+    --tc-158: rgba(62, 80, 58, 0.96);
+    --tc-159: rgba(81, 104, 76, 0.93);
+    --tc-160: rgba(109, 141, 102, 0.35);
+    --tc-161: rgba(11, 34, 7, 0.97);
+    --tc-162: rgba(16, 44, 10, 0.93);
+    --tc-163: rgba(18, 50, 11, 0.96);
+    --tc-164: rgba(21, 58, 14, 0.93);
+    --tc-165: rgba(77, 132, 66, 0.24);
+    --tc-166: rgba(66, 119, 55, 0.2);
+    --tc-167: rgba(113, 196, 96, 0.32);
+    --tc-168: rgba(148, 228, 132, 0.16);
+    --tc-169: rgba(106, 196, 88, 0.55);
+    --tc-170: rgba(123, 198, 108, 0.36);
+    --tc-171: rgba(15, 37, 11, 0.98);
+    --tc-172: #43a92f;
+    --tc-173: #030a02;
+    --tc-174: #071604;
+    --tc-175: #11300b;
+    --tc-176: #1b4612;
+    --tc-177: #e1ffdb;
+    --tc-178: #97c58e;
+    --tc-179: #081406;
+    --tc-180: #11260d;
+    --tc-181: #1b3a15;
+    --tc-182: #12270e;
+    --tc-183: #274721;
+    --tc-184: #23421d;
+    --tc-185: #277817;
+    --tc-186: #59bf45;
+    --tc-187: #265c1b;
+    --tc-188: #29591f;
+    --tc-189: #11190f;
+    --tc-190: #426f39;
+    --tc-191: #368626;
+    --tc-192: #2f5527;
+    --tc-193: #3b6134;
+    --tc-194: #edffea;
+    --tc-195: #93ac8e;
+    --tc-196: #dae8d7;
+    --tc-197: #cae8c4;
+    --tc-198: #e6f2e4;
+    --tc-199: #eff8ed;
+    --tc-200: #ebffe7;
+    --tc-201: #c4ffb8;
+    --tc-202: #e2ffdc;
+    --tc-203: #f4fcf3;
+    --tc-204: #1b570f;
+    --tc-205: #19520e;
+    --tc-206: #1c5d0f;
+    --tc-207: #0d3305;
+    --tc-208: #ecffe8;
+    --tc-209: #8de1b3;
+    --tc-210: #f0ffed;
+    --tc-211: #f3fff1;
+    --tc-212: #e8ffe4;
+    --tc-213: #ddf1d9;
+    --tc-214: #8ce87a;
+    --tc-215: #eaffe6;
+}
+
+html.palette-violet {
+    --tc-1: 270 47% 9%;
+    --tc-2: 270 100% 94%;
+    --tc-3: 270 44% 13%;
+    --tc-4: 270 70% 56%;
+    --tc-5: 270 100% 97%;
+    --tc-6: 270 46% 23%;
+    --tc-7: 270 100% 95%;
+    --tc-8: 270 47% 20%;
+    --tc-9: 270 58% 79%;
+    --tc-10: 270 45% 28%;
+    --tc-11: 270 100% 96%;
+    --tc-12: 270 24% 24%;
+    --tc-13: 270 28% 22%;
+    --tc-14: 270 70% 71%;
+    --tc-15: 270 46% 11%;
+    --tc-16: rgba(108, 47, 169, 0.32);
+    --tc-17: rgba(14, 7, 22, 0.9);
+    --tc-18: rgba(55, 16, 94, 0.95);
+    --tc-19: rgba(99, 72, 126, 0.16);
+    --tc-20: rgba(98, 70, 126, 0.13);
+    --tc-21: rgba(21, 8, 34, 0.95);
+    --tc-22: rgba(24, 9, 39, 0.9);
+    --tc-23: rgba(17, 9, 25, 0.8);
+    --tc-24: rgba(97, 45, 150, 0.18);
+    --tc-25: rgba(18, 10, 26, 0.86);
+    --tc-26: rgba(167, 109, 225, 0.34);
+    --tc-27: rgba(22, 9, 36, 0.97);
+    --tc-28: rgba(53, 22, 84, 0.94);
+    --tc-29: rgba(64, 20, 109, 0.95);
+    --tc-30: rgba(168, 98, 238, 0.35);
+    --tc-31: rgba(108, 47, 169, 0.18);
+    --tc-32: rgba(108, 47, 169, 0.2);
+    --tc-33: rgba(130, 69, 191, 0.18);
+    --tc-34: rgba(196, 146, 247, 0.7);
+    --tc-35: rgba(142, 70, 215, 0.96);
+    --tc-36: rgba(142, 70, 215, 0.95);
+    --tc-37: rgba(149, 78, 220, 0.95);
+    --tc-38: rgba(200, 157, 244, 0.42);
+    --tc-39: rgba(149, 78, 220, 0.9);
+    --tc-40: rgba(200, 157, 244, 0.35);
+    --tc-41: rgba(149, 78, 220, 0.85);
+    --tc-42: rgba(182, 118, 246, 0.85);
+    --tc-43: rgba(124, 58, 191, 0.95);
+    --tc-44: rgba(130, 69, 191, 0.35);
+    --tc-45: rgba(9, 6, 12, 0.98);
+    --tc-46: rgba(24, 18, 31, 0.94);
+    --tc-47: rgba(103, 88, 118, 0.5);
+    --tc-48: rgba(7, 4, 10, 0.98);
+    --tc-49: rgba(158, 144, 173, 0.1);
+    --tc-50: rgba(16, 11, 22, 0.08);
+    --tc-51: rgba(48, 15, 82, 0.98);
+    --tc-52: rgba(80, 27, 133, 0.95);
+    --tc-53: rgba(182, 122, 243, 0.56);
+    --tc-54: rgba(48, 15, 81, 0.96);
+    --tc-55: rgba(210, 168, 252, 0.17);
+    --tc-56: rgba(26, 8, 45, 0.1);
+    --tc-57: rgba(51, 24, 79, 0.96);
+    --tc-58: rgba(67, 31, 104, 0.93);
+    --tc-59: rgba(171, 125, 218, 0.44);
+    --tc-60: rgba(67, 31, 104, 0.95);
+    --tc-61: rgba(76, 49, 103, 0.95);
+    --tc-62: rgba(95, 61, 129, 0.93);
+    --tc-63: rgba(201, 157, 246, 0.42);
+    --tc-64: rgba(95, 61, 129, 0.95);
+    --tc-65: rgba(69, 47, 92, 0.95);
+    --tc-66: rgba(85, 60, 111, 0.91);
+    --tc-67: rgba(170, 135, 204, 0.4);
+    --tc-68: rgba(85, 60, 111, 0.95);
+    --tc-69: rgba(55, 33, 77, 0.95);
+    --tc-70: rgba(70, 42, 98, 0.92);
+    --tc-71: rgba(167, 126, 208, 0.42);
+    --tc-72: rgba(70, 42, 98, 0.95);
+    --tc-73: rgba(52, 44, 60, 0.96);
+    --tc-74: rgba(71, 61, 82, 0.93);
+    --tc-75: rgba(113, 96, 130, 0.28);
+    --tc-76: rgba(47, 39, 56, 0.96);
+    --tc-77: rgba(142, 114, 171, 0.32);
+    --tc-78: rgba(190, 160, 220, 0.14);
+    --tc-79: rgba(20, 10, 31, 0.1);
+    --tc-80: rgba(127, 0, 255, 0.9);
+    --tc-81: rgba(192, 130, 255, 0.9);
+    --tc-82: rgba(59, 52, 67, 0.96);
+    --tc-83: rgba(84, 74, 95, 0.93);
+    --tc-84: rgba(181, 166, 196, 0.62);
+    --tc-85: rgba(71, 62, 80, 0.97);
+    --tc-86: rgba(98, 86, 110, 0.94);
+    --tc-87: rgba(190, 175, 205, 0.62);
+    --tc-88: rgba(211, 193, 230, 0.7);
+    --tc-89: rgba(161, 150, 172, 0.1);
+    --tc-90: rgba(8, 6, 11, 0.36);
+    --tc-91: rgba(175, 127, 224, 0.2);
+    --tc-92: rgba(17, 8, 27, 0.1);
+    --tc-93: rgba(130, 69, 191, 0.32);
+    --tc-94: rgba(180, 125, 236, 0.45);
+    --tc-95: rgba(154, 125, 184, 0.28);
+    --tc-96: rgba(130, 69, 191, 0.45);
+    --tc-97: rgba(130, 69, 191, 0.0);
+    --tc-98: rgba(97, 45, 150, 0.75);
+    --tc-99: rgba(130, 69, 191, 0.95);
+    --tc-100: rgba(12, 4, 20, 0.9);
+    --tc-101: rgba(27, 10, 44, 0.88);
+    --tc-102: rgba(111, 52, 170, 0.32);
+    --tc-103: rgba(65, 26, 104, 0.38);
+    --tc-104: rgba(182, 126, 238, 0.45);
+    --tc-105: rgba(92, 39, 146, 0.9);
+    --tc-106: rgba(154, 125, 184, 0.18);
+    --tc-107: rgba(6, 2, 10, 0.78);
+    --tc-108: rgba(219, 184, 255, 0.45);
+    --tc-109: rgba(57, 23, 91, 0.65);
+    --tc-110: rgba(193, 145, 241, 0.35);
+    --tc-111: rgba(193, 145, 241, 0.4);
+    --tc-112: rgba(57, 23, 91, 0.55);
+    --tc-113: rgba(17, 8, 26, 0.94);
+    --tc-114: rgba(220, 186, 255, 0.7);
+    --tc-115: rgba(40, 11, 70, 0.98);
+    --tc-116: rgba(65, 21, 110, 0.95);
+    --tc-117: rgba(188, 133, 244, 0.55);
+    --tc-118: rgba(68, 18, 118, 0.97);
+    --tc-119: rgba(96, 24, 169, 0.94);
+    --tc-120: rgba(195, 143, 247, 0.6);
+    --tc-121: rgba(86, 78, 95, 0.96);
+    --tc-122: rgba(116, 104, 129, 0.93);
+    --tc-123: rgba(157, 140, 175, 0.4);
+    --tc-124: rgba(176, 116, 236, 0.97);
+    --tc-125: rgba(197, 149, 246, 0.94);
+    --tc-126: rgba(239, 223, 255, 0.74);
+    --tc-127: rgba(174, 112, 236, 0.97);
+    --tc-128: rgba(194, 143, 245, 0.94);
+    --tc-129: rgba(240, 224, 255, 0.8);
+    --tc-130: rgba(180, 120, 240, 0.96);
+    --tc-131: rgba(199, 150, 248, 0.93);
+    --tc-132: rgba(240, 225, 255, 0.72);
+    --tc-133: rgba(86, 13, 159, 0.97);
+    --tc-134: rgba(119, 24, 214, 0.94);
+    --tc-135: rgba(209, 163, 255, 0.72);
+    --tc-136: rgba(29, 14, 44, 0.94);
+    --tc-137: rgba(49, 24, 74, 0.92);
+    --tc-138: rgba(111, 76, 146, 0.22);
+    --tc-139: rgba(20, 10, 30, 0.88);
+    --tc-140: rgba(111, 76, 146, 0.2);
+    --tc-141: rgba(18, 8, 28, 0.96);
+    --tc-142: rgba(36, 16, 56, 0.94);
+    --tc-143: rgba(20, 10, 30, 0.9);
+    --tc-144: rgba(19, 9, 30, 0.98);
+    --tc-145: rgba(40, 19, 61, 0.96);
+    --tc-146: rgba(117, 80, 154, 0.2);
+    --tc-147: rgba(117, 80, 154, 0.1);
+    --tc-148: rgba(28, 14, 42, 0.92);
+    --tc-149: rgba(56, 31, 82, 0.9);
+    --tc-150: rgba(95, 44, 146, 0.96);
+    --tc-151: rgba(120, 57, 184, 0.94);
+    --tc-152: rgba(81, 45, 117, 0.9);
+    --tc-153: rgba(121, 84, 158, 0.2);
+    --tc-154: rgba(28, 13, 44, 0.96);
+    --tc-155: rgba(22, 10, 34, 0.97);
+    --tc-156: rgba(153, 108, 198, 0.34);
+    --tc-157: rgba(8, 2, 15, 0.95);
+    --tc-158: rgba(69, 58, 80, 0.96);
+    --tc-159: rgba(90, 76, 104, 0.93);
+    --tc-160: rgba(122, 102, 141, 0.35);
+    --tc-161: rgba(20, 7, 34, 0.97);
+    --tc-162: rgba(27, 10, 44, 0.93);
+    --tc-163: rgba(30, 11, 50, 0.96);
+    --tc-164: rgba(36, 14, 58, 0.93);
+    --tc-165: rgba(99, 66, 132, 0.24);
+    --tc-166: rgba(87, 55, 119, 0.2);
+    --tc-167: rgba(146, 96, 196, 0.32);
+    --tc-168: rgba(180, 132, 228, 0.16);
+    --tc-169: rgba(142, 88, 196, 0.55);
+    --tc-170: rgba(153, 108, 198, 0.36);
+    --tc-171: rgba(24, 11, 37, 0.98);
+    --tc-172: #6c2fa9;
+    --tc-173: #06020a;
+    --tc-174: #0d0416;
+    --tc-175: #1d0b30;
+    --tc-176: #2c1246;
+    --tc-177: #eddbff;
+    --tc-178: #aa8ec5;
+    --tc-179: #0d0614;
+    --tc-180: #190d26;
+    --tc-181: #27153a;
+    --tc-182: #1a0e27;
+    --tc-183: #342147;
+    --tc-184: #2f1d42;
+    --tc-185: #471778;
+    --tc-186: #8245bf;
+    --tc-187: #3b1b5c;
+    --tc-188: #3c1f59;
+    --tc-189: #140f19;
+    --tc-190: #54396f;
+    --tc-191: #562686;
+    --tc-192: #3e2755;
+    --tc-193: #4a3461;
+    --tc-194: #f4eaff;
+    --tc-195: #9d8eac;
+    --tc-196: #e0d7e8;
+    --tc-197: #d6c4e8;
+    --tc-198: #ebe4f2;
+    --tc-199: #f2edf8;
+    --tc-200: #f3e7ff;
+    --tc-201: #dbb8ff;
+    --tc-202: #eddcff;
+    --tc-203: #f8f3fc;
+    --tc-204: #330f57;
+    --tc-205: #300e52;
+    --tc-206: #360f5d;
+    --tc-207: #1c0533;
+    --tc-208: #f3e8ff;
+    --tc-209: #b78de1;
+    --tc-210: #f6edff;
+    --tc-211: #f8f1ff;
+    --tc-212: #f2e4ff;
+    --tc-213: #e5d9f1;
+    --tc-214: #b17ae8;
+    --tc-215: #f2e6ff;
+}
+
+html.palette-red {
+    --tc-1: 0 47% 9%;
+    --tc-2: 0 100% 94%;
+    --tc-3: 0 44% 13%;
+    --tc-4: 0 70% 56%;
+    --tc-5: 0 100% 97%;
+    --tc-6: 0 46% 23%;
+    --tc-7: 0 100% 95%;
+    --tc-8: 0 47% 20%;
+    --tc-9: 0 58% 79%;
+    --tc-10: 0 45% 28%;
+    --tc-11: 0 100% 96%;
+    --tc-12: 0 24% 24%;
+    --tc-13: 0 28% 22%;
+    --tc-14: 0 70% 71%;
+    --tc-15: 0 46% 11%;
+    --tc-16: rgba(169, 47, 47, 0.32);
+    --tc-17: rgba(22, 7, 7, 0.9);
+    --tc-18: rgba(94, 16, 16, 0.95);
+    --tc-19: rgba(126, 72, 72, 0.16);
+    --tc-20: rgba(126, 70, 70, 0.13);
+    --tc-21: rgba(34, 8, 8, 0.95);
+    --tc-22: rgba(39, 9, 9, 0.9);
+    --tc-23: rgba(25, 9, 9, 0.8);
+    --tc-24: rgba(150, 45, 45, 0.18);
+    --tc-25: rgba(26, 10, 10, 0.86);
+    --tc-26: rgba(225, 109, 109, 0.34);
+    --tc-27: rgba(36, 9, 9, 0.97);
+    --tc-28: rgba(84, 22, 22, 0.94);
+    --tc-29: rgba(109, 20, 20, 0.95);
+    --tc-30: rgba(238, 98, 98, 0.35);
+    --tc-31: rgba(169, 47, 47, 0.18);
+    --tc-32: rgba(169, 47, 47, 0.2);
+    --tc-33: rgba(191, 69, 69, 0.18);
+    --tc-34: rgba(247, 146, 146, 0.7);
+    --tc-35: rgba(215, 70, 70, 0.96);
+    --tc-36: rgba(215, 70, 70, 0.95);
+    --tc-37: rgba(220, 78, 78, 0.95);
+    --tc-38: rgba(244, 157, 157, 0.42);
+    --tc-39: rgba(220, 78, 78, 0.9);
+    --tc-40: rgba(244, 157, 157, 0.35);
+    --tc-41: rgba(220, 78, 78, 0.85);
+    --tc-42: rgba(246, 118, 118, 0.85);
+    --tc-43: rgba(191, 58, 58, 0.95);
+    --tc-44: rgba(191, 69, 69, 0.35);
+    --tc-45: rgba(12, 6, 6, 0.98);
+    --tc-46: rgba(31, 18, 18, 0.94);
+    --tc-47: rgba(118, 88, 88, 0.5);
+    --tc-48: rgba(10, 4, 4, 0.98);
+    --tc-49: rgba(173, 144, 144, 0.1);
+    --tc-50: rgba(22, 11, 11, 0.08);
+    --tc-51: rgba(82, 15, 15, 0.98);
+    --tc-52: rgba(133, 27, 27, 0.95);
+    --tc-53: rgba(243, 122, 122, 0.56);
+    --tc-54: rgba(81, 15, 15, 0.96);
+    --tc-55: rgba(252, 168, 168, 0.17);
+    --tc-56: rgba(45, 8, 8, 0.1);
+    --tc-57: rgba(79, 24, 24, 0.96);
+    --tc-58: rgba(104, 31, 31, 0.93);
+    --tc-59: rgba(218, 125, 125, 0.44);
+    --tc-60: rgba(104, 31, 31, 0.95);
+    --tc-61: rgba(103, 49, 49, 0.95);
+    --tc-62: rgba(129, 61, 61, 0.93);
+    --tc-63: rgba(246, 157, 157, 0.42);
+    --tc-64: rgba(129, 61, 61, 0.95);
+    --tc-65: rgba(92, 47, 47, 0.95);
+    --tc-66: rgba(111, 60, 60, 0.91);
+    --tc-67: rgba(204, 135, 135, 0.4);
+    --tc-68: rgba(111, 60, 60, 0.95);
+    --tc-69: rgba(77, 33, 33, 0.95);
+    --tc-70: rgba(98, 42, 42, 0.92);
+    --tc-71: rgba(208, 126, 126, 0.42);
+    --tc-72: rgba(98, 42, 42, 0.95);
+    --tc-73: rgba(60, 44, 44, 0.96);
+    --tc-74: rgba(82, 61, 61, 0.93);
+    --tc-75: rgba(130, 96, 96, 0.28);
+    --tc-76: rgba(56, 39, 39, 0.96);
+    --tc-77: rgba(171, 114, 114, 0.32);
+    --tc-78: rgba(220, 160, 160, 0.14);
+    --tc-79: rgba(31, 10, 10, 0.1);
+    --tc-80: rgba(255, 0, 0, 0.9);
+    --tc-81: rgba(255, 130, 130, 0.9);
+    --tc-82: rgba(67, 52, 52, 0.96);
+    --tc-83: rgba(95, 74, 74, 0.93);
+    --tc-84: rgba(196, 166, 166, 0.62);
+    --tc-85: rgba(80, 62, 62, 0.97);
+    --tc-86: rgba(110, 86, 86, 0.94);
+    --tc-87: rgba(205, 175, 175, 0.62);
+    --tc-88: rgba(230, 193, 193, 0.7);
+    --tc-89: rgba(172, 150, 150, 0.1);
+    --tc-90: rgba(11, 6, 6, 0.36);
+    --tc-91: rgba(224, 127, 127, 0.2);
+    --tc-92: rgba(27, 8, 8, 0.1);
+    --tc-93: rgba(191, 69, 69, 0.32);
+    --tc-94: rgba(236, 125, 125, 0.45);
+    --tc-95: rgba(184, 125, 125, 0.28);
+    --tc-96: rgba(191, 69, 69, 0.45);
+    --tc-97: rgba(191, 69, 69, 0.0);
+    --tc-98: rgba(150, 45, 45, 0.75);
+    --tc-99: rgba(191, 69, 69, 0.95);
+    --tc-100: rgba(20, 4, 4, 0.9);
+    --tc-101: rgba(44, 10, 10, 0.88);
+    --tc-102: rgba(170, 52, 52, 0.32);
+    --tc-103: rgba(104, 26, 26, 0.38);
+    --tc-104: rgba(238, 126, 126, 0.45);
+    --tc-105: rgba(146, 39, 39, 0.9);
+    --tc-106: rgba(184, 125, 125, 0.18);
+    --tc-107: rgba(10, 2, 2, 0.78);
+    --tc-108: rgba(255, 184, 184, 0.45);
+    --tc-109: rgba(91, 23, 23, 0.65);
+    --tc-110: rgba(241, 145, 145, 0.35);
+    --tc-111: rgba(241, 145, 145, 0.4);
+    --tc-112: rgba(91, 23, 23, 0.55);
+    --tc-113: rgba(26, 8, 8, 0.94);
+    --tc-114: rgba(255, 186, 186, 0.7);
+    --tc-115: rgba(70, 11, 11, 0.98);
+    --tc-116: rgba(110, 21, 21, 0.95);
+    --tc-117: rgba(244, 133, 133, 0.55);
+    --tc-118: rgba(118, 18, 18, 0.97);
+    --tc-119: rgba(169, 24, 24, 0.94);
+    --tc-120: rgba(247, 143, 143, 0.6);
+    --tc-121: rgba(95, 78, 78, 0.96);
+    --tc-122: rgba(129, 104, 104, 0.93);
+    --tc-123: rgba(175, 140, 140, 0.4);
+    --tc-124: rgba(236, 116, 116, 0.97);
+    --tc-125: rgba(246, 149, 149, 0.94);
+    --tc-126: rgba(255, 223, 223, 0.74);
+    --tc-127: rgba(236, 112, 112, 0.97);
+    --tc-128: rgba(245, 143, 143, 0.94);
+    --tc-129: rgba(255, 224, 224, 0.8);
+    --tc-130: rgba(240, 120, 120, 0.96);
+    --tc-131: rgba(248, 150, 150, 0.93);
+    --tc-132: rgba(255, 225, 225, 0.72);
+    --tc-133: rgba(159, 13, 13, 0.97);
+    --tc-134: rgba(214, 24, 24, 0.94);
+    --tc-135: rgba(255, 163, 163, 0.72);
+    --tc-136: rgba(44, 14, 14, 0.94);
+    --tc-137: rgba(74, 24, 24, 0.92);
+    --tc-138: rgba(146, 76, 76, 0.22);
+    --tc-139: rgba(30, 10, 10, 0.88);
+    --tc-140: rgba(146, 76, 76, 0.2);
+    --tc-141: rgba(28, 8, 8, 0.96);
+    --tc-142: rgba(56, 16, 16, 0.94);
+    --tc-143: rgba(30, 10, 10, 0.9);
+    --tc-144: rgba(30, 9, 9, 0.98);
+    --tc-145: rgba(61, 19, 19, 0.96);
+    --tc-146: rgba(154, 80, 80, 0.2);
+    --tc-147: rgba(154, 80, 80, 0.1);
+    --tc-148: rgba(42, 14, 14, 0.92);
+    --tc-149: rgba(82, 31, 31, 0.9);
+    --tc-150: rgba(146, 44, 44, 0.96);
+    --tc-151: rgba(184, 57, 57, 0.94);
+    --tc-152: rgba(117, 45, 45, 0.9);
+    --tc-153: rgba(158, 84, 84, 0.2);
+    --tc-154: rgba(44, 13, 13, 0.96);
+    --tc-155: rgba(34, 10, 10, 0.97);
+    --tc-156: rgba(198, 108, 108, 0.34);
+    --tc-157: rgba(15, 2, 2, 0.95);
+    --tc-158: rgba(80, 58, 58, 0.96);
+    --tc-159: rgba(104, 76, 76, 0.93);
+    --tc-160: rgba(141, 102, 102, 0.35);
+    --tc-161: rgba(34, 7, 7, 0.97);
+    --tc-162: rgba(44, 10, 10, 0.93);
+    --tc-163: rgba(50, 11, 11, 0.96);
+    --tc-164: rgba(58, 14, 14, 0.93);
+    --tc-165: rgba(132, 66, 66, 0.24);
+    --tc-166: rgba(119, 55, 55, 0.2);
+    --tc-167: rgba(196, 96, 96, 0.32);
+    --tc-168: rgba(228, 132, 132, 0.16);
+    --tc-169: rgba(196, 88, 88, 0.55);
+    --tc-170: rgba(198, 108, 108, 0.36);
+    --tc-171: rgba(37, 11, 11, 0.98);
+    --tc-172: #a92f2f;
+    --tc-173: #0a0202;
+    --tc-174: #160404;
+    --tc-175: #300b0b;
+    --tc-176: #461212;
+    --tc-177: #ffdbdb;
+    --tc-178: #c58e8e;
+    --tc-179: #140606;
+    --tc-180: #260d0d;
+    --tc-181: #3a1515;
+    --tc-182: #270e0e;
+    --tc-183: #472121;
+    --tc-184: #421d1d;
+    --tc-185: #781717;
+    --tc-186: #bf4545;
+    --tc-187: #5c1b1b;
+    --tc-188: #591f1f;
+    --tc-189: #190f0f;
+    --tc-190: #6f3939;
+    --tc-191: #862626;
+    --tc-192: #552727;
+    --tc-193: #613434;
+    --tc-194: #ffeaea;
+    --tc-195: #ac8e8e;
+    --tc-196: #e8d7d7;
+    --tc-197: #e8c4c4;
+    --tc-198: #f2e4e4;
+    --tc-199: #f8eded;
+    --tc-200: #ffe7e7;
+    --tc-201: #ffb8b8;
+    --tc-202: #ffdcdc;
+    --tc-203: #fcf3f3;
+    --tc-204: #570f0f;
+    --tc-205: #520e0e;
+    --tc-206: #5d0f0f;
+    --tc-207: #330505;
+    --tc-208: #ffe8e8;
+    --tc-209: #e18d8d;
+    --tc-210: #ffeded;
+    --tc-211: #fff1f1;
+    --tc-212: #ffe4e4;
+    --tc-213: #f1d9d9;
+    --tc-214: #e87a7a;
+    --tc-215: #ffe6e6;
+}
+
+html.palette-blue {
+    --tc-1: 220 47% 9%;
+    --tc-2: 220 100% 94%;
+    --tc-3: 220 44% 13%;
+    --tc-4: 220 70% 56%;
+    --tc-5: 220 100% 97%;
+    --tc-6: 220 46% 23%;
+    --tc-7: 220 100% 95%;
+    --tc-8: 220 47% 20%;
+    --tc-9: 220 58% 79%;
+    --tc-10: 220 45% 28%;
+    --tc-11: 220 100% 96%;
+    --tc-12: 220 24% 24%;
+    --tc-13: 220 28% 22%;
+    --tc-14: 220 70% 71%;
+    --tc-15: 220 46% 11%;
+    --tc-16: rgba(47, 88, 169, 0.32);
+    --tc-17: rgba(7, 12, 22, 0.9);
+    --tc-18: rgba(16, 42, 94, 0.95);
+    --tc-19: rgba(72, 90, 126, 0.16);
+    --tc-20: rgba(70, 89, 126, 0.13);
+    --tc-21: rgba(8, 17, 34, 0.95);
+    --tc-22: rgba(9, 19, 39, 0.9);
+    --tc-23: rgba(9, 14, 25, 0.8);
+    --tc-24: rgba(45, 80, 150, 0.18);
+    --tc-25: rgba(10, 15, 26, 0.86);
+    --tc-26: rgba(109, 148, 225, 0.34);
+    --tc-27: rgba(9, 18, 36, 0.97);
+    --tc-28: rgba(22, 43, 84, 0.94);
+    --tc-29: rgba(20, 50, 109, 0.95);
+    --tc-30: rgba(98, 145, 238, 0.35);
+    --tc-31: rgba(47, 88, 169, 0.18);
+    --tc-32: rgba(47, 88, 169, 0.2);
+    --tc-33: rgba(69, 110, 191, 0.18);
+    --tc-34: rgba(146, 180, 247, 0.7);
+    --tc-35: rgba(70, 118, 215, 0.96);
+    --tc-36: rgba(70, 118, 215, 0.95);
+    --tc-37: rgba(78, 125, 220, 0.95);
+    --tc-38: rgba(157, 186, 244, 0.42);
+    --tc-39: rgba(78, 125, 220, 0.9);
+    --tc-40: rgba(157, 186, 244, 0.35);
+    --tc-41: rgba(78, 125, 220, 0.85);
+    --tc-42: rgba(118, 161, 246, 0.85);
+    --tc-43: rgba(58, 102, 191, 0.95);
+    --tc-44: rgba(69, 110, 191, 0.35);
+    --tc-45: rgba(6, 8, 12, 0.98);
+    --tc-46: rgba(18, 22, 31, 0.94);
+    --tc-47: rgba(88, 98, 118, 0.5);
+    --tc-48: rgba(4, 6, 10, 0.98);
+    --tc-49: rgba(144, 154, 173, 0.1);
+    --tc-50: rgba(11, 15, 22, 0.08);
+    --tc-51: rgba(15, 37, 82, 0.98);
+    --tc-52: rgba(27, 62, 133, 0.95);
+    --tc-53: rgba(122, 162, 243, 0.56);
+    --tc-54: rgba(15, 37, 81, 0.96);
+    --tc-55: rgba(168, 196, 252, 0.17);
+    --tc-56: rgba(8, 20, 45, 0.1);
+    --tc-57: rgba(24, 42, 79, 0.96);
+    --tc-58: rgba(31, 55, 104, 0.93);
+    --tc-59: rgba(125, 156, 218, 0.44);
+    --tc-60: rgba(31, 55, 104, 0.95);
+    --tc-61: rgba(49, 67, 103, 0.95);
+    --tc-62: rgba(61, 84, 129, 0.93);
+    --tc-63: rgba(157, 187, 246, 0.42);
+    --tc-64: rgba(61, 84, 129, 0.95);
+    --tc-65: rgba(47, 62, 92, 0.95);
+    --tc-66: rgba(60, 77, 111, 0.91);
+    --tc-67: rgba(135, 158, 204, 0.4);
+    --tc-68: rgba(60, 77, 111, 0.95);
+    --tc-69: rgba(33, 48, 77, 0.95);
+    --tc-70: rgba(42, 61, 98, 0.92);
+    --tc-71: rgba(126, 153, 208, 0.42);
+    --tc-72: rgba(42, 61, 98, 0.95);
+    --tc-73: rgba(44, 49, 60, 0.96);
+    --tc-74: rgba(61, 68, 82, 0.93);
+    --tc-75: rgba(96, 107, 130, 0.28);
+    --tc-76: rgba(39, 45, 56, 0.96);
+    --tc-77: rgba(114, 133, 171, 0.32);
+    --tc-78: rgba(160, 180, 220, 0.14);
+    --tc-79: rgba(10, 17, 31, 0.1);
+    --tc-80: rgba(0, 85, 255, 0.9);
+    --tc-81: rgba(130, 172, 255, 0.9);
+    --tc-82: rgba(52, 57, 67, 0.96);
+    --tc-83: rgba(74, 81, 95, 0.93);
+    --tc-84: rgba(166, 176, 196, 0.62);
+    --tc-85: rgba(62, 68, 80, 0.97);
+    --tc-86: rgba(86, 94, 110, 0.94);
+    --tc-87: rgba(175, 185, 205, 0.62);
+    --tc-88: rgba(193, 205, 230, 0.7);
+    --tc-89: rgba(150, 157, 172, 0.1);
+    --tc-90: rgba(6, 8, 11, 0.36);
+    --tc-91: rgba(127, 159, 224, 0.2);
+    --tc-92: rgba(8, 14, 27, 0.1);
+    --tc-93: rgba(69, 110, 191, 0.32);
+    --tc-94: rgba(125, 162, 236, 0.45);
+    --tc-95: rgba(125, 145, 184, 0.28);
+    --tc-96: rgba(69, 110, 191, 0.45);
+    --tc-97: rgba(69, 110, 191, 0.0);
+    --tc-98: rgba(45, 80, 150, 0.75);
+    --tc-99: rgba(69, 110, 191, 0.95);
+    --tc-100: rgba(4, 9, 20, 0.9);
+    --tc-101: rgba(10, 21, 44, 0.88);
+    --tc-102: rgba(52, 91, 170, 0.32);
+    --tc-103: rgba(26, 52, 104, 0.38);
+    --tc-104: rgba(126, 163, 238, 0.45);
+    --tc-105: rgba(39, 75, 146, 0.9);
+    --tc-106: rgba(125, 145, 184, 0.18);
+    --tc-107: rgba(2, 5, 10, 0.78);
+    --tc-108: rgba(184, 208, 255, 0.45);
+    --tc-109: rgba(23, 46, 91, 0.65);
+    --tc-110: rgba(145, 177, 241, 0.35);
+    --tc-111: rgba(145, 177, 241, 0.4);
+    --tc-112: rgba(23, 46, 91, 0.55);
+    --tc-113: rgba(8, 14, 26, 0.94);
+    --tc-114: rgba(186, 209, 255, 0.7);
+    --tc-115: rgba(11, 31, 70, 0.98);
+    --tc-116: rgba(21, 51, 110, 0.95);
+    --tc-117: rgba(133, 170, 244, 0.55);
+    --tc-118: rgba(18, 51, 118, 0.97);
+    --tc-119: rgba(24, 72, 169, 0.94);
+    --tc-120: rgba(143, 178, 247, 0.6);
+    --tc-121: rgba(78, 84, 95, 0.96);
+    --tc-122: rgba(104, 112, 129, 0.93);
+    --tc-123: rgba(140, 152, 175, 0.4);
+    --tc-124: rgba(116, 156, 236, 0.97);
+    --tc-125: rgba(149, 181, 246, 0.94);
+    --tc-126: rgba(223, 234, 255, 0.74);
+    --tc-127: rgba(112, 153, 236, 0.97);
+    --tc-128: rgba(143, 177, 245, 0.94);
+    --tc-129: rgba(224, 234, 255, 0.8);
+    --tc-130: rgba(120, 160, 240, 0.96);
+    --tc-131: rgba(150, 183, 248, 0.93);
+    --tc-132: rgba(225, 235, 255, 0.72);
+    --tc-133: rgba(13, 62, 159, 0.97);
+    --tc-134: rgba(24, 87, 214, 0.94);
+    --tc-135: rgba(163, 194, 255, 0.72);
+    --tc-136: rgba(14, 24, 44, 0.94);
+    --tc-137: rgba(24, 41, 74, 0.92);
+    --tc-138: rgba(76, 99, 146, 0.22);
+    --tc-139: rgba(10, 17, 30, 0.88);
+    --tc-140: rgba(76, 99, 146, 0.2);
+    --tc-141: rgba(8, 15, 28, 0.96);
+    --tc-142: rgba(16, 29, 56, 0.94);
+    --tc-143: rgba(10, 17, 30, 0.9);
+    --tc-144: rgba(9, 16, 30, 0.98);
+    --tc-145: rgba(19, 33, 61, 0.96);
+    --tc-146: rgba(80, 105, 154, 0.2);
+    --tc-147: rgba(80, 105, 154, 0.1);
+    --tc-148: rgba(14, 23, 42, 0.92);
+    --tc-149: rgba(31, 48, 82, 0.9);
+    --tc-150: rgba(44, 78, 146, 0.96);
+    --tc-151: rgba(57, 99, 184, 0.94);
+    --tc-152: rgba(45, 69, 117, 0.9);
+    --tc-153: rgba(84, 109, 158, 0.2);
+    --tc-154: rgba(13, 23, 44, 0.96);
+    --tc-155: rgba(10, 18, 34, 0.97);
+    --tc-156: rgba(108, 138, 198, 0.34);
+    --tc-157: rgba(2, 6, 15, 0.95);
+    --tc-158: rgba(58, 65, 80, 0.96);
+    --tc-159: rgba(76, 85, 104, 0.93);
+    --tc-160: rgba(102, 115, 141, 0.35);
+    --tc-161: rgba(7, 16, 34, 0.97);
+    --tc-162: rgba(10, 21, 44, 0.93);
+    --tc-163: rgba(11, 24, 50, 0.96);
+    --tc-164: rgba(14, 29, 58, 0.93);
+    --tc-165: rgba(66, 88, 132, 0.24);
+    --tc-166: rgba(55, 76, 119, 0.2);
+    --tc-167: rgba(96, 129, 196, 0.32);
+    --tc-168: rgba(132, 164, 228, 0.16);
+    --tc-169: rgba(88, 124, 196, 0.55);
+    --tc-170: rgba(108, 138, 198, 0.36);
+    --tc-171: rgba(11, 20, 37, 0.98);
+    --tc-172: #2f58a9;
+    --tc-173: #02050a;
+    --tc-174: #040a16;
+    --tc-175: #0b1730;
+    --tc-176: #122346;
+    --tc-177: #dbe7ff;
+    --tc-178: #8ea0c5;
+    --tc-179: #060b14;
+    --tc-180: #0d1526;
+    --tc-181: #15213a;
+    --tc-182: #0e1627;
+    --tc-183: #212e47;
+    --tc-184: #1d2942;
+    --tc-185: #173778;
+    --tc-186: #456ebf;
+    --tc-187: #1b315c;
+    --tc-188: #1f3259;
+    --tc-189: #0f1219;
+    --tc-190: #394b6f;
+    --tc-191: #264686;
+    --tc-192: #273655;
+    --tc-193: #344361;
+    --tc-194: #eaf1ff;
+    --tc-195: #8e98ac;
+    --tc-196: #d7dde8;
+    --tc-197: #c4d0e8;
+    --tc-198: #e4e9f2;
+    --tc-199: #edf1f8;
+    --tc-200: #e7efff;
+    --tc-201: #b8d0ff;
+    --tc-202: #dce8ff;
+    --tc-203: #f3f6fc;
+    --tc-204: #0f2757;
+    --tc-205: #0e2552;
+    --tc-206: #0f295d;
+    --tc-207: #051433;
+    --tc-208: #e8f0ff;
+    --tc-209: #8da9e1;
+    --tc-210: #edf3ff;
+    --tc-211: #f1f6ff;
+    --tc-212: #e4edff;
+    --tc-213: #d9e1f1;
+    --tc-214: #7a9fe8;
+    --tc-215: #e6eeff;
+}
+
+html.palette-orange {
+    --tc-1: 30 47% 9%;
+    --tc-2: 30 100% 94%;
+    --tc-3: 30 44% 13%;
+    --tc-4: 30 70% 56%;
+    --tc-5: 30 100% 97%;
+    --tc-6: 30 46% 23%;
+    --tc-7: 30 100% 95%;
+    --tc-8: 30 47% 20%;
+    --tc-9: 30 58% 79%;
+    --tc-10: 30 45% 28%;
+    --tc-11: 30 100% 96%;
+    --tc-12: 30 24% 24%;
+    --tc-13: 30 28% 22%;
+    --tc-14: 30 70% 71%;
+    --tc-15: 30 46% 11%;
+    --tc-16: rgba(169, 108, 47, 0.32);
+    --tc-17: rgba(22, 14, 7, 0.9);
+    --tc-18: rgba(94, 55, 16, 0.95);
+    --tc-19: rgba(126, 99, 72, 0.16);
+    --tc-20: rgba(126, 98, 70, 0.13);
+    --tc-21: rgba(34, 21, 8, 0.95);
+    --tc-22: rgba(39, 24, 9, 0.9);
+    --tc-23: rgba(25, 17, 9, 0.8);
+    --tc-24: rgba(150, 98, 45, 0.18);
+    --tc-25: rgba(26, 18, 10, 0.86);
+    --tc-26: rgba(225, 167, 109, 0.34);
+    --tc-27: rgba(36, 22, 9, 0.97);
+    --tc-28: rgba(84, 53, 22, 0.94);
+    --tc-29: rgba(109, 64, 20, 0.95);
+    --tc-30: rgba(238, 168, 98, 0.35);
+    --tc-31: rgba(169, 108, 47, 0.18);
+    --tc-32: rgba(169, 108, 47, 0.2);
+    --tc-33: rgba(191, 130, 69, 0.18);
+    --tc-34: rgba(247, 196, 146, 0.7);
+    --tc-35: rgba(215, 142, 70, 0.96);
+    --tc-36: rgba(215, 142, 70, 0.95);
+    --tc-37: rgba(220, 149, 78, 0.95);
+    --tc-38: rgba(244, 201, 157, 0.42);
+    --tc-39: rgba(220, 149, 78, 0.9);
+    --tc-40: rgba(244, 201, 157, 0.35);
+    --tc-41: rgba(220, 149, 78, 0.85);
+    --tc-42: rgba(246, 182, 118, 0.85);
+    --tc-43: rgba(191, 124, 58, 0.95);
+    --tc-44: rgba(191, 130, 69, 0.35);
+    --tc-45: rgba(12, 9, 6, 0.98);
+    --tc-46: rgba(31, 24, 18, 0.94);
+    --tc-47: rgba(118, 103, 88, 0.5);
+    --tc-48: rgba(10, 7, 4, 0.98);
+    --tc-49: rgba(173, 158, 144, 0.1);
+    --tc-50: rgba(22, 16, 11, 0.08);
+    --tc-51: rgba(82, 48, 15, 0.98);
+    --tc-52: rgba(133, 80, 27, 0.95);
+    --tc-53: rgba(243, 182, 122, 0.56);
+    --tc-54: rgba(81, 48, 15, 0.96);
+    --tc-55: rgba(252, 210, 168, 0.17);
+    --tc-56: rgba(45, 26, 8, 0.1);
+    --tc-57: rgba(79, 52, 24, 0.96);
+    --tc-58: rgba(104, 68, 31, 0.93);
+    --tc-59: rgba(218, 171, 125, 0.44);
+    --tc-60: rgba(104, 68, 31, 0.95);
+    --tc-61: rgba(103, 76, 49, 0.95);
+    --tc-62: rgba(129, 95, 61, 0.93);
+    --tc-63: rgba(246, 202, 157, 0.42);
+    --tc-64: rgba(129, 95, 61, 0.95);
+    --tc-65: rgba(92, 70, 47, 0.95);
+    --tc-66: rgba(111, 86, 60, 0.91);
+    --tc-67: rgba(204, 170, 135, 0.4);
+    --tc-68: rgba(111, 86, 60, 0.95);
+    --tc-69: rgba(77, 55, 33, 0.95);
+    --tc-70: rgba(98, 70, 42, 0.92);
+    --tc-71: rgba(208, 167, 126, 0.42);
+    --tc-72: rgba(98, 70, 42, 0.95);
+    --tc-73: rgba(60, 52, 44, 0.96);
+    --tc-74: rgba(82, 72, 61, 0.93);
+    --tc-75: rgba(130, 113, 96, 0.28);
+    --tc-76: rgba(56, 48, 39, 0.96);
+    --tc-77: rgba(171, 142, 114, 0.32);
+    --tc-78: rgba(220, 190, 160, 0.14);
+    --tc-79: rgba(31, 20, 10, 0.1);
+    --tc-80: rgba(255, 128, 0, 0.9);
+    --tc-81: rgba(255, 192, 130, 0.9);
+    --tc-82: rgba(67, 60, 52, 0.96);
+    --tc-83: rgba(95, 85, 74, 0.93);
+    --tc-84: rgba(196, 181, 166, 0.62);
+    --tc-85: rgba(80, 71, 62, 0.97);
+    --tc-86: rgba(110, 98, 86, 0.94);
+    --tc-87: rgba(205, 190, 175, 0.62);
+    --tc-88: rgba(230, 211, 193, 0.7);
+    --tc-89: rgba(172, 161, 150, 0.1);
+    --tc-90: rgba(11, 8, 6, 0.36);
+    --tc-91: rgba(224, 176, 127, 0.2);
+    --tc-92: rgba(27, 18, 8, 0.1);
+    --tc-93: rgba(191, 130, 69, 0.32);
+    --tc-94: rgba(236, 180, 125, 0.45);
+    --tc-95: rgba(184, 154, 125, 0.28);
+    --tc-96: rgba(191, 130, 69, 0.45);
+    --tc-97: rgba(191, 130, 69, 0.0);
+    --tc-98: rgba(150, 98, 45, 0.75);
+    --tc-99: rgba(191, 130, 69, 0.95);
+    --tc-100: rgba(20, 12, 4, 0.9);
+    --tc-101: rgba(44, 27, 10, 0.88);
+    --tc-102: rgba(170, 111, 52, 0.32);
+    --tc-103: rgba(104, 65, 26, 0.38);
+    --tc-104: rgba(238, 182, 126, 0.45);
+    --tc-105: rgba(146, 92, 39, 0.9);
+    --tc-106: rgba(184, 154, 125, 0.18);
+    --tc-107: rgba(10, 6, 2, 0.78);
+    --tc-108: rgba(255, 220, 184, 0.45);
+    --tc-109: rgba(91, 57, 23, 0.65);
+    --tc-110: rgba(241, 193, 145, 0.35);
+    --tc-111: rgba(241, 193, 145, 0.4);
+    --tc-112: rgba(91, 57, 23, 0.55);
+    --tc-113: rgba(26, 17, 8, 0.94);
+    --tc-114: rgba(255, 220, 186, 0.7);
+    --tc-115: rgba(70, 41, 11, 0.98);
+    --tc-116: rgba(110, 66, 21, 0.95);
+    --tc-117: rgba(244, 188, 133, 0.55);
+    --tc-118: rgba(118, 68, 18, 0.97);
+    --tc-119: rgba(169, 96, 24, 0.94);
+    --tc-120: rgba(247, 195, 143, 0.6);
+    --tc-121: rgba(95, 86, 78, 0.96);
+    --tc-122: rgba(129, 116, 104, 0.93);
+    --tc-123: rgba(175, 158, 140, 0.4);
+    --tc-124: rgba(236, 176, 116, 0.97);
+    --tc-125: rgba(246, 198, 149, 0.94);
+    --tc-126: rgba(255, 239, 223, 0.74);
+    --tc-127: rgba(236, 174, 112, 0.97);
+    --tc-128: rgba(245, 194, 143, 0.94);
+    --tc-129: rgba(255, 240, 224, 0.8);
+    --tc-130: rgba(240, 180, 120, 0.96);
+    --tc-131: rgba(248, 199, 150, 0.93);
+    --tc-132: rgba(255, 240, 225, 0.72);
+    --tc-133: rgba(159, 86, 13, 0.97);
+    --tc-134: rgba(214, 119, 24, 0.94);
+    --tc-135: rgba(255, 209, 163, 0.72);
+    --tc-136: rgba(44, 29, 14, 0.94);
+    --tc-137: rgba(74, 49, 24, 0.92);
+    --tc-138: rgba(146, 111, 76, 0.22);
+    --tc-139: rgba(30, 20, 10, 0.88);
+    --tc-140: rgba(146, 111, 76, 0.2);
+    --tc-141: rgba(28, 18, 8, 0.96);
+    --tc-142: rgba(56, 36, 16, 0.94);
+    --tc-143: rgba(30, 20, 10, 0.9);
+    --tc-144: rgba(30, 20, 9, 0.98);
+    --tc-145: rgba(61, 40, 19, 0.96);
+    --tc-146: rgba(154, 117, 80, 0.2);
+    --tc-147: rgba(154, 117, 80, 0.1);
+    --tc-148: rgba(42, 28, 14, 0.92);
+    --tc-149: rgba(82, 57, 31, 0.9);
+    --tc-150: rgba(146, 95, 44, 0.96);
+    --tc-151: rgba(184, 120, 57, 0.94);
+    --tc-152: rgba(117, 81, 45, 0.9);
+    --tc-153: rgba(158, 121, 84, 0.2);
+    --tc-154: rgba(44, 28, 13, 0.96);
+    --tc-155: rgba(34, 22, 10, 0.97);
+    --tc-156: rgba(198, 153, 108, 0.34);
+    --tc-157: rgba(15, 8, 2, 0.95);
+    --tc-158: rgba(80, 69, 58, 0.96);
+    --tc-159: rgba(104, 90, 76, 0.93);
+    --tc-160: rgba(141, 122, 102, 0.35);
+    --tc-161: rgba(34, 20, 7, 0.97);
+    --tc-162: rgba(44, 27, 10, 0.93);
+    --tc-163: rgba(50, 30, 11, 0.96);
+    --tc-164: rgba(58, 36, 14, 0.93);
+    --tc-165: rgba(132, 99, 66, 0.24);
+    --tc-166: rgba(119, 87, 55, 0.2);
+    --tc-167: rgba(196, 146, 96, 0.32);
+    --tc-168: rgba(228, 180, 132, 0.16);
+    --tc-169: rgba(196, 142, 88, 0.55);
+    --tc-170: rgba(198, 153, 108, 0.36);
+    --tc-171: rgba(37, 24, 11, 0.98);
+    --tc-172: #a96c2f;
+    --tc-173: #0a0602;
+    --tc-174: #160d04;
+    --tc-175: #301e0b;
+    --tc-176: #462c12;
+    --tc-177: #ffeddb;
+    --tc-178: #c5aa8e;
+    --tc-179: #140d06;
+    --tc-180: #261a0d;
+    --tc-181: #3a2815;
+    --tc-182: #271a0e;
+    --tc-183: #473421;
+    --tc-184: #42301d;
+    --tc-185: #784817;
+    --tc-186: #bf8245;
+    --tc-187: #5c3c1b;
+    --tc-188: #593c1f;
+    --tc-189: #19140f;
+    --tc-190: #6f5439;
+    --tc-191: #865626;
+    --tc-192: #553e27;
+    --tc-193: #614a34;
+    --tc-194: #fff4ea;
+    --tc-195: #ac9d8e;
+    --tc-196: #e8e0d7;
+    --tc-197: #e8d6c4;
+    --tc-198: #f2ebe4;
+    --tc-199: #f8f2ed;
+    --tc-200: #fff3e7;
+    --tc-201: #ffdcb8;
+    --tc-202: #ffeedc;
+    --tc-203: #fcf8f3;
+    --tc-204: #57330f;
+    --tc-205: #52300e;
+    --tc-206: #5d360f;
+    --tc-207: #331c05;
+    --tc-208: #fff3e8;
+    --tc-209: #e1b78d;
+    --tc-210: #fff6ed;
+    --tc-211: #fff8f1;
+    --tc-212: #fff2e4;
+    --tc-213: #f1e5d9;
+    --tc-214: #e8b17a;
+    --tc-215: #fff2e6;
+}
+
+html.palette-pink {
+    --tc-1: 310 47% 9%;
+    --tc-2: 310 100% 94%;
+    --tc-3: 310 44% 13%;
+    --tc-4: 310 70% 56%;
+    --tc-5: 310 100% 97%;
+    --tc-6: 310 46% 23%;
+    --tc-7: 310 100% 95%;
+    --tc-8: 310 47% 20%;
+    --tc-9: 310 58% 79%;
+    --tc-10: 310 45% 28%;
+    --tc-11: 310 100% 96%;
+    --tc-12: 310 24% 24%;
+    --tc-13: 310 28% 22%;
+    --tc-14: 310 70% 71%;
+    --tc-15: 310 46% 11%;
+    --tc-16: rgba(169, 47, 149, 0.32);
+    --tc-17: rgba(22, 7, 19, 0.9);
+    --tc-18: rgba(94, 16, 81, 0.95);
+    --tc-19: rgba(126, 72, 117, 0.16);
+    --tc-20: rgba(126, 70, 117, 0.13);
+    --tc-21: rgba(34, 8, 30, 0.95);
+    --tc-22: rgba(39, 9, 34, 0.9);
+    --tc-23: rgba(25, 9, 22, 0.8);
+    --tc-24: rgba(150, 45, 132, 0.18);
+    --tc-25: rgba(26, 10, 23, 0.86);
+    --tc-26: rgba(225, 109, 206, 0.34);
+    --tc-27: rgba(36, 9, 31, 0.97);
+    --tc-28: rgba(84, 22, 74, 0.94);
+    --tc-29: rgba(109, 20, 94, 0.95);
+    --tc-30: rgba(238, 98, 215, 0.35);
+    --tc-31: rgba(169, 47, 149, 0.18);
+    --tc-32: rgba(169, 47, 149, 0.2);
+    --tc-33: rgba(191, 69, 171, 0.18);
+    --tc-34: rgba(247, 146, 230, 0.7);
+    --tc-35: rgba(215, 70, 191, 0.96);
+    --tc-36: rgba(215, 70, 191, 0.95);
+    --tc-37: rgba(220, 78, 196, 0.95);
+    --tc-38: rgba(244, 157, 229, 0.42);
+    --tc-39: rgba(220, 78, 196, 0.9);
+    --tc-40: rgba(244, 157, 229, 0.35);
+    --tc-41: rgba(220, 78, 196, 0.85);
+    --tc-42: rgba(246, 118, 225, 0.85);
+    --tc-43: rgba(191, 58, 169, 0.95);
+    --tc-44: rgba(191, 69, 171, 0.35);
+    --tc-45: rgba(12, 6, 11, 0.98);
+    --tc-46: rgba(31, 18, 29, 0.94);
+    --tc-47: rgba(118, 88, 113, 0.5);
+    --tc-48: rgba(10, 4, 9, 0.98);
+    --tc-49: rgba(173, 144, 168, 0.1);
+    --tc-50: rgba(22, 11, 20, 0.08);
+    --tc-51: rgba(82, 15, 71, 0.98);
+    --tc-52: rgba(133, 27, 115, 0.95);
+    --tc-53: rgba(243, 122, 223, 0.56);
+    --tc-54: rgba(81, 15, 70, 0.96);
+    --tc-55: rgba(252, 168, 238, 0.17);
+    --tc-56: rgba(45, 8, 39, 0.1);
+    --tc-57: rgba(79, 24, 70, 0.96);
+    --tc-58: rgba(104, 31, 92, 0.93);
+    --tc-59: rgba(218, 125, 202, 0.44);
+    --tc-60: rgba(104, 31, 92, 0.95);
+    --tc-61: rgba(103, 49, 94, 0.95);
+    --tc-62: rgba(129, 61, 118, 0.93);
+    --tc-63: rgba(246, 157, 231, 0.42);
+    --tc-64: rgba(129, 61, 118, 0.95);
+    --tc-65: rgba(92, 47, 84, 0.95);
+    --tc-66: rgba(111, 60, 102, 0.91);
+    --tc-67: rgba(204, 135, 192, 0.4);
+    --tc-68: rgba(111, 60, 102, 0.95);
+    --tc-69: rgba(77, 33, 70, 0.95);
+    --tc-70: rgba(98, 42, 89, 0.92);
+    --tc-71: rgba(208, 126, 194, 0.42);
+    --tc-72: rgba(98, 42, 89, 0.95);
+    --tc-73: rgba(60, 44, 57, 0.96);
+    --tc-74: rgba(82, 61, 78, 0.93);
+    --tc-75: rgba(130, 96, 124, 0.28);
+    --tc-76: rgba(56, 39, 53, 0.96);
+    --tc-77: rgba(171, 114, 161, 0.32);
+    --tc-78: rgba(220, 160, 210, 0.14);
+    --tc-79: rgba(31, 10, 27, 0.1);
+    --tc-80: rgba(255, 0, 212, 0.9);
+    --tc-81: rgba(255, 130, 234, 0.9);
+    --tc-82: rgba(67, 52, 64, 0.96);
+    --tc-83: rgba(95, 74, 91, 0.93);
+    --tc-84: rgba(196, 166, 191, 0.62);
+    --tc-85: rgba(80, 62, 77, 0.97);
+    --tc-86: rgba(110, 86, 106, 0.94);
+    --tc-87: rgba(205, 175, 200, 0.62);
+    --tc-88: rgba(230, 193, 224, 0.7);
+    --tc-89: rgba(172, 150, 168, 0.1);
+    --tc-90: rgba(11, 6, 10, 0.36);
+    --tc-91: rgba(224, 127, 208, 0.2);
+    --tc-92: rgba(27, 8, 24, 0.1);
+    --tc-93: rgba(191, 69, 171, 0.32);
+    --tc-94: rgba(236, 125, 217, 0.45);
+    --tc-95: rgba(184, 125, 174, 0.28);
+    --tc-96: rgba(191, 69, 171, 0.45);
+    --tc-97: rgba(191, 69, 171, 0.0);
+    --tc-98: rgba(150, 45, 132, 0.75);
+    --tc-99: rgba(191, 69, 171, 0.95);
+    --tc-100: rgba(20, 4, 17, 0.9);
+    --tc-101: rgba(44, 10, 38, 0.88);
+    --tc-102: rgba(170, 52, 150, 0.32);
+    --tc-103: rgba(104, 26, 91, 0.38);
+    --tc-104: rgba(238, 126, 219, 0.45);
+    --tc-105: rgba(146, 39, 128, 0.9);
+    --tc-106: rgba(184, 125, 174, 0.18);
+    --tc-107: rgba(10, 2, 9, 0.78);
+    --tc-108: rgba(255, 184, 243, 0.45);
+    --tc-109: rgba(91, 23, 80, 0.65);
+    --tc-110: rgba(241, 145, 225, 0.35);
+    --tc-111: rgba(241, 145, 225, 0.4);
+    --tc-112: rgba(91, 23, 80, 0.55);
+    --tc-113: rgba(26, 8, 23, 0.94);
+    --tc-114: rgba(255, 186, 243, 0.7);
+    --tc-115: rgba(70, 11, 60, 0.98);
+    --tc-116: rgba(110, 21, 95, 0.95);
+    --tc-117: rgba(244, 133, 225, 0.55);
+    --tc-118: rgba(118, 18, 101, 0.97);
+    --tc-119: rgba(169, 24, 145, 0.94);
+    --tc-120: rgba(247, 143, 230, 0.6);
+    --tc-121: rgba(95, 78, 92, 0.96);
+    --tc-122: rgba(129, 104, 125, 0.93);
+    --tc-123: rgba(175, 140, 169, 0.4);
+    --tc-124: rgba(236, 116, 216, 0.97);
+    --tc-125: rgba(246, 149, 230, 0.94);
+    --tc-126: rgba(255, 223, 250, 0.74);
+    --tc-127: rgba(236, 112, 215, 0.97);
+    --tc-128: rgba(245, 143, 228, 0.94);
+    --tc-129: rgba(255, 224, 250, 0.8);
+    --tc-130: rgba(240, 120, 220, 0.96);
+    --tc-131: rgba(248, 150, 232, 0.93);
+    --tc-132: rgba(255, 225, 250, 0.72);
+    --tc-133: rgba(159, 13, 135, 0.97);
+    --tc-134: rgba(214, 24, 182, 0.94);
+    --tc-135: rgba(255, 163, 240, 0.72);
+    --tc-136: rgba(44, 14, 39, 0.94);
+    --tc-137: rgba(74, 24, 66, 0.92);
+    --tc-138: rgba(146, 76, 134, 0.22);
+    --tc-139: rgba(30, 10, 27, 0.88);
+    --tc-140: rgba(146, 76, 134, 0.2);
+    --tc-141: rgba(28, 8, 25, 0.96);
+    --tc-142: rgba(56, 16, 49, 0.94);
+    --tc-143: rgba(30, 10, 27, 0.9);
+    --tc-144: rgba(30, 9, 26, 0.98);
+    --tc-145: rgba(61, 19, 54, 0.96);
+    --tc-146: rgba(154, 80, 142, 0.2);
+    --tc-147: rgba(154, 80, 142, 0.1);
+    --tc-148: rgba(42, 14, 37, 0.92);
+    --tc-149: rgba(82, 31, 73, 0.9);
+    --tc-150: rgba(146, 44, 129, 0.96);
+    --tc-151: rgba(184, 57, 163, 0.94);
+    --tc-152: rgba(117, 45, 105, 0.9);
+    --tc-153: rgba(158, 84, 146, 0.2);
+    --tc-154: rgba(44, 13, 39, 0.96);
+    --tc-155: rgba(34, 10, 30, 0.97);
+    --tc-156: rgba(198, 108, 183, 0.34);
+    --tc-157: rgba(15, 2, 13, 0.95);
+    --tc-158: rgba(80, 58, 76, 0.96);
+    --tc-159: rgba(104, 76, 99, 0.93);
+    --tc-160: rgba(141, 102, 134, 0.35);
+    --tc-161: rgba(34, 7, 29, 0.97);
+    --tc-162: rgba(44, 10, 38, 0.93);
+    --tc-163: rgba(50, 11, 43, 0.96);
+    --tc-164: rgba(58, 14, 51, 0.93);
+    --tc-165: rgba(132, 66, 121, 0.24);
+    --tc-166: rgba(119, 55, 108, 0.2);
+    --tc-167: rgba(196, 96, 179, 0.32);
+    --tc-168: rgba(228, 132, 212, 0.16);
+    --tc-169: rgba(196, 88, 178, 0.55);
+    --tc-170: rgba(198, 108, 183, 0.36);
+    --tc-171: rgba(37, 11, 33, 0.98);
+    --tc-172: #a92f95;
+    --tc-173: #0a0209;
+    --tc-174: #160413;
+    --tc-175: #300b2a;
+    --tc-176: #46123d;
+    --tc-177: #ffdbf9;
+    --tc-178: #c58ebc;
+    --tc-179: #140612;
+    --tc-180: #260d22;
+    --tc-181: #3a1534;
+    --tc-182: #270e23;
+    --tc-183: #472141;
+    --tc-184: #421d3c;
+    --tc-185: #781768;
+    --tc-186: #bf45ab;
+    --tc-187: #5c1b51;
+    --tc-188: #591f4f;
+    --tc-189: #190f17;
+    --tc-190: #6f3966;
+    --tc-191: #862676;
+    --tc-192: #55274d;
+    --tc-193: #613459;
+    --tc-194: #ffeafb;
+    --tc-195: #ac8ea7;
+    --tc-196: #e8d7e5;
+    --tc-197: #e8c4e2;
+    --tc-198: #f2e4f0;
+    --tc-199: #f8edf6;
+    --tc-200: #ffe7fb;
+    --tc-201: #ffb8f3;
+    --tc-202: #ffdcf9;
+    --tc-203: #fcf3fa;
+    --tc-204: #570f4b;
+    --tc-205: #520e47;
+    --tc-206: #5d0f50;
+    --tc-207: #33052b;
+    --tc-208: #ffe8fb;
+    --tc-209: #e18dd3;
+    --tc-210: #ffedfc;
+    --tc-211: #fff1fd;
+    --tc-212: #ffe4fa;
+    --tc-213: #f1d9ed;
+    --tc-214: #e87ad6;
+    --tc-215: #ffe6fb;
+}
+
+html.palette-yellow {
+    --tc-1: 50 47% 9%;
+    --tc-2: 50 100% 94%;
+    --tc-3: 50 44% 13%;
+    --tc-4: 50 70% 56%;
+    --tc-5: 50 100% 97%;
+    --tc-6: 50 46% 23%;
+    --tc-7: 50 100% 95%;
+    --tc-8: 50 47% 20%;
+    --tc-9: 50 58% 79%;
+    --tc-10: 50 45% 28%;
+    --tc-11: 50 100% 96%;
+    --tc-12: 50 24% 24%;
+    --tc-13: 50 28% 22%;
+    --tc-14: 50 70% 71%;
+    --tc-15: 50 46% 11%;
+    --tc-16: rgba(169, 149, 47, 0.32);
+    --tc-17: rgba(22, 20, 7, 0.9);
+    --tc-18: rgba(94, 81, 16, 0.95);
+    --tc-19: rgba(126, 117, 72, 0.16);
+    --tc-20: rgba(126, 117, 70, 0.13);
+    --tc-21: rgba(34, 30, 8, 0.95);
+    --tc-22: rgba(39, 34, 9, 0.9);
+    --tc-23: rgba(25, 22, 9, 0.8);
+    --tc-24: rgba(150, 132, 45, 0.18);
+    --tc-25: rgba(26, 23, 10, 0.86);
+    --tc-26: rgba(225, 206, 109, 0.34);
+    --tc-27: rgba(36, 31, 9, 0.97);
+    --tc-28: rgba(84, 74, 22, 0.94);
+    --tc-29: rgba(109, 94, 20, 0.95);
+    --tc-30: rgba(238, 215, 98, 0.35);
+    --tc-31: rgba(169, 149, 47, 0.18);
+    --tc-32: rgba(169, 149, 47, 0.2);
+    --tc-33: rgba(191, 171, 69, 0.18);
+    --tc-34: rgba(247, 230, 146, 0.7);
+    --tc-35: rgba(215, 191, 70, 0.96);
+    --tc-36: rgba(215, 191, 70, 0.95);
+    --tc-37: rgba(220, 196, 78, 0.95);
+    --tc-38: rgba(244, 230, 157, 0.42);
+    --tc-39: rgba(220, 196, 78, 0.9);
+    --tc-40: rgba(244, 230, 157, 0.35);
+    --tc-41: rgba(220, 196, 78, 0.85);
+    --tc-42: rgba(246, 225, 118, 0.85);
+    --tc-43: rgba(191, 169, 58, 0.95);
+    --tc-44: rgba(191, 171, 69, 0.35);
+    --tc-45: rgba(12, 11, 6, 0.98);
+    --tc-46: rgba(31, 29, 18, 0.94);
+    --tc-47: rgba(118, 113, 88, 0.5);
+    --tc-48: rgba(10, 9, 4, 0.98);
+    --tc-49: rgba(173, 168, 144, 0.1);
+    --tc-50: rgba(22, 20, 11, 0.08);
+    --tc-51: rgba(82, 71, 15, 0.98);
+    --tc-52: rgba(133, 115, 27, 0.95);
+    --tc-53: rgba(243, 223, 122, 0.56);
+    --tc-54: rgba(81, 70, 15, 0.96);
+    --tc-55: rgba(252, 238, 168, 0.17);
+    --tc-56: rgba(45, 39, 8, 0.1);
+    --tc-57: rgba(79, 70, 24, 0.96);
+    --tc-58: rgba(104, 92, 31, 0.93);
+    --tc-59: rgba(218, 203, 125, 0.44);
+    --tc-60: rgba(104, 92, 31, 0.95);
+    --tc-61: rgba(103, 94, 49, 0.95);
+    --tc-62: rgba(129, 118, 61, 0.93);
+    --tc-63: rgba(246, 231, 157, 0.42);
+    --tc-64: rgba(129, 118, 61, 0.95);
+    --tc-65: rgba(92, 85, 47, 0.95);
+    --tc-66: rgba(111, 102, 60, 0.91);
+    --tc-67: rgba(204, 193, 135, 0.4);
+    --tc-68: rgba(111, 102, 60, 0.95);
+    --tc-69: rgba(77, 70, 33, 0.95);
+    --tc-70: rgba(98, 89, 42, 0.92);
+    --tc-71: rgba(208, 194, 126, 0.42);
+    --tc-72: rgba(98, 89, 42, 0.95);
+    --tc-73: rgba(60, 57, 44, 0.96);
+    --tc-74: rgba(82, 78, 61, 0.93);
+    --tc-75: rgba(130, 124, 96, 0.28);
+    --tc-76: rgba(56, 53, 39, 0.96);
+    --tc-77: rgba(171, 162, 114, 0.32);
+    --tc-78: rgba(220, 210, 160, 0.14);
+    --tc-79: rgba(31, 27, 10, 0.1);
+    --tc-80: rgba(255, 212, 0, 0.9);
+    --tc-81: rgba(255, 234, 130, 0.9);
+    --tc-82: rgba(67, 64, 52, 0.96);
+    --tc-83: rgba(95, 92, 74, 0.93);
+    --tc-84: rgba(196, 191, 166, 0.62);
+    --tc-85: rgba(80, 77, 62, 0.97);
+    --tc-86: rgba(110, 106, 86, 0.94);
+    --tc-87: rgba(205, 200, 175, 0.62);
+    --tc-88: rgba(230, 224, 193, 0.7);
+    --tc-89: rgba(172, 168, 150, 0.1);
+    --tc-90: rgba(11, 10, 6, 0.36);
+    --tc-91: rgba(224, 208, 127, 0.2);
+    --tc-92: rgba(27, 24, 8, 0.1);
+    --tc-93: rgba(191, 171, 69, 0.32);
+    --tc-94: rgba(236, 218, 125, 0.45);
+    --tc-95: rgba(184, 174, 125, 0.28);
+    --tc-96: rgba(191, 171, 69, 0.45);
+    --tc-97: rgba(191, 171, 69, 0.0);
+    --tc-98: rgba(150, 132, 45, 0.75);
+    --tc-99: rgba(191, 171, 69, 0.95);
+    --tc-100: rgba(20, 17, 4, 0.9);
+    --tc-101: rgba(44, 38, 10, 0.88);
+    --tc-102: rgba(170, 150, 52, 0.32);
+    --tc-103: rgba(104, 91, 26, 0.38);
+    --tc-104: rgba(238, 219, 126, 0.45);
+    --tc-105: rgba(146, 128, 39, 0.9);
+    --tc-106: rgba(184, 174, 125, 0.18);
+    --tc-107: rgba(10, 9, 2, 0.78);
+    --tc-108: rgba(255, 243, 184, 0.45);
+    --tc-109: rgba(91, 80, 23, 0.65);
+    --tc-110: rgba(241, 225, 145, 0.35);
+    --tc-111: rgba(241, 225, 145, 0.4);
+    --tc-112: rgba(91, 80, 23, 0.55);
+    --tc-113: rgba(26, 23, 8, 0.94);
+    --tc-114: rgba(255, 244, 186, 0.7);
+    --tc-115: rgba(70, 60, 11, 0.98);
+    --tc-116: rgba(110, 95, 21, 0.95);
+    --tc-117: rgba(244, 226, 133, 0.55);
+    --tc-118: rgba(118, 101, 18, 0.97);
+    --tc-119: rgba(169, 145, 24, 0.94);
+    --tc-120: rgba(247, 230, 143, 0.6);
+    --tc-121: rgba(95, 92, 78, 0.96);
+    --tc-122: rgba(129, 125, 104, 0.93);
+    --tc-123: rgba(175, 169, 140, 0.4);
+    --tc-124: rgba(236, 216, 116, 0.97);
+    --tc-125: rgba(246, 230, 149, 0.94);
+    --tc-126: rgba(255, 250, 223, 0.74);
+    --tc-127: rgba(236, 215, 112, 0.97);
+    --tc-128: rgba(245, 228, 143, 0.94);
+    --tc-129: rgba(255, 250, 224, 0.8);
+    --tc-130: rgba(240, 220, 120, 0.96);
+    --tc-131: rgba(248, 232, 150, 0.93);
+    --tc-132: rgba(255, 250, 225, 0.72);
+    --tc-133: rgba(159, 135, 13, 0.97);
+    --tc-134: rgba(214, 182, 24, 0.94);
+    --tc-135: rgba(255, 240, 163, 0.72);
+    --tc-136: rgba(44, 39, 14, 0.94);
+    --tc-137: rgba(74, 66, 24, 0.92);
+    --tc-138: rgba(146, 134, 76, 0.22);
+    --tc-139: rgba(30, 27, 10, 0.88);
+    --tc-140: rgba(146, 134, 76, 0.2);
+    --tc-141: rgba(28, 25, 8, 0.96);
+    --tc-142: rgba(56, 49, 16, 0.94);
+    --tc-143: rgba(30, 27, 10, 0.9);
+    --tc-144: rgba(30, 26, 9, 0.98);
+    --tc-145: rgba(61, 54, 19, 0.96);
+    --tc-146: rgba(154, 142, 80, 0.2);
+    --tc-147: rgba(154, 142, 80, 0.1);
+    --tc-148: rgba(42, 37, 14, 0.92);
+    --tc-149: rgba(82, 74, 31, 0.9);
+    --tc-150: rgba(146, 129, 44, 0.96);
+    --tc-151: rgba(184, 163, 57, 0.94);
+    --tc-152: rgba(117, 105, 45, 0.9);
+    --tc-153: rgba(158, 146, 84, 0.2);
+    --tc-154: rgba(44, 39, 13, 0.96);
+    --tc-155: rgba(34, 30, 10, 0.97);
+    --tc-156: rgba(198, 183, 108, 0.34);
+    --tc-157: rgba(15, 13, 2, 0.95);
+    --tc-158: rgba(80, 76, 58, 0.96);
+    --tc-159: rgba(104, 99, 76, 0.93);
+    --tc-160: rgba(141, 134, 102, 0.35);
+    --tc-161: rgba(34, 29, 7, 0.97);
+    --tc-162: rgba(44, 38, 10, 0.93);
+    --tc-163: rgba(50, 43, 11, 0.96);
+    --tc-164: rgba(58, 51, 14, 0.93);
+    --tc-165: rgba(132, 121, 66, 0.24);
+    --tc-166: rgba(119, 108, 55, 0.2);
+    --tc-167: rgba(196, 179, 96, 0.32);
+    --tc-168: rgba(228, 212, 132, 0.16);
+    --tc-169: rgba(196, 178, 88, 0.55);
+    --tc-170: rgba(198, 183, 108, 0.36);
+    --tc-171: rgba(37, 33, 11, 0.98);
+    --tc-172: #a9952f;
+    --tc-173: #0a0902;
+    --tc-174: #161304;
+    --tc-175: #302a0b;
+    --tc-176: #463d12;
+    --tc-177: #fff9db;
+    --tc-178: #c5bc8e;
+    --tc-179: #141206;
+    --tc-180: #26220d;
+    --tc-181: #3a3415;
+    --tc-182: #27230e;
+    --tc-183: #474121;
+    --tc-184: #423c1d;
+    --tc-185: #786817;
+    --tc-186: #bfab45;
+    --tc-187: #5c511b;
+    --tc-188: #594f1f;
+    --tc-189: #19170f;
+    --tc-190: #6f6639;
+    --tc-191: #867626;
+    --tc-192: #554d27;
+    --tc-193: #615a34;
+    --tc-194: #fffbea;
+    --tc-195: #aca78e;
+    --tc-196: #e8e5d7;
+    --tc-197: #e8e2c4;
+    --tc-198: #f2f0e4;
+    --tc-199: #f8f6ed;
+    --tc-200: #fffbe7;
+    --tc-201: #fff3b8;
+    --tc-202: #fff9dc;
+    --tc-203: #fcfbf3;
+    --tc-204: #574b0f;
+    --tc-205: #52470e;
+    --tc-206: #5d500f;
+    --tc-207: #332b05;
+    --tc-208: #fffbe8;
+    --tc-209: #e1d38d;
+    --tc-210: #fffced;
+    --tc-211: #fffdf1;
+    --tc-212: #fffae4;
+    --tc-213: #f1edd9;
+    --tc-214: #e8d67a;
+    --tc-215: #fffbe6;
 }
