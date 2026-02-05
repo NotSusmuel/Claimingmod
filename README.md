@@ -1,10 +1,10 @@
 ﻿# Claimingmod
 
-ArthasMod is a browser extension that customizes the ISY web UI with a dark, modern theme and quality-of-life tweaks.
+ClaimingMod is a browser extension that customizes the ISY web UI with a dark, modern theme and quality-of-life tweaks.
 
 ## What it does
 
-- Applies a custom "ArthasMod" visual theme (colors, typography, cards, menus).
+- Applies a custom "ClaimingMod" visual theme (colors, typography, cards, menus).
 - Adds a third theme option in the profile settings alongside base light/dark modes.
 - Improves timetable visuals (lesson colors, readability, sizing/spacing tweaks).
 - Adds UI fixes for specific pages (e.g., absences/table alignment, sidebars, overlays).
@@ -22,5 +22,5 @@ ArthasMod is a browser extension that customizes the ISY web UI with a dark, mod
 
 1. Load the extension as an unpacked extension in your browser.
 2. Open ISY.
-3. In profile settings, select **ArthasMod** to enable the custom theme.
+3. In profile settings, select **ClaimingMod** to enable the custom theme.
 
