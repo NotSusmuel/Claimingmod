@@ -1842,3 +1842,43 @@ body.ArthasMod-enabled .tippy-box[data-theme~="isy"] .tippy-content {
 body.ArthasMod-enabled .tippy-box[data-theme~="isy"] > .tippy-arrow {
     color: rgba(11, 20, 37, 0.98) !important;
 }
+
+/*Fixes for Mobile Version*/
+[data-v-e69c0a82].bg-primaryColor.rounded-full {
+    border-radius: 10px !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+a.rounded-full.border-primaryColor.bg-primaryWeakColor,
+a.rounded-full.border-primaryColor.dark\:bg-primarySecondaryColor {
+    border-radius: 10px !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 1px solid rgba(76, 103, 146, 0.22) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: inline-flex !important;
+}
+
+a.rounded-full.border-primaryColor:hover {
+    background: var(--isy-item-hover-bg) !important;
+    transform: translateY(-1px) !important;
+    border-color: rgba(69, 117, 191, 0.35) !important;
+    box-shadow: var(--isy-shadow-hover) !important;
+}
+
+a.rounded-full.border-primaryColor button {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+div.flex.items-center.bg-backgroundContrast.rounded-full.h-20:has(input.bg-transparent){
+    background: var(--isy-input-bg) !important;
+    border: 1px solid var(--isy-border-subtle) !important;
+    border-radius: 50px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.55) !important;
+}
