@@ -1,4 +1,4 @@
-﻿# ArthasMod
+﻿# Claimingmod
 
 ArthasMod is a browser extension that customizes the ISY web UI with a dark, modern theme and quality-of-life tweaks.
 
