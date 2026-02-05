@@ -1,17 +1,17 @@
-console.log("ArthasMod: Costume Applied!");
+console.log("ClaimingMod: Costume Applied!");
 
-const ARTHAS_THEME_MODE_KEY = 'arthasmod-theme-mode';
-const ARTHAS_THEME_MODE = {
+const Claiming_THEME_MODE_KEY = 'Claimingmod-theme-mode';
+const Claiming_THEME_MODE = {
     ISY: 'isy',
-    ARTHAS: 'arthas'
+    Claiming: 'Claiming'
 };
-let arthasModeEnabled = true;
+let ClaimingModeEnabled = true;
 let suppressThemeSelectionHandling = false;
 
-const ABSENCE_TABLE_FIX_STYLE_ID = 'arthasmod-absence-table-fix';
-const ARTHAS_BRIGHTNESS_STYLE_ID = 'arthasmod-lesson-brightness-style';
-const ARTHAS_LESSON_BRIGHTNESS_VAR = '--arthas-lesson-brightness';
-const ARTHAS_LESSON_BRIGHTNESS_VALUE_KEY = 'arthasmod-lesson-brightness-value';
+const ABSENCE_TABLE_FIX_STYLE_ID = 'Claimingmod-absence-table-fix';
+const Claiming_BRIGHTNESS_STYLE_ID = 'Claimingmod-lesson-brightness-style';
+const Claiming_LESSON_BRIGHTNESS_VAR = '--Claiming-lesson-brightness';
+const Claiming_LESSON_BRIGHTNESS_VALUE_KEY = 'Claimingmod-lesson-brightness-value';
 
 function ensureBaseAbsenceTableFixStyles() {
     if (document.getElementById(ABSENCE_TABLE_FIX_STYLE_ID)) return;
@@ -86,25 +86,25 @@ function ensureBaseAbsenceTableFixStyles() {
 
 function readThemeModePreference() {
     try {
-        const value = localStorage.getItem(ARTHAS_THEME_MODE_KEY);
-        if (value === ARTHAS_THEME_MODE.ISY) return ARTHAS_THEME_MODE.ISY;
-        return ARTHAS_THEME_MODE.ARTHAS;
+        const value = localStorage.getItem(Claiming_THEME_MODE_KEY);
+        if (value === Claiming_THEME_MODE.ISY) return Claiming_THEME_MODE.ISY;
+        return Claiming_THEME_MODE.Claiming;
     } catch {
-        return ARTHAS_THEME_MODE.ARTHAS;
+        return Claiming_THEME_MODE.Claiming;
     }
 }
 
 function writeThemeModePreference(mode) {
     try {
-        localStorage.setItem(ARTHAS_THEME_MODE_KEY, mode);
+        localStorage.setItem(Claiming_THEME_MODE_KEY, mode);
     } catch {
         // Ignore persistence errors.
     }
 }
 
-const ARTHAS_STYLESHEET_ID = 'arthasmod-theme-styles';
+const Claiming_STYLESHEET_ID = 'Claimingmod-theme-styles';
 
-function findArthasExtensionStylesheets() {
+function findClaimingExtensionStylesheets() {
     const runtimeId = chrome.runtime?.id;
     const targetHref = runtimeId ? `chrome-extension://${runtimeId}/styles.css` : '/styles.css';
     const matches = [];
@@ -119,12 +119,12 @@ function findArthasExtensionStylesheets() {
     return matches;
 }
 
-function ensureArthasStylesheetNode() {
-    let node = document.getElementById(ARTHAS_STYLESHEET_ID);
+function ensureClaimingStylesheetNode() {
+    let node = document.getElementById(Claiming_STYLESHEET_ID);
     if (node) return node;
 
     node = document.createElement('link');
-    node.id = ARTHAS_STYLESHEET_ID;
+    node.id = Claiming_STYLESHEET_ID;
     node.rel = 'stylesheet';
     node.href = chrome.runtime.getURL('styles.css');
 
@@ -132,9 +132,9 @@ function ensureArthasStylesheetNode() {
     return node;
 }
 
-function toggleArthasStylesheet(enabled) {
+function toggleClaimingStylesheet(enabled) {
     // Handle any existing stylesheet (including old auto-injected ones).
-    findArthasExtensionStylesheets().forEach((sheet) => {
+    findClaimingExtensionStylesheets().forEach((sheet) => {
         try {
             sheet.disabled = !enabled;
         } catch {
@@ -147,18 +147,18 @@ function toggleArthasStylesheet(enabled) {
         }
     });
 
-    const injectedNode = ensureArthasStylesheetNode();
+    const injectedNode = ensureClaimingStylesheetNode();
     injectedNode.disabled = !enabled;
 }
 
-function removeArthasFooterDecorations() {
+function removeClaimingFooterDecorations() {
     const footer = document.querySelector('.footer');
     if (!footer) return;
     footer.classList.remove('isy-footer-themed');
-    footer.querySelectorAll('.arthasmod-version').forEach((el) => el.remove());
+    footer.querySelectorAll('.Claimingmod-version').forEach((el) => el.remove());
 }
 
-function removeArthasTimetableClasses() {
+function removeClaimingTimetableClasses() {
     const timetableClasses = [
         'isy-tt-past-lesson',
         'isy-tt-exam-text',
@@ -174,20 +174,20 @@ function removeArthasTimetableClasses() {
     });
 }
 
-function isArthasModeEnabled() {
-    return arthasModeEnabled;
+function isClaimingModeEnabled() {
+    return ClaimingModeEnabled;
 }
 
-function applyArthasModeStateToDom(enabled) {
-    arthasModeEnabled = enabled;
+function applyClaimingModeStateToDom(enabled) {
+    ClaimingModeEnabled = enabled;
     if (document.body) {
-        document.body.classList.toggle('ArthasMod-enabled', enabled);
+        document.body.classList.toggle('ClaimingMod-enabled', enabled);
     }
-    toggleArthasStylesheet(enabled);
+    toggleClaimingStylesheet(enabled);
     if (!enabled) {
-        removeArthasFooterDecorations();
+        removeClaimingFooterDecorations();
         removeCachedTimetableOverlay();
-        removeArthasTimetableClasses();
+        removeClaimingTimetableClasses();
     }
 }
 
@@ -400,7 +400,7 @@ function applyPastLessonClasses(entries) {
 }
 
 function applyTimetableClasses(entries) {
-    if (!isArthasModeEnabled()) return;
+    if (!isClaimingModeEnabled()) return;
 
     const safeEntries = Array.isArray(entries)
         ? entries.filter((entry) => entry && typeof entry.closest === 'function')
@@ -504,7 +504,7 @@ function ensureTimetablePastRefresh() {
     if (timetablePastRefreshInterval !== null) return;
 
     timetablePastRefreshInterval = window.setInterval(() => {
-        if (!isArthasModeEnabled()) return;
+        if (!isClaimingModeEnabled()) return;
         if (!window.location.href.includes('timetable')) return;
 
         const realItems = Array.from(document.querySelectorAll(TIMETABLE_ENTRY_SELECTOR))
@@ -530,7 +530,7 @@ let activePreloadAnchorWeekKey = null;
 let lastPreloadedAnchorWeekKey = null;
 
 function shouldShowTimetableOverlay() {
-    if (!isArthasModeEnabled()) return false;
+    if (!isClaimingModeEnabled()) return false;
 
     const href = window.location.href.toLowerCase();
     let pathname = '';
@@ -566,8 +566,8 @@ function hasRealTimetableScaffoldOrMount() {
 }
 
 function decorateFooter() {
-    if (!isArthasModeEnabled()) {
-        removeArthasFooterDecorations();
+    if (!isClaimingModeEnabled()) {
+        removeClaimingFooterDecorations();
         return;
     }
 
@@ -579,13 +579,13 @@ function decorateFooter() {
     const rightArea = footer.querySelector('.w-36.text-right') || footer.lastElementChild;
     if (!rightArea) return;
 
-    if (!rightArea.querySelector('.arthasmod-version')) {
+    if (!rightArea.querySelector('.Claimingmod-version')) {
         const versionEl = document.createElement('a');
-        versionEl.className = 'arthasmod-version';
-        versionEl.href = 'https://github.com/Arthas1811';
+        versionEl.className = 'Claimingmod-version';
+        versionEl.href = 'https://github.com/Claimingnine';
         versionEl.target = '_blank';
         versionEl.rel = 'noopener noreferrer';
-        versionEl.textContent = `ArthasMod v.${EXTENSION_VERSION}`;
+        versionEl.textContent = `ClaimingMod v.${EXTENSION_VERSION}`;
         rightArea.prepend(versionEl);
     }
 }
@@ -593,7 +593,7 @@ function decorateFooter() {
 
 
 
-function applyNativeDarkPresetForArthas() {
+function applyNativeDarkPresetForClaiming() {
     const root = document.documentElement;
     root.classList.add('dark');
     root.setAttribute('theme', 'dark');
@@ -621,7 +621,7 @@ function applyNativeDarkPresetForArthas() {
             darkLabel.click();
         }
 
-        applyDarkSliderPresetForArthas(true);
+        applyDarkSliderPresetForClaiming(true);
     } finally {
         suppressThemeSelectionHandling = false;
     }
@@ -632,28 +632,28 @@ function getDisplayModeSlider() {
     return document.querySelector('.display-mode-container .range-slider');
 }
 
-function readArthasLessonBrightnessSliderValue() {
+function readClaimingLessonBrightnessSliderValue() {
     try {
-        const value = localStorage.getItem(ARTHAS_LESSON_BRIGHTNESS_VALUE_KEY);
+        const value = localStorage.getItem(Claiming_LESSON_BRIGHTNESS_VALUE_KEY);
         return value;
     } catch {
         return null;
     }
 }
 
-function writeArthasLessonBrightnessSliderValue(value) {
+function writeClaimingLessonBrightnessSliderValue(value) {
     try {
-        localStorage.setItem(ARTHAS_LESSON_BRIGHTNESS_VALUE_KEY, String(value));
+        localStorage.setItem(Claiming_LESSON_BRIGHTNESS_VALUE_KEY, String(value));
     } catch {
         // Ignore persistence failures.
     }
 }
 
-function applySavedArthasBrightnessToSlider(slider, emitEvents = false) {
+function applySavedClaimingBrightnessToSlider(slider, emitEvents = false) {
     if (!slider) return;
 
-    const saved = readArthasLessonBrightnessSliderValue();
-    const fallback = getArthasDarkSliderValue(slider);
+    const saved = readClaimingLessonBrightnessSliderValue();
+    const fallback = getClaimingDarkSliderValue(slider);
     const target = saved ?? fallback;
 
     suppressThemeSelectionHandling = true;
@@ -668,28 +668,28 @@ function applySavedArthasBrightnessToSlider(slider, emitEvents = false) {
         suppressThemeSelectionHandling = false;
     }
 
-    setArthasLessonBrightnessFromSlider(slider);
+    setClaimingLessonBrightnessFromSlider(slider);
 }
 
-function ensureArthasLessonBrightnessStyle() {
-    if (document.getElementById(ARTHAS_BRIGHTNESS_STYLE_ID)) return;
+function ensureClaimingLessonBrightnessStyle() {
+    if (document.getElementById(Claiming_BRIGHTNESS_STYLE_ID)) return;
 
     const style = document.createElement('style');
-    style.id = ARTHAS_BRIGHTNESS_STYLE_ID;
+    style.id = Claiming_BRIGHTNESS_STYLE_ID;
     style.textContent = `
-body.ArthasMod-enabled .calendar-week-element-inner,
-body.ArthasMod-enabled .calendar-week-element .calendar-week-element-inner {
+body.ClaimingMod-enabled .calendar-week-element-inner,
+body.ClaimingMod-enabled .calendar-week-element .calendar-week-element-inner {
     position: relative !important;
     overflow: hidden !important;
 }
 
-body.ArthasMod-enabled .calendar-week-element-inner::after,
-body.ArthasMod-enabled .calendar-week-element .calendar-week-element-inner::after {
+body.ClaimingMod-enabled .calendar-week-element-inner::after,
+body.ClaimingMod-enabled .calendar-week-element .calendar-week-element-inner::after {
     content: "" !important;
     position: absolute !important;
     inset: 0 !important;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.46)) !important;
-    opacity: var(${ARTHAS_LESSON_BRIGHTNESS_VAR}, 0) !important;
+    opacity: var(${Claiming_LESSON_BRIGHTNESS_VAR}, 0) !important;
     pointer-events: none !important;
     z-index: 0 !important;
 }
@@ -698,7 +698,7 @@ body.ArthasMod-enabled .calendar-week-element .calendar-week-element-inner::afte
     (document.head || document.documentElement).appendChild(style);
 }
 
-function setArthasLessonBrightnessFromSlider(slider) {
+function setClaimingLessonBrightnessFromSlider(slider) {
     if (!slider) return;
 
     const min = Number.parseFloat(slider.min || '0');
@@ -706,28 +706,28 @@ function setArthasLessonBrightnessFromSlider(slider) {
     const value = Number.parseFloat(slider.value || String(max));
 
     if (!Number.isFinite(min) || !Number.isFinite(max) || max <= min) {
-        document.documentElement.style.setProperty(ARTHAS_LESSON_BRIGHTNESS_VAR, '1');
+        document.documentElement.style.setProperty(Claiming_LESSON_BRIGHTNESS_VAR, '1');
         return;
     }
 
-    writeArthasLessonBrightnessSliderValue(slider.value);
+    writeClaimingLessonBrightnessSliderValue(slider.value);
 
     // Slider max keeps current colors (brightest). Lower values add darker overlay.
     const normalized = Math.min(1, Math.max(0, (value - min) / (max - min)));
     const darkenOpacity = 0.48 * (1 - normalized);
-    document.documentElement.style.setProperty(ARTHAS_LESSON_BRIGHTNESS_VAR, darkenOpacity.toFixed(3));
+    document.documentElement.style.setProperty(Claiming_LESSON_BRIGHTNESS_VAR, darkenOpacity.toFixed(3));
 }
 
-function getArthasDarkSliderValue(slider) {
+function getClaimingDarkSliderValue(slider) {
     if (!slider) return '100';
     return slider.max || '100';
 }
 
-function applyDarkSliderPresetForArthas(emitEvents = true) {
+function applyDarkSliderPresetForClaiming(emitEvents = true) {
     const slider = getDisplayModeSlider();
     if (!slider) return;
 
-    const targetValue = getArthasDarkSliderValue(slider);
+    const targetValue = getClaimingDarkSliderValue(slider);
     if (String(slider.value) === String(targetValue)) return;
 
     suppressThemeSelectionHandling = true;
@@ -743,87 +743,87 @@ function applyDarkSliderPresetForArthas(emitEvents = true) {
     }
 }
 
-function scheduleArthasDarkPresetReapply() {
+function scheduleClaimingDarkPresetReapply() {
     const delays = [0, 80, 220, 500, 1000];
     delays.forEach((delay) => {
         window.setTimeout(() => {
-            if (!isArthasModeEnabled()) return;
-            applyNativeDarkPresetForArthas();
-            applyDarkSliderPresetForArthas(true);
+            if (!isClaimingModeEnabled()) return;
+            applyNativeDarkPresetForClaiming();
+            applyDarkSliderPresetForClaiming(true);
         }, delay);
     });
 }
 
-function syncArthasSliderLockState() {
+function syncClaimingSliderLockState() {
     const slider = getDisplayModeSlider();
     if (!slider) return;
 
-    const arthasEnabled = isArthasModeEnabled();
+    const ClaimingEnabled = isClaimingModeEnabled();
     slider.disabled = false;
 
-    if (arthasEnabled) {
+    if (ClaimingEnabled) {
         slider.style.opacity = '';
         slider.style.cursor = '';
-        slider.title = 'ArthasMod: Regelt die Helligkeit der Lektionen.';
-        applySavedArthasBrightnessToSlider(slider, false);
+        slider.title = 'ClaimingMod: Regelt die Helligkeit der Lektionen.';
+        applySavedClaimingBrightnessToSlider(slider, false);
     } else {
         slider.style.opacity = '';
         slider.style.cursor = '';
         slider.title = '';
-        document.documentElement.style.setProperty(ARTHAS_LESSON_BRIGHTNESS_VAR, '1');
+        document.documentElement.style.setProperty(Claiming_LESSON_BRIGHTNESS_VAR, '1');
     }
 }
 
-function setArthasModeEnabled(enabled, persist = true) {
+function setClaimingModeEnabled(enabled, persist = true) {
     if (enabled) {
         // Force native dark mode first so ISY swaps non-customized assets.
-        applyNativeDarkPresetForArthas();
+        applyNativeDarkPresetForClaiming();
     }
 
-    applyArthasModeStateToDom(enabled);
+    applyClaimingModeStateToDom(enabled);
 
     if (persist) {
-        writeThemeModePreference(enabled ? ARTHAS_THEME_MODE.ARTHAS : ARTHAS_THEME_MODE.ISY);
+        writeThemeModePreference(enabled ? Claiming_THEME_MODE.Claiming : Claiming_THEME_MODE.ISY);
     }
 
     if (enabled) {
         const slider = getDisplayModeSlider();
-        applySavedArthasBrightnessToSlider(slider, true);
-        initializeArthasFeatures();
+        applySavedClaimingBrightnessToSlider(slider, true);
+        initializeClaimingFeatures();
     } else {
-        document.documentElement.style.setProperty(ARTHAS_LESSON_BRIGHTNESS_VAR, '1');
+        document.documentElement.style.setProperty(Claiming_LESSON_BRIGHTNESS_VAR, '1');
     }
 
-    syncArthasModeOptionState();
-    syncArthasSliderLockState();
+    syncClaimingModeOptionState();
+    syncClaimingSliderLockState();
 }
 
-function buildArthasModeOption() {
+function buildClaimingModeOption() {
     const template = document.querySelector('#settingsDarkMode')?.closest('.radio-button-container.display-radio')
         || document.querySelector('#settingsWhiteMode')?.closest('.radio-button-container.display-radio');
 
     const wrapper = template ? template.cloneNode(true) : document.createElement('div');
     if (!template) {
         wrapper.className = 'radio-button-container display-radio ml-2';
-        wrapper.innerHTML = '<label class="radio-button" for="settingsArthasMode" tabindex="0"><div class="circle-container mr-1"><div class="outer-circle"><div class="inner-circle"></div></div></div><span>ArthasMod</span></label><input id="settingsArthasMode" type="radio" hidden="" name="settingsDisplayMode">';
+        wrapper.innerHTML = '<label class="radio-button" for="settingsClaimingMode" tabindex="0"><div class="circle-container mr-1"><div class="outer-circle"><div class="inner-circle"></div></div></div><span>ClaimingMod</span></label><input id="settingsClaimingMode" type="radio" hidden="" name="settingsDisplayMode">';
     }
 
-    wrapper.classList.add('arthasmod-theme-option');
+    wrapper.classList.add('Claimingmod-theme-option');
     wrapper.classList.remove('mr-2');
     wrapper.classList.add('ml-2');
 
     const label = wrapper.querySelector('label.radio-button');
     if (label) {
-        label.setAttribute('for', 'settingsArthasMode');
+        label.setAttribute('for', 'settingsClaimingMode');
         label.setAttribute('tabindex', '0');
 
         const spanCandidates = Array.from(label.querySelectorAll('span'));
         const textSpan = spanCandidates[spanCandidates.length - 1];
-        if (textSpan) textSpan.textContent = 'ArthasMod';
+        if (textSpan) textSpan.textContent = 'ClaimingMod';
     }
 
     const input = wrapper.querySelector('input[type="radio"]') || document.createElement('input');
-    input.id = 'settingsArthasMode';
+    input.id = 'settingsClaimingMode';
     input.type = 'radio';
     input.hidden = true;
     input.name = 'settingsDisplayMode';
@@ -842,42 +842,42 @@ function buildArthasModeOption() {
     return wrapper;
 }
 
-function syncArthasModeOptionState() {
-    const arthasInput = document.getElementById('settingsArthasMode');
-    if (!arthasInput) return;
+function syncClaimingModeOptionState() {
+    const ClaimingInput = document.getElementById('settingsClaimingMode');
+    if (!ClaimingInput) return;
 
-    const arthasEnabled = isArthasModeEnabled();
-    arthasInput.checked = arthasEnabled;
+    const ClaimingEnabled = isClaimingModeEnabled();
+    ClaimingInput.checked = ClaimingEnabled;
 
-    const arthasInnerCircle = arthasInput
-        .closest('.arthasmod-theme-option')
+    const ClaimingInnerCircle = ClaimingInput
+        .closest('.Claimingmod-theme-option')
         ?.querySelector('.inner-circle');
-    if (arthasInnerCircle) {
-        arthasInnerCircle.style.display = arthasEnabled ? '' : 'none';
+    if (ClaimingInnerCircle) {
+        ClaimingInnerCircle.style.display = ClaimingEnabled ? '' : 'none';
     }
 
-    // Prevent double-selected visuals: hide native mode dots while Arthas mode is active.
+    // Prevent double-selected visuals: hide native mode dots while Claiming mode is active.
     const nativeModeDots = document.querySelectorAll(
         'label[for="settingsWhiteMode"] .inner-circle, label[for="settingsDarkMode"] .inner-circle'
     );
     nativeModeDots.forEach((dot) => {
-        dot.style.display = arthasEnabled ? 'none' : '';
+        dot.style.display = ClaimingEnabled ? 'none' : '';
     });
 
-    syncArthasSliderLockState();
+    syncClaimingSliderLockState();
 }
 
-function ensureArthasModeOption() {
+function ensureClaimingModeOption() {
     const modeRow = document.querySelector('.settings-container .display-mode-container .flex.items-center.mb-4')
         || document.querySelector('.display-mode-container .flex.items-center.mb-4')
         || document.querySelector('.display-mode-container > .flex.items-center');
     if (!modeRow) return;
 
-    if (!modeRow.querySelector('.arthasmod-theme-option')) {
-        modeRow.appendChild(buildArthasModeOption());
+    if (!modeRow.querySelector('.Claimingmod-theme-option')) {
+        modeRow.appendChild(buildClaimingModeOption());
     }
 
-    syncArthasModeOptionState();
+    syncClaimingModeOptionState();
 }
 
 function handleThemeModeSelectionEvent(event) {
@@ -886,38 +886,38 @@ function handleThemeModeSelectionEvent(event) {
     const target = event.target;
     if (!(target instanceof Element)) return;
 
-    if (target.closest('#settingsArthasMode, .arthasmod-theme-option label')) {
-        setArthasModeEnabled(true, true);
+    if (target.closest('#settingsClaimingMode, .Claimingmod-theme-option label')) {
+        setClaimingModeEnabled(true, true);
         return;
     }
 
     if (target.closest('#settingsWhiteMode, #settingsDarkMode, label[for="settingsWhiteMode"], label[for="settingsDarkMode"]')) {
-        setArthasModeEnabled(false, true);
+        setClaimingModeEnabled(false, true);
         return;
     }
 
     if (target.matches('.display-mode-container .range-slider') || target.closest('.display-mode-container .range-slider')) {
-        if (isArthasModeEnabled()) {
+        if (isClaimingModeEnabled()) {
             event.preventDefault();
             event.stopImmediatePropagation();
             const slider = target.closest('.display-mode-container .range-slider') || target;
             if (slider && typeof slider.value !== 'undefined') {
-                setArthasLessonBrightnessFromSlider(slider);
+                setClaimingLessonBrightnessFromSlider(slider);
             }
         }
         return;
     }
 }
 
-function startArthasModeOptionObserver() {
-    ensureArthasModeOption();
+function startClaimingModeOptionObserver() {
+    ensureClaimingModeOption();
 
     document.addEventListener('click', handleThemeModeSelectionEvent, true);
     document.addEventListener('change', handleThemeModeSelectionEvent, true);
     document.addEventListener('input', handleThemeModeSelectionEvent, true);
 
     const modeObserver = new MutationObserver(() => {
-        ensureArthasModeOption();
+        ensureClaimingModeOption();
     });
 
     if (document.body) {
@@ -926,9 +926,9 @@ function startArthasModeOptionObserver() {
 
     // Fallback for views that reuse hidden DOM without mutation events.
     window.setInterval(() => {
-        ensureArthasModeOption();
-        if (isArthasModeEnabled()) {
-            setArthasLessonBrightnessFromSlider(getDisplayModeSlider());
+        ensureClaimingModeOption();
+        if (isClaimingModeEnabled()) {
+            setClaimingLessonBrightnessFromSlider(getDisplayModeSlider());
         }
     }, 1000);
 }
@@ -1301,22 +1301,22 @@ function ensureTimetableNavigationOverlayHandlers() {
     const nextButton = getTimetableNavigationButton('next');
     const currentButton = getTimetableCurrentWeekButton();
 
-    if (previousButton && !previousButton.dataset.arthasOverlayNavBound) {
-        previousButton.dataset.arthasOverlayNavBound = '1';
+    if (previousButton && !previousButton.dataset.ClaimingOverlayNavBound) {
+        previousButton.dataset.ClaimingOverlayNavBound = '1';
         previousButton.addEventListener('click', () => {
             handleTimetableNavigationOverlay('previous');
         }, true);
     }
 
-    if (nextButton && !nextButton.dataset.arthasOverlayNavBound) {
-        nextButton.dataset.arthasOverlayNavBound = '1';
+    if (nextButton && !nextButton.dataset.ClaimingOverlayNavBound) {
+        nextButton.dataset.ClaimingOverlayNavBound = '1';
         nextButton.addEventListener('click', () => {
             handleTimetableNavigationOverlay('next');
         }, true);
     }
 
-    if (currentButton && !currentButton.dataset.arthasOverlayNavBound) {
-        currentButton.dataset.arthasOverlayNavBound = '1';
+    if (currentButton && !currentButton.dataset.ClaimingOverlayNavBound) {
+        currentButton.dataset.ClaimingOverlayNavBound = '1';
         currentButton.addEventListener('click', () => {
             handleTimetableNavigationOverlay('current');
         }, true);
@@ -1459,7 +1459,7 @@ function startBackgroundWeekPreloadIfReady() {
 }
 
 function applyCachedTimetable() {
-    if (!isArthasModeEnabled()) return;
+    if (!isClaimingModeEnabled()) return;
 
     console.log("Isy Modernizer: Checking cache for timetable...");
     // Only run on the main timetable view
@@ -1491,7 +1491,7 @@ function applyCachedTimetable() {
 // Global state to track URL (path + query + hash for SPA routes)
 let currentUrl = window.location.href;
 let timetableObserverStarted = false;
-let arthasModeObserverStarted = false;
+let ClaimingModeObserverStarted = false;
 
 function startTimetableObserver() {
     if (timetableObserverStarted) return;
@@ -1503,7 +1503,7 @@ function startTimetableObserver() {
     const pendingMutations = [];
 
     const processTimetableMutation = (mutations = []) => {
-        if (!isArthasModeEnabled()) {
+        if (!isClaimingModeEnabled()) {
             removeCachedTimetableOverlay();
             return;
         }
@@ -1638,7 +1638,7 @@ function startTimetableObserver() {
 
     // URL watchdog: some SPA transitions don't trigger a useful mutation immediately.
     window.setInterval(() => {
-        if (!isArthasModeEnabled()) {
+        if (!isClaimingModeEnabled()) {
             removeCachedTimetableOverlay();
             return;
         }
@@ -1654,8 +1654,8 @@ function startTimetableObserver() {
     }, 1000);
 }
 
-function initializeArthasFeatures() {
-    if (!isArthasModeEnabled()) return;
+function initializeClaimingFeatures() {
+    if (!isClaimingModeEnabled()) return;
 
     try {
         decorateFooter();
@@ -1664,40 +1664,40 @@ function initializeArthasFeatures() {
 
         // Defer initial timetable decoration until after current render tick.
         window.setTimeout(() => {
-            if (!isArthasModeEnabled()) return;
+            if (!isClaimingModeEnabled()) return;
             applyTimetableClasses(Array.from(document.querySelectorAll(TIMETABLE_ENTRY_SELECTOR)));
         }, 0);
 
         ensureTimetablePastRefresh();
         chrome.runtime.sendMessage({ action: 'SYNC_THEME' });
     } catch (error) {
-        console.warn('Isy Modernizer: initializeArthasFeatures failed.', error);
+        console.warn('Isy Modernizer: initializeClaimingFeatures failed.', error);
     }
 }
 
 function initializeThemeMode() {
     const mode = readThemeModePreference();
-    applyArthasModeStateToDom(mode !== ARTHAS_THEME_MODE.ISY);
+    applyClaimingModeStateToDom(mode !== Claiming_THEME_MODE.ISY);
 }
 
-function bootstrapArthasMod() {
+function bootstrapClaimingMod() {
     ensureBaseAbsenceTableFixStyles();
-    ensureArthasLessonBrightnessStyle();
+    ensureClaimingLessonBrightnessStyle();
 
-    if (!arthasModeObserverStarted) {
-        arthasModeObserverStarted = true;
-        startArthasModeOptionObserver();
+    if (!ClaimingModeObserverStarted) {
+        ClaimingModeObserverStarted = true;
+        startClaimingModeOptionObserver();
     }
 
-    if (isArthasModeEnabled()) {
-        initializeArthasFeatures();
+    if (isClaimingModeEnabled()) {
+        initializeClaimingFeatures();
     }
 }
 
 // Initialize
 initializeThemeMode();
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bootstrapArthasMod);
+    document.addEventListener('DOMContentLoaded', bootstrapClaimingMod);
 } else {
-    bootstrapArthasMod();
+    bootstrapClaimingMod();
 }

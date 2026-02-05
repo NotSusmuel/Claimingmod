@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "ArthasMod",
+    "name": "ClaimingMod",
     "version": "1.0",
-    "description": "A modern costume for isy.ksr.ch made by Arthas1811",
+    "description": "A modern costume for isy.ksr.ch made by Claimingnine",
     "host_permissions": [
         "*://isy.ksr.ch/*",
         "*://isy-api.ksr.ch/*",

@@ -1,10 +1,10 @@
 ﻿(() => {
     'use strict';
 
-    if (window.__arthasWeekApiCacheInstalled) return;
-    window.__arthasWeekApiCacheInstalled = true;
+    if (window.__ClaimingWeekApiCacheInstalled) return;
+    window.__ClaimingWeekApiCacheInstalled = true;
 
-    const CACHE_STORE_KEY = 'arthas-week-graphql-cache-v1';
+    const CACHE_STORE_KEY = 'Claiming-week-graphql-cache-v1';
     const CACHE_MAX_AGE_MS = 45 * 24 * 60 * 60 * 1000;
     const CACHE_MAX_ENTRIES = 240;
     const PRELOAD_PREVIOUS_WEEKS = 5;
@@ -621,9 +621,9 @@
         };
 
         window.setTimeout(() => {
-            try { xhr.dispatchEvent(createEvent('readystatechange')); } catch {}
-            try { xhr.dispatchEvent(createEvent('load')); } catch {}
-            try { xhr.dispatchEvent(createEvent('loadend')); } catch {}
+            try { xhr.dispatchEvent(createEvent('readystatechange')); } catch { }
+            try { xhr.dispatchEvent(createEvent('load')); } catch { }
+            try { xhr.dispatchEvent(createEvent('loadend')); } catch { }
         }, 0);
     }
 
@@ -673,8 +673,8 @@
             configurable: true,
             enumerable: descriptor.enumerable,
             get: function getPatchedProperty() {
-                if (this.__arthasCachedXhrState) {
-                    return resolveValue.call(this, this.__arthasCachedXhrState, descriptor);
+                if (this.__ClaimingCachedXhrState) {
+                    return resolveValue.call(this, this.__ClaimingCachedXhrState, descriptor);
                 }
                 return descriptor.get.call(this);
             }
@@ -696,8 +696,8 @@
 
     try {
         xhrProto.getAllResponseHeaders = function patchedGetAllResponseHeaders() {
-            if (this.__arthasCachedXhrState) {
-                return this.__arthasCachedXhrState.responseHeaders || 'content-type: application/json\r\n';
+            if (this.__ClaimingCachedXhrState) {
+                return this.__ClaimingCachedXhrState.responseHeaders || 'content-type: application/json\r\n';
             }
             return originalGetAllResponseHeaders.call(this);
         };
@@ -707,8 +707,8 @@
 
     try {
         xhrProto.getResponseHeader = function patchedGetResponseHeader(name) {
-            if (this.__arthasCachedXhrState) {
-                return parseResponseHeaderValue(this.__arthasCachedXhrState.responseHeaders, name);
+            if (this.__ClaimingCachedXhrState) {
+                return parseResponseHeaderValue(this.__ClaimingCachedXhrState.responseHeaders, name);
             }
             return originalGetResponseHeader.call(this, name);
         };
@@ -718,7 +718,7 @@
 
     try {
         xhrProto.open = function patchedOpen(method, url, asyncValue, user, password) {
-            this.__arthasRequestInfo = {
+            this.__ClaimingRequestInfo = {
                 method: String(method || 'GET').toUpperCase(),
                 url: String(url || ''),
                 headers: {},
@@ -726,7 +726,7 @@
                 user,
                 password
             };
-            this.__arthasCachedXhrState = null;
+            this.__ClaimingCachedXhrState = null;
 
             return originalOpen.call(this, method, url, asyncValue, user, password);
         };
@@ -736,8 +736,8 @@
 
     try {
         xhrProto.setRequestHeader = function patchedSetRequestHeader(name, value) {
-            if (this.__arthasRequestInfo && name) {
-                this.__arthasRequestInfo.headers[String(name).toLowerCase()] = String(value);
+            if (this.__ClaimingRequestInfo && name) {
+                this.__ClaimingRequestInfo.headers[String(name).toLowerCase()] = String(value);
             }
             return originalSetRequestHeader.call(this, name, value);
         };
@@ -747,7 +747,7 @@
 
     try {
         xhrProto.send = function patchedSend(body) {
-            const requestInfo = this.__arthasRequestInfo;
+            const requestInfo = this.__ClaimingRequestInfo;
             if (!requestInfo || !isGraphqlRequest(requestInfo.url, requestInfo.method)) {
                 return originalSend.call(this, body);
             }
@@ -767,7 +767,7 @@
 
             const cached = getCachedEntry(meta);
             if (cached) {
-                this.__arthasCachedXhrState = {
+                this.__ClaimingCachedXhrState = {
                     readyState: 4,
                     status: Number.isFinite(cached.status) ? cached.status : 200,
                     statusText: cached.statusText || 'OK',
@@ -776,7 +776,7 @@
                     responseJson: safeJsonParse(cached.body),
                     responseHeaders: cached.responseHeaders || 'content-type: application/json\r\n'
                 };
-                applyInstanceStateFallback(this, this.__arthasCachedXhrState);
+                applyInstanceStateFallback(this, this.__ClaimingCachedXhrState);
 
                 revalidateInBackground(requestInfo.url, bodyText, requestInfo.headers, meta);
                 dispatchCachedEvents(this);

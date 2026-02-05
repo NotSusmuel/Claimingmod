@@ -834,8 +834,8 @@ textarea:focus-visible {
     box-shadow: 0 8px 16px -12px rgba(39, 78, 146, 0.9) !important;
 }
 
-.calendar-week-day-header.today .cwd-header-label > span,
-.calendar-week-day .today .cwd-header-label > span {
+.calendar-week-day-header.today .cwd-header-label>span,
+.calendar-week-day .today .cwd-header-label>span {
     color: #e7f1ff !important;
     font-weight: 700 !important;
 }
@@ -953,13 +953,11 @@ body,
 }
 
 .day-view-scaffold::before {
-    background-image: repeating-linear-gradient(
-        to right,
-        rgba(70, 92, 126, 0.13) 0,
-        rgba(70, 92, 126, 0.13) 0.06rem,
-        transparent 0.06rem,
-        transparent calc(100% / var(--calendar-week-number-of-days))
-    ) !important;
+    background-image: repeating-linear-gradient(to right,
+            rgba(70, 92, 126, 0.13) 0,
+            rgba(70, 92, 126, 0.13) 0.06rem,
+            transparent 0.06rem,
+            transparent calc(100% / var(--calendar-week-number-of-days))) !important;
 }
 
 .scroll-indicator {
@@ -998,7 +996,7 @@ body,
     color: #dcebff !important;
 }
 
-.footer .arthasmod-version {
+.footer .Claimingmod-version {
     display: inline-flex !important;
     align-items: center !important;
     margin-right: 0.45rem !important;
@@ -1040,7 +1038,7 @@ body,
     overflow: hidden !important;
 }
 
-[data-v-cab99d68].w-full.h-full.relative.bg-background > [data-v-cab99d68].absolute.bg-background {
+[data-v-cab99d68].w-full.h-full.relative.bg-background>[data-v-cab99d68].absolute.bg-background {
     background: transparent !important;
     background-color: transparent !important;
 }
@@ -1072,11 +1070,11 @@ body,
     max-width: 100% !important;
 }
 
-[data-v-0eb0dee1] .grid.grid-flow-col.grid-cols-semesterViewColumn > * {
+[data-v-0eb0dee1] .grid.grid-flow-col.grid-cols-semesterViewColumn>* {
     min-width: 0 !important;
 }
 
-[data-v-0eb0dee1] .grid.grid-flow-col.grid-cols-semesterViewColumn.w-full > :nth-child(2) {
+[data-v-0eb0dee1] .grid.grid-flow-col.grid-cols-semesterViewColumn.w-full> :nth-child(2) {
     margin-left: 0 !important;
     padding-left: 0.4rem !important;
     padding-right: 0.4rem !important;
@@ -1102,8 +1100,8 @@ body,
     padding-right: 0 !important;
 }
 
-[data-v-0eb0dee1] [data-type="absences"] [data-message-iri] > div,
-[data-v-0eb0dee1] [data-type="absences"] [data-message-iri] > div > div {
+[data-v-0eb0dee1] [data-type="absences"] [data-message-iri]>div,
+[data-v-0eb0dee1] [data-type="absences"] [data-message-iri]>div>div {
     width: 100% !important;
     height: 100% !important;
     display: flex !important;
@@ -1118,13 +1116,13 @@ body,
     height: clamp(0.68rem, 0.95vw, 0.95rem) !important;
 }
 
-.footer .arthasmod-version:hover {
+.footer .Claimingmod-version:hover {
     color: #ffffff !important;
     border-color: rgba(186, 217, 255, 0.7) !important;
 }
 
 
-/* ArthasMod timetable palette remap */
+/* ClaimingMod timetable palette remap */
 /* Lektion (dark blue gradient) */
 .calendar-week-element-inner.calendar-coloring[style*="144, 172, 47"],
 .calendar-week-element-inner.calendar-coloring[style*="144,172,47"],
@@ -1326,7 +1324,7 @@ body,
 }
 
 
-/* ArthasMod palette intensity pass: stronger gradients without changing text color */
+/* ClaimingMod palette intensity pass: stronger gradients without changing text color */
 .calendar-week-element-inner.calendar-coloring,
 .calendar-week-element-inner[class*="isy-tt-"],
 .calendar-week-element .calendar-week-element-inner {
@@ -1346,88 +1344,88 @@ body,
 }
 
 
-/* ArthasMod full asset normalization (catch remaining standard/light assets) */
-body.ArthasMod-enabled,
-body.ArthasMod-enabled #app,
-body.ArthasMod-enabled .app,
-body.ArthasMod-enabled .routing-view,
-body.ArthasMod-enabled .inner-page,
-body.ArthasMod-enabled .sidebar-page {
+/* ClaimingMod full asset normalization (catch remaining standard/light assets) */
+body.ClaimingMod-enabled,
+body.ClaimingMod-enabled #app,
+body.ClaimingMod-enabled .app,
+body.ClaimingMod-enabled .routing-view,
+body.ClaimingMod-enabled .inner-page,
+body.ClaimingMod-enabled .sidebar-page {
     color-scheme: dark !important;
 }
 
-body.ArthasMod-enabled .button,
-body.ArthasMod-enabled .flat-button,
-body.ArthasMod-enabled .icon-button,
-body.ArthasMod-enabled .seamless,
-body.ArthasMod-enabled button,
-body.ArthasMod-enabled [role="button"] {
+body.ClaimingMod-enabled .button,
+body.ClaimingMod-enabled .flat-button,
+body.ClaimingMod-enabled .icon-button,
+body.ClaimingMod-enabled .seamless,
+body.ClaimingMod-enabled button,
+body.ClaimingMod-enabled [role="button"] {
     background: linear-gradient(145deg, rgba(14, 24, 44, 0.94), rgba(24, 42, 74, 0.92)) !important;
     border-color: rgba(76, 103, 146, 0.22) !important;
     color: var(--isy-text-dark) !important;
 }
 
-body.ArthasMod-enabled input,
-body.ArthasMod-enabled select,
-body.ArthasMod-enabled textarea,
-body.ArthasMod-enabled .text-input,
-body.ArthasMod-enabled .range-slider {
+body.ClaimingMod-enabled input,
+body.ClaimingMod-enabled select,
+body.ClaimingMod-enabled textarea,
+body.ClaimingMod-enabled .text-input,
+body.ClaimingMod-enabled .range-slider {
     background: rgba(10, 16, 30, 0.88) !important;
     border-color: rgba(76, 103, 146, 0.20) !important;
     color: var(--isy-text-dark) !important;
 }
 
-body.ArthasMod-enabled .popup-window,
-body.ArthasMod-enabled .modal,
-body.ArthasMod-enabled .dropdown,
-body.ArthasMod-enabled .notification,
-body.ArthasMod-enabled .calendar-element,
-body.ArthasMod-enabled .calendarlist__wrapper,
-body.ArthasMod-enabled .calendarlist__list,
-body.ArthasMod-enabled .side-slide-container {
+body.ClaimingMod-enabled .popup-window,
+body.ClaimingMod-enabled .modal,
+body.ClaimingMod-enabled .dropdown,
+body.ClaimingMod-enabled .notification,
+body.ClaimingMod-enabled .calendar-element,
+body.ClaimingMod-enabled .calendarlist__wrapper,
+body.ClaimingMod-enabled .calendarlist__list,
+body.ClaimingMod-enabled .side-slide-container {
     background: linear-gradient(160deg, rgba(8, 14, 28, 0.96), rgba(16, 30, 56, 0.94)) !important;
     border-color: rgba(76, 103, 146, 0.20) !important;
     color: var(--isy-text-dark) !important;
 }
 
-body.ArthasMod-enabled i.isy,
-body.ArthasMod-enabled .material-symbols-outlined,
-body.ArthasMod-enabled svg {
+body.ClaimingMod-enabled i.isy,
+body.ClaimingMod-enabled .material-symbols-outlined,
+body.ClaimingMod-enabled svg {
     color: #dce9ff !important;
 }
 
 /* Keep status icons meaningful */
-body.ArthasMod-enabled i.isy_absences_check,
-body.ArthasMod-enabled .isy_absences_check {
+body.ClaimingMod-enabled i.isy_absences_check,
+body.ClaimingMod-enabled .isy_absences_check {
     color: #8de1b3 !important;
 }
 
-body.ArthasMod-enabled .isy_absences_cross,
-body.ArthasMod-enabled .isy_absences_remove,
-body.ArthasMod-enabled .isy_absences_cancel {
+body.ClaimingMod-enabled .isy_absences_cross,
+body.ClaimingMod-enabled .isy_absences_remove,
+body.ClaimingMod-enabled .isy_absences_cancel {
     color: #ff9aa8 !important;
 }
 
 /* Normalize legacy logo/image assets so blue-on-light variants don't clash */
-body.ArthasMod-enabled img[src*="isy-logo-rgb_blue"],
-body.ArthasMod-enabled img[src*="isy-logo-rgb_white"],
-body.ArthasMod-enabled img[src*="logo"] {
+body.ClaimingMod-enabled img[src*="isy-logo-rgb_blue"],
+body.ClaimingMod-enabled img[src*="isy-logo-rgb_white"],
+body.ClaimingMod-enabled img[src*="logo"] {
     filter: brightness(1.08) saturate(0.86) contrast(1.05) !important;
 }
 
 /* Hard fallback for any light backgrounds left by upstream classes */
-body.ArthasMod-enabled .bg-white,
-body.ArthasMod-enabled [class*="bg-white"],
-body.ArthasMod-enabled [class*="background-white"],
-body.ArthasMod-enabled [style*="background: rgb(255"],
-body.ArthasMod-enabled [style*="background-color: rgb(255"] {
+body.ClaimingMod-enabled .bg-white,
+body.ClaimingMod-enabled [class*="bg-white"],
+body.ClaimingMod-enabled [class*="background-white"],
+body.ClaimingMod-enabled [style*="background: rgb(255"],
+body.ClaimingMod-enabled [style*="background-color: rgb(255"] {
     background-color: rgba(10, 16, 30, 0.9) !important;
     color: var(--isy-text-dark) !important;
 }
 
 
-/* ArthasMod token bridge for UI parts still using default utility tokens */
-body.ArthasMod-enabled {
+/* ClaimingMod token bridge for UI parts still using default utility tokens */
+body.ClaimingMod-enabled {
     /* Utility classes in original ISY css use hsl(var(--token)); keep tokens in HSL triplet format */
     --background: 220 47% 9% !important;
     --foreground: 216 100% 94% !important;
@@ -1451,116 +1449,116 @@ body.ArthasMod-enabled {
 }
 
 /* Specific side filter sheet (Zeitraum- und Filterauswahl) */
-body.ArthasMod-enabled [data-v-d18ebabc].bg-backgroundContrast {
+body.ClaimingMod-enabled [data-v-d18ebabc].bg-backgroundContrast {
     background: linear-gradient(160deg, rgba(9, 16, 30, 0.98), rgba(19, 34, 61, 0.96)) !important;
     color: var(--isy-text-dark) !important;
     border-left: 1px solid rgba(80, 109, 154, 0.20) !important;
     box-shadow: -10px 0 24px -16px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(80, 109, 154, 0.10) inset !important;
 }
 
-body.ArthasMod-enabled [data-v-d18ebabc] [data-v-98694fd9],
-body.ArthasMod-enabled [data-v-d18ebabc] [data-v-98694fd9] * {
+body.ClaimingMod-enabled [data-v-d18ebabc] [data-v-98694fd9],
+body.ClaimingMod-enabled [data-v-d18ebabc] [data-v-98694fd9] * {
     color: var(--isy-text-dark) !important;
 }
 
-body.ArthasMod-enabled [data-v-d18ebabc] button,
-body.ArthasMod-enabled [data-v-d18ebabc] .inline-flex,
-body.ArthasMod-enabled [data-v-d18ebabc] [class*="bg-background"],
-body.ArthasMod-enabled [data-v-d18ebabc] [class*="bg-secondary"],
-body.ArthasMod-enabled [data-v-d18ebabc] [class*="bg-primary"] {
+body.ClaimingMod-enabled [data-v-d18ebabc] button,
+body.ClaimingMod-enabled [data-v-d18ebabc] .inline-flex,
+body.ClaimingMod-enabled [data-v-d18ebabc] [class*="bg-background"],
+body.ClaimingMod-enabled [data-v-d18ebabc] [class*="bg-secondary"],
+body.ClaimingMod-enabled [data-v-d18ebabc] [class*="bg-primary"] {
     border-color: rgba(80, 109, 154, 0.20) !important;
 }
 
-body.ArthasMod-enabled [data-v-d18ebabc] .bg-background,
-body.ArthasMod-enabled [data-v-d18ebabc] [class~="bg-background"] {
+body.ClaimingMod-enabled [data-v-d18ebabc] .bg-background,
+body.ClaimingMod-enabled [data-v-d18ebabc] [class~="bg-background"] {
     background: rgba(14, 24, 42, 0.92) !important;
 }
 
-body.ArthasMod-enabled [data-v-d18ebabc] .bg-secondary,
-body.ArthasMod-enabled [data-v-d18ebabc] [class~="bg-secondary"] {
+body.ClaimingMod-enabled [data-v-d18ebabc] .bg-secondary,
+body.ClaimingMod-enabled [data-v-d18ebabc] [class~="bg-secondary"] {
     background: rgba(31, 52, 82, 0.9) !important;
     color: #eaf2ff !important;
 }
 
-body.ArthasMod-enabled [data-v-d18ebabc] .bg-primary,
-body.ArthasMod-enabled [data-v-d18ebabc] [class~="bg-primary"] {
+body.ClaimingMod-enabled [data-v-d18ebabc] .bg-primary,
+body.ClaimingMod-enabled [data-v-d18ebabc] [class~="bg-primary"] {
     background: linear-gradient(145deg, rgba(44, 84, 146, 0.96), rgba(57, 110, 184, 0.94)) !important;
     color: #edf4ff !important;
 }
 
-body.ArthasMod-enabled [data-v-d18ebabc] .hover\:bg-accent:hover,
-body.ArthasMod-enabled [data-v-d18ebabc] [class*="hover:bg-accent"]:hover,
-body.ArthasMod-enabled [data-v-d18ebabc] .hover\:bg-primary\/90:hover {
+body.ClaimingMod-enabled [data-v-d18ebabc] .hover\:bg-accent:hover,
+body.ClaimingMod-enabled [data-v-d18ebabc] [class*="hover:bg-accent"]:hover,
+body.ClaimingMod-enabled [data-v-d18ebabc] .hover\:bg-primary\/90:hover {
     background: rgba(45, 74, 117, 0.9) !important;
     color: #f1f6ff !important;
 }
 
-body.ArthasMod-enabled [data-v-d18ebabc] .bg-border,
-body.ArthasMod-enabled [data-v-d18ebabc] [class~="bg-border"] {
+body.ClaimingMod-enabled [data-v-d18ebabc] .bg-border,
+body.ClaimingMod-enabled [data-v-d18ebabc] [class~="bg-border"] {
     background: rgba(84, 114, 158, 0.20) !important;
 }
 
 
 /* Generic utility-theme remap for shadcn/tw components that still look "standard" */
-body.ArthasMod-enabled .bg-background {
+body.ClaimingMod-enabled .bg-background {
     background-color: hsl(var(--background)) !important;
 }
 
-body.ArthasMod-enabled .bg-popover,
-body.ArthasMod-enabled .bg-card {
+body.ClaimingMod-enabled .bg-popover,
+body.ClaimingMod-enabled .bg-card {
     background-color: hsl(var(--card)) !important;
 }
 
-body.ArthasMod-enabled .bg-secondary {
+body.ClaimingMod-enabled .bg-secondary {
     background-color: hsl(var(--secondary)) !important;
 }
 
-body.ArthasMod-enabled .bg-muted {
+body.ClaimingMod-enabled .bg-muted {
     background-color: hsl(var(--muted)) !important;
 }
 
-body.ArthasMod-enabled .bg-primary {
+body.ClaimingMod-enabled .bg-primary {
     background: linear-gradient(145deg, rgba(44, 84, 146, 0.96), rgba(57, 110, 184, 0.94)) !important;
 }
 
-body.ArthasMod-enabled .text-foreground,
-body.ArthasMod-enabled .text-card-foreground,
-body.ArthasMod-enabled .text-popover-foreground,
-body.ArthasMod-enabled .text-secondary-foreground,
-body.ArthasMod-enabled .text-muted-foreground {
+body.ClaimingMod-enabled .text-foreground,
+body.ClaimingMod-enabled .text-card-foreground,
+body.ClaimingMod-enabled .text-popover-foreground,
+body.ClaimingMod-enabled .text-secondary-foreground,
+body.ClaimingMod-enabled .text-muted-foreground {
     color: hsl(var(--foreground)) !important;
 }
 
-body.ArthasMod-enabled .border-input,
-body.ArthasMod-enabled .border-border,
-body.ArthasMod-enabled .border,
-body.ArthasMod-enabled .border-b,
-body.ArthasMod-enabled .border-t,
-body.ArthasMod-enabled .border-l,
-body.ArthasMod-enabled .border-r {
+body.ClaimingMod-enabled .border-input,
+body.ClaimingMod-enabled .border-border,
+body.ClaimingMod-enabled .border,
+body.ClaimingMod-enabled .border-b,
+body.ClaimingMod-enabled .border-t,
+body.ClaimingMod-enabled .border-l,
+body.ClaimingMod-enabled .border-r {
     border-color: hsl(var(--border)) !important;
 }
 
 
 /* Timetable top controls: remove button backgrounds (back/forward, current date, help) */
-body.ArthasMod-enabled .time-table-scaffold .tts-header button,
-body.ArthasMod-enabled .time-table-scaffold .tts-header .current-week-button,
-body.ArthasMod-enabled .time-table-scaffold .tts-header .h-12.rounded,
-body.ArthasMod-enabled .time-table-scaffold .tts-header button:has(.fa-circle-question),
-body.ArthasMod-enabled .time-table-scaffold .tts-header button:has(.isy_back),
-body.ArthasMod-enabled .time-table-scaffold .tts-header button:has(.isy_to_appointment),
-body.ArthasMod-enabled .time-table-scaffold .tts-header button:has(.isy_forward) {
+body.ClaimingMod-enabled .time-table-scaffold .tts-header button,
+body.ClaimingMod-enabled .time-table-scaffold .tts-header .current-week-button,
+body.ClaimingMod-enabled .time-table-scaffold .tts-header .h-12.rounded,
+body.ClaimingMod-enabled .time-table-scaffold .tts-header button:has(.fa-circle-question),
+body.ClaimingMod-enabled .time-table-scaffold .tts-header button:has(.isy_back),
+body.ClaimingMod-enabled .time-table-scaffold .tts-header button:has(.isy_to_appointment),
+body.ClaimingMod-enabled .time-table-scaffold .tts-header button:has(.isy_forward) {
     background: transparent !important;
     background-color: transparent !important;
     box-shadow: none !important;
     border-color: transparent !important;
 }
 
-body.ArthasMod-enabled .time-table-scaffold .tts-header button:hover,
-body.ArthasMod-enabled .time-table-scaffold .tts-header button:active,
-body.ArthasMod-enabled .time-table-scaffold .tts-header button:focus-visible,
-body.ArthasMod-enabled .time-table-scaffold .tts-header .current-week-button:hover,
-body.ArthasMod-enabled .time-table-scaffold .tts-header .current-week-button:active {
+body.ClaimingMod-enabled .time-table-scaffold .tts-header button:hover,
+body.ClaimingMod-enabled .time-table-scaffold .tts-header button:active,
+body.ClaimingMod-enabled .time-table-scaffold .tts-header button:focus-visible,
+body.ClaimingMod-enabled .time-table-scaffold .tts-header .current-week-button:hover,
+body.ClaimingMod-enabled .time-table-scaffold .tts-header .current-week-button:active {
     background: transparent !important;
     background-color: transparent !important;
     box-shadow: none !important;
@@ -1568,26 +1566,26 @@ body.ArthasMod-enabled .time-table-scaffold .tts-header .current-week-button:act
 
 
 /* Explicit help icon button override (kept transparent in all states) */
-body.ArthasMod-enabled button[data-v-65831265].h-12.rounded,
-body.ArthasMod-enabled button.h-12.rounded.text-xl.text-fontColor.ml-1,
-body.ArthasMod-enabled button.print\:hidden.h-12.rounded,
-body.ArthasMod-enabled button:has(.fa-circle-question) {
+body.ClaimingMod-enabled button[data-v-65831265].h-12.rounded,
+body.ClaimingMod-enabled button.h-12.rounded.text-xl.text-fontColor.ml-1,
+body.ClaimingMod-enabled button.print\:hidden.h-12.rounded,
+body.ClaimingMod-enabled button:has(.fa-circle-question) {
     background: transparent !important;
     background-color: transparent !important;
     box-shadow: none !important;
     border: 0 !important;
 }
 
-body.ArthasMod-enabled button[data-v-65831265].h-12.rounded:hover,
-body.ArthasMod-enabled button[data-v-65831265].h-12.rounded:active,
-body.ArthasMod-enabled button[data-v-65831265].h-12.rounded:focus,
-body.ArthasMod-enabled button[data-v-65831265].h-12.rounded:focus-visible,
-body.ArthasMod-enabled button.h-12.rounded.text-xl.text-fontColor.ml-1:hover,
-body.ArthasMod-enabled button.h-12.rounded.text-xl.text-fontColor.ml-1:active,
-body.ArthasMod-enabled button.h-12.rounded.text-xl.text-fontColor.ml-1:focus-visible,
-body.ArthasMod-enabled button:has(.fa-circle-question):hover,
-body.ArthasMod-enabled button:has(.fa-circle-question):active,
-body.ArthasMod-enabled button:has(.fa-circle-question):focus-visible {
+body.ClaimingMod-enabled button[data-v-65831265].h-12.rounded:hover,
+body.ClaimingMod-enabled button[data-v-65831265].h-12.rounded:active,
+body.ClaimingMod-enabled button[data-v-65831265].h-12.rounded:focus,
+body.ClaimingMod-enabled button[data-v-65831265].h-12.rounded:focus-visible,
+body.ClaimingMod-enabled button.h-12.rounded.text-xl.text-fontColor.ml-1:hover,
+body.ClaimingMod-enabled button.h-12.rounded.text-xl.text-fontColor.ml-1:active,
+body.ClaimingMod-enabled button.h-12.rounded.text-xl.text-fontColor.ml-1:focus-visible,
+body.ClaimingMod-enabled button:has(.fa-circle-question):hover,
+body.ClaimingMod-enabled button:has(.fa-circle-question):active,
+body.ClaimingMod-enabled button:has(.fa-circle-question):focus-visible {
     background: transparent !important;
     background-color: transparent !important;
     box-shadow: none !important;
@@ -1596,13 +1594,13 @@ body.ArthasMod-enabled button:has(.fa-circle-question):focus-visible {
 
 
 /* Profile button: only bottom-left corner rounded */
-body.ArthasMod-enabled .profile-button[data-v-65831265] {
+body.ClaimingMod-enabled .profile-button[data-v-65831265] {
     border-bottom-left-radius: 14px !important;
 }
 
 
 /* Keep navbar hover glow visible (avoid clipping at top edge) */
-body.ArthasMod-enabled .header-bottom {
+body.ClaimingMod-enabled .header-bottom {
     overflow-y: visible !important;
     overflow-x: auto !important;
     padding-top: 4px !important;
@@ -1611,8 +1609,8 @@ body.ArthasMod-enabled .header-bottom {
 
 
 /* Absence/appointment preview cards: darken bright gray reservation-like entries */
-body.ArthasMod-enabled .appointment-preview,
-body.ArthasMod-enabled .appointment-preview.calendar-coloring {
+body.ClaimingMod-enabled .appointment-preview,
+body.ClaimingMod-enabled .appointment-preview.calendar-coloring {
     --background: 220 46% 11% !important;
     background: linear-gradient(150deg, rgba(9, 16, 30, 0.98), rgba(13, 24, 44, 0.96)) !important;
     background-color: rgba(10, 18, 34, 0.97) !important;
@@ -1621,49 +1619,50 @@ body.ArthasMod-enabled .appointment-preview.calendar-coloring {
     color: #e4eeff !important;
 }
 
-body.ArthasMod-enabled .appointment-preview *,
-body.ArthasMod-enabled .appointment-preview .text-xl,
-body.ArthasMod-enabled .appointment-preview p,
-body.ArthasMod-enabled .appointment-preview span,
-body.ArthasMod-enabled .appointment-preview div {
+body.ClaimingMod-enabled .appointment-preview *,
+body.ClaimingMod-enabled .appointment-preview .text-xl,
+body.ClaimingMod-enabled .appointment-preview p,
+body.ClaimingMod-enabled .appointment-preview span,
+body.ClaimingMod-enabled .appointment-preview div {
     color: #e4eeff !important;
 }
-body.ArthasMod-enabled .appointment-preview.calendar-coloring[style*="211, 211, 211"],
-body.ArthasMod-enabled .appointment-preview.calendar-coloring[style*="211,211,211"] {
+
+body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211, 211, 211"],
+body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211,211,211"] {
     background: linear-gradient(145deg, rgba(58, 66, 80, 0.96), rgba(76, 86, 104, 0.93)) !important;
     border-color: rgba(102, 116, 141, 0.35) !important;
     color: #d9e2f1 !important;
 }
 
-body.ArthasMod-enabled .appointment-preview.calendar-coloring[style*="211, 211, 211"] .text-xl,
-body.ArthasMod-enabled .appointment-preview.calendar-coloring[style*="211,211,211"] .text-xl,
-body.ArthasMod-enabled .appointment-preview.calendar-coloring[style*="211, 211, 211"] p,
-body.ArthasMod-enabled .appointment-preview.calendar-coloring[style*="211,211,211"] p {
+body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211, 211, 211"] .text-xl,
+body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211,211,211"] .text-xl,
+body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211, 211, 211"] p,
+body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211,211,211"] p {
     color: #d9e2f1 !important;
 }
 
 
 /* Side menu borders: reduce thickness */
-body.ArthasMod-enabled .side-slide-container,
-body.ArthasMod-enabled .my-profile,
-body.ArthasMod-enabled .my-profile-body,
-body.ArthasMod-enabled .profile-container,
-body.ArthasMod-enabled .my-profile-footer,
-body.ArthasMod-enabled .my-profile .header {
+body.ClaimingMod-enabled .side-slide-container,
+body.ClaimingMod-enabled .my-profile,
+body.ClaimingMod-enabled .my-profile-body,
+body.ClaimingMod-enabled .profile-container,
+body.ClaimingMod-enabled .my-profile-footer,
+body.ClaimingMod-enabled .my-profile .header {
     border-width: 1px !important;
 }
 
-body.ArthasMod-enabled .my-profile .header,
-body.ArthasMod-enabled .my-profile-footer,
-body.ArthasMod-enabled .profile-container {
+body.ClaimingMod-enabled .my-profile .header,
+body.ClaimingMod-enabled .my-profile-footer,
+body.ClaimingMod-enabled .profile-container {
     border-top-width: 1px !important;
     border-bottom-width: 1px !important;
 }
 
 
-/* Slightly darken lessons globally in ArthasMod without changing text color */
-body.ArthasMod-enabled .calendar-week-element-inner.calendar-coloring,
-body.ArthasMod-enabled .calendar-week-element .calendar-week-element-inner.calendar-coloring {
+/* Slightly darken lessons globally in ClaimingMod without changing text color */
+body.ClaimingMod-enabled .calendar-week-element-inner.calendar-coloring,
+body.ClaimingMod-enabled .calendar-week-element .calendar-week-element-inner.calendar-coloring {
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.06),
         inset 0 -28px 38px rgba(0, 0, 0, 0.40),
@@ -1671,85 +1670,85 @@ body.ArthasMod-enabled .calendar-week-element .calendar-week-element-inner.calen
 }
 
 /* Sidebar in timetable/agenda: make outlines thinner and less aggressive */
-body.ArthasMod-enabled .sidebar[data-v-a21e0373],
-body.ArthasMod-enabled .sidebar-header[data-v-a21e0373],
-body.ArthasMod-enabled .sidebar-content-wrapper[data-v-a21e0373],
-body.ArthasMod-enabled .sidebar-button[data-v-dede7c43],
-body.ArthasMod-enabled .sidebar-button.selected[data-v-dede7c43],
-body.ArthasMod-enabled .sidebar-inner-button[data-v-dede7c43] {
+body.ClaimingMod-enabled .sidebar[data-v-a21e0373],
+body.ClaimingMod-enabled .sidebar-header[data-v-a21e0373],
+body.ClaimingMod-enabled .sidebar-content-wrapper[data-v-a21e0373],
+body.ClaimingMod-enabled .sidebar-button[data-v-dede7c43],
+body.ClaimingMod-enabled .sidebar-button.selected[data-v-dede7c43],
+body.ClaimingMod-enabled .sidebar-inner-button[data-v-dede7c43] {
     border-width: 1px !important;
 }
 
-body.ArthasMod-enabled .sidebar[data-v-a21e0373],
-body.ArthasMod-enabled .sidebar-header[data-v-a21e0373],
-body.ArthasMod-enabled .sidebar-button[data-v-dede7c43],
-body.ArthasMod-enabled .sidebar-content-wrapper[data-v-a21e0373] {
+body.ClaimingMod-enabled .sidebar[data-v-a21e0373],
+body.ClaimingMod-enabled .sidebar-header[data-v-a21e0373],
+body.ClaimingMod-enabled .sidebar-button[data-v-dede7c43],
+body.ClaimingMod-enabled .sidebar-content-wrapper[data-v-a21e0373] {
     border-color: hsl(var(--border) / 0.55) !important;
 }
 
 
 /* Remove icon tile outlines in sidebar completely */
-body.ArthasMod-enabled .sidebar-button[data-v-dede7c43],
-body.ArthasMod-enabled .sidebar-button.selected[data-v-dede7c43],
-body.ArthasMod-enabled .sidebar-inner-button[data-v-dede7c43] {
+body.ClaimingMod-enabled .sidebar-button[data-v-dede7c43],
+body.ClaimingMod-enabled .sidebar-button.selected[data-v-dede7c43],
+body.ClaimingMod-enabled .sidebar-inner-button[data-v-dede7c43] {
     border: 0 !important;
     outline: 0 !important;
     box-shadow: none !important;
 }
 
 
-/* Priority circles in messages/forms: keep visible with Arthas token bridge */
-body.ArthasMod-enabled .priority__circle[data-v-83289acc] {
+/* Priority circles in messages/forms: keep visible with Claiming token bridge */
+body.ClaimingMod-enabled .priority__circle[data-v-83289acc] {
     border-style: solid !important;
     border-width: 1.75px !important;
     background-color: transparent !important;
 }
 
-body.ArthasMod-enabled .priority__circle.circle--normal[data-v-83289acc] {
+body.ClaimingMod-enabled .priority__circle.circle--normal[data-v-83289acc] {
     border-color: var(--priority-color-normal, #7aa8e8) !important;
 }
 
-body.ArthasMod-enabled .priority__circle.circle--high[data-v-83289acc] {
+body.ClaimingMod-enabled .priority__circle.circle--high[data-v-83289acc] {
     border-color: var(--priority-color-high, #f2c14f) !important;
 }
 
-body.ArthasMod-enabled .priority__circle.circle--urgent[data-v-83289acc] {
+body.ClaimingMod-enabled .priority__circle.circle--urgent[data-v-83289acc] {
     border-color: var(--priority-color-urgent, #e97a4b) !important;
 }
 
-body.ArthasMod-enabled .priority__circle.circle--exception[data-v-83289acc] {
+body.ClaimingMod-enabled .priority__circle.circle--exception[data-v-83289acc] {
     border-color: var(--priority-color-exception, #d65b6d) !important;
 }
 
-body.ArthasMod-enabled .priority__circle.circle--filled-normal[data-v-83289acc] {
+body.ClaimingMod-enabled .priority__circle.circle--filled-normal[data-v-83289acc] {
     background-color: var(--priority-color-normal, #7aa8e8) !important;
 }
 
-body.ArthasMod-enabled .priority__circle.circle--filled-high[data-v-83289acc] {
+body.ClaimingMod-enabled .priority__circle.circle--filled-high[data-v-83289acc] {
     background-color: var(--priority-color-high, #f2c14f) !important;
 }
 
-body.ArthasMod-enabled .priority__circle.circle--filled-urgent[data-v-83289acc] {
+body.ClaimingMod-enabled .priority__circle.circle--filled-urgent[data-v-83289acc] {
     background-color: var(--priority-color-urgent, #e97a4b) !important;
 }
 
-body.ArthasMod-enabled .priority__circle.circle--filled-exception[data-v-83289acc] {
+body.ClaimingMod-enabled .priority__circle.circle--filled-exception[data-v-83289acc] {
     background-color: var(--priority-color-exception, #d65b6d) !important;
 }
 
 
 /* Remove gap under top header block */
-body.ArthasMod-enabled .header {
+body.ClaimingMod-enabled .header {
     margin-bottom: 0 !important;
 }
 
 
 /* Split header and timetable menu with distinct gradients */
-body.ArthasMod-enabled .header-top {
+body.ClaimingMod-enabled .header-top {
     background: linear-gradient(180deg, rgba(7, 17, 34, 0.97), rgba(10, 22, 44, 0.93)) !important;
 }
 
-body.ArthasMod-enabled .header-bottom {
+body.ClaimingMod-enabled .header-bottom {
     background: linear-gradient(180deg, rgba(11, 26, 50, 0.96), rgba(14, 32, 58, 0.93)) !important;
     border-top: 1px solid rgba(66, 93, 132, 0.24) !important;
     border-bottom: 1px solid rgba(55, 82, 119, 0.20) !important;
@@ -1757,29 +1756,29 @@ body.ArthasMod-enabled .header-bottom {
 
 
 /* Top menu: subtle bottom border + soft glow */
-body.ArthasMod-enabled .header-bottom {
+body.ClaimingMod-enabled .header-bottom {
     border-bottom: 1px solid rgba(96, 136, 196, 0.32) !important;
     box-shadow: 0 1px 0 rgba(132, 170, 228, 0.16), 0 8px 18px -16px rgba(88, 132, 196, 0.55) !important;
 }
 
 
 /* People detail mini-tab row: transparent buttons, consistent size + alignment */
-body.ArthasMod-enabled .flex.print\:hidden:has(> a > button.seamless.noLabel[data-v-fe6f1f85]),
-body.ArthasMod-enabled .flex.print\:hidden:has(> div > button.seamless.noLabel[data-v-fe6f1f85]) {
+body.ClaimingMod-enabled .flex.print\:hidden:has(> a > button.seamless.noLabel[data-v-fe6f1f85]),
+body.ClaimingMod-enabled .flex.print\:hidden:has(> div > button.seamless.noLabel[data-v-fe6f1f85]) {
     align-items: center !important;
     gap: 0.35rem !important;
 }
 
-body.ArthasMod-enabled .flex.print\:hidden > a:has(> button.seamless.noLabel[data-v-fe6f1f85]),
-body.ArthasMod-enabled .flex.print\:hidden > div:has(> button.seamless.noLabel[data-v-fe6f1f85]) {
+body.ClaimingMod-enabled .flex.print\:hidden>a:has(> button.seamless.noLabel[data-v-fe6f1f85]),
+body.ClaimingMod-enabled .flex.print\:hidden>div:has(> button.seamless.noLabel[data-v-fe6f1f85]) {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     height: 2.7rem !important;
 }
 
-body.ArthasMod-enabled .flex.print\:hidden > a > button.seamless.noLabel[data-v-fe6f1f85],
-body.ArthasMod-enabled .flex.print\:hidden > div > button.seamless.noLabel[data-v-fe6f1f85] {
+body.ClaimingMod-enabled .flex.print\:hidden>a>button.seamless.noLabel[data-v-fe6f1f85],
+body.ClaimingMod-enabled .flex.print\:hidden>div>button.seamless.noLabel[data-v-fe6f1f85] {
     width: 2.7rem !important;
     min-width: 2.7rem !important;
     height: 2.7rem !important;
@@ -1796,12 +1795,12 @@ body.ArthasMod-enabled .flex.print\:hidden > div > button.seamless.noLabel[data-
     justify-content: center !important;
 }
 
-body.ArthasMod-enabled .flex.print\:hidden > a > button.seamless.noLabel[data-v-fe6f1f85] .icon,
-body.ArthasMod-enabled .flex.print\:hidden > div > button.seamless.noLabel[data-v-fe6f1f85] .icon,
-body.ArthasMod-enabled .flex.print\:hidden > a > button.seamless.noLabel[data-v-fe6f1f85] i.isy,
-body.ArthasMod-enabled .flex.print\:hidden > div > button.seamless.noLabel[data-v-fe6f1f85] i.isy,
-body.ArthasMod-enabled .flex.print\:hidden > a > button.seamless.noLabel[data-v-fe6f1f85] svg,
-body.ArthasMod-enabled .flex.print\:hidden > div > button.seamless.noLabel[data-v-fe6f1f85] svg {
+body.ClaimingMod-enabled .flex.print\:hidden>a>button.seamless.noLabel[data-v-fe6f1f85] .icon,
+body.ClaimingMod-enabled .flex.print\:hidden>div>button.seamless.noLabel[data-v-fe6f1f85] .icon,
+body.ClaimingMod-enabled .flex.print\:hidden>a>button.seamless.noLabel[data-v-fe6f1f85] i.isy,
+body.ClaimingMod-enabled .flex.print\:hidden>div>button.seamless.noLabel[data-v-fe6f1f85] i.isy,
+body.ClaimingMod-enabled .flex.print\:hidden>a>button.seamless.noLabel[data-v-fe6f1f85] svg,
+body.ClaimingMod-enabled .flex.print\:hidden>div>button.seamless.noLabel[data-v-fe6f1f85] svg {
     width: 1.35rem !important;
     height: 1.35rem !important;
     min-width: 1.35rem !important;
@@ -1813,13 +1812,13 @@ body.ArthasMod-enabled .flex.print\:hidden > div > button.seamless.noLabel[data-
 
 
 /* Fallback without :has for profile detail tab row */
-body.ArthasMod-enabled [data-v-cab99d68] .flex.print\:hidden {
+body.ClaimingMod-enabled [data-v-cab99d68] .flex.print\:hidden {
     align-items: center !important;
     gap: 0.35rem !important;
 }
 
-body.ArthasMod-enabled [data-v-cab99d68] .flex.print\:hidden > a,
-body.ArthasMod-enabled [data-v-cab99d68] .flex.print\:hidden > div {
+body.ClaimingMod-enabled [data-v-cab99d68] .flex.print\:hidden>a,
+body.ClaimingMod-enabled [data-v-cab99d68] .flex.print\:hidden>div {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -1828,17 +1827,17 @@ body.ArthasMod-enabled [data-v-cab99d68] .flex.print\:hidden > div {
 
 
 /* Timetable hover tooltip (tippy) */
-body.ArthasMod-enabled .tippy-box[data-theme~="isy"] {
+body.ClaimingMod-enabled .tippy-box[data-theme~="isy"] {
     background: linear-gradient(150deg, rgba(9, 16, 30, 0.98), rgba(13, 24, 44, 0.96)) !important;
     border: 1px solid rgba(108, 143, 198, 0.36) !important;
     color: #e6efff !important;
     box-shadow: 0 16px 34px -18px rgba(2, 7, 15, 0.95) !important;
 }
 
-body.ArthasMod-enabled .tippy-box[data-theme~="isy"] .tippy-content {
+body.ClaimingMod-enabled .tippy-box[data-theme~="isy"] .tippy-content {
     color: #e6efff !important;
 }
 
-body.ArthasMod-enabled .tippy-box[data-theme~="isy"] > .tippy-arrow {
+body.ClaimingMod-enabled .tippy-box[data-theme~="isy"]>.tippy-arrow {
     color: rgba(11, 20, 37, 0.98) !important;
 }
