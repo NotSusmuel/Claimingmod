@@ -113,6 +113,24 @@ body {
     line-height: 1.45 !important;
 }
 
+/* Login Window */
+body.ClaimingMod-enabled .login-window {
+    border-radius: 14px !important;
+}
+
+body.ClaimingMod-enabled .li-input-unfocused-border {
+    display: none !important;
+}
+
+body.ClaimingMod-enabled .li-input {
+    border-radius: 14px !important;
+}
+
+body.ClaimingMod-enabled .print\:hidden.button {
+    border-radius: 14px !important;
+}
+
+
 /* 2. Header Transformation - Floating & Glass */
 .header {
     background: var(--isy-header-bg) !important;
@@ -1360,7 +1378,6 @@ body.ClaimingMod-enabled .sidebar-page {
 
 body.ClaimingMod-enabled .button,
 body.ClaimingMod-enabled .flat-button,
-body.ClaimingMod-enabled .icon-button,
 body.ClaimingMod-enabled .seamless,
 body.ClaimingMod-enabled button,
 body.ClaimingMod-enabled [role="button"] {
@@ -1846,15 +1863,22 @@ body.ClaimingMod-enabled .tippy-box[data-theme~="isy"]>.tippy-arrow {
     color: var(--tc-171) !important;
 }
 
+body.ClaimingMod-enabled .icon-button {
+    border-radius: 10px !important;
+    background: linear-gradient(145deg, var(--tc-136), var(--tc-137)) !important;
+    border-color: var(--tc-138) !important;
+    color: var(--isy-text-dark) !important;
+}
+
 /*Fixes for Mobile Version*/
-[data-v-e69c0a82].bg-primaryColor.rounded-full {
+body.ClaimingMod-enabled [data-v-e69c0a82].bg-primaryColor.rounded-full {
     border-radius: 10px !important;
     background: transparent !important;
     background-color: transparent !important;
 }
 
-a.rounded-full.border-primaryColor.bg-primaryWeakColor,
-a.rounded-full.border-primaryColor.dark\:bg-primarySecondaryColor {
+body.ClaimingMod-enabled a.rounded-full.border-primaryColor.bg-primaryWeakColor,
+body.ClaimingMod-enabled a.rounded-full.border-primaryColor.dark\:bg-primarySecondaryColor {
     border-radius: 10px !important;
     background: transparent !important;
     background-color: transparent !important;
@@ -1863,14 +1887,14 @@ a.rounded-full.border-primaryColor.dark\:bg-primarySecondaryColor {
     display: inline-flex !important;
 }
 
-a.rounded-full.border-primaryColor:hover {
+body.ClaimingMod-enableda.rounded-full.border-primaryColor:hover {
     background: var(--isy-item-hover-bg) !important;
     transform: translateY(-1px) !important;
     border-color: rgba(69, 117, 191, 0.35) !important;
     box-shadow: var(--isy-shadow-hover) !important;
 }
 
-a.rounded-full.border-primaryColor button {
+body.ClaimingMod-enableda.rounded-full.border-primaryColor button {
     background: transparent !important;
     background-color: transparent !important;
     border: none !important;
@@ -1878,7 +1902,7 @@ a.rounded-full.border-primaryColor button {
     padding: 0 !important;
 }
 
-div.flex.items-center.bg-backgroundContrast.rounded-full.h-20:has(input.bg-transparent) {
+body.ClaimingMod-enabled div.flex.items-center.bg-backgroundContrast.rounded-full.h-20:has(input.bg-transparent) {
     background: var(--isy-input-bg) !important;
     border: 1px solid var(--isy-border-subtle) !important;
     border-radius: 50px !important;

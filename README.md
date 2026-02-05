@@ -5,6 +5,7 @@ ClaimingMod is a browser extension that customizes the ISY web UI with a dark, m
 ## What it does
 
 - Applies a custom "ClaimingMod" visual theme (colors, typography, cards, menus).
+- Has different color options for the theme.
 - Adds a third theme option in the profile settings alongside base light/dark modes.
 - Improves timetable visuals (lesson colors, readability, sizing/spacing tweaks).
 - Adds UI fixes for specific pages (e.g., absences/table alignment, sidebars, overlays).
