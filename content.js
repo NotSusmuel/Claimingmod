@@ -1,17 +1,17 @@
 console.log("ClaimingMod: Costume Applied!");
 
-const Claiming_THEME_MODE_KEY = 'Claimingmod-theme-mode';
-const Claiming_THEME_MODE = {
+const CLAIMING_THEME_MODE_KEY = 'claimingmod-theme-mode';
+const CLAIMING_THEME_MODE = {
     ISY: 'isy',
-    Claiming: 'Claiming'
+    CLAIMING: 'claiming'
 };
-let ClaimingModeEnabled = true;
+let claimingModeEnabled = true;
 let suppressThemeSelectionHandling = false;
 
-const ABSENCE_TABLE_FIX_STYLE_ID = 'Claimingmod-absence-table-fix';
-const Claiming_BRIGHTNESS_STYLE_ID = 'Claimingmod-lesson-brightness-style';
-const Claiming_LESSON_BRIGHTNESS_VAR = '--Claiming-lesson-brightness';
-const Claiming_LESSON_BRIGHTNESS_VALUE_KEY = 'Claimingmod-lesson-brightness-value';
+const ABSENCE_TABLE_FIX_STYLE_ID = 'claimingmod-absence-table-fix';
+const CLAIMING_BRIGHTNESS_STYLE_ID = 'claimingmod-lesson-brightness-style';
+const CLAIMING_LESSON_BRIGHTNESS_VAR = '--claiming-lesson-brightness';
+const CLAIMING_LESSON_BRIGHTNESS_VALUE_KEY = 'claimingmod-lesson-brightness-value';
 
 function ensureBaseAbsenceTableFixStyles() {
     if (document.getElementById(ABSENCE_TABLE_FIX_STYLE_ID)) return;
@@ -86,23 +86,23 @@ function ensureBaseAbsenceTableFixStyles() {
 
 function readThemeModePreference() {
     try {
-        const value = localStorage.getItem(Claiming_THEME_MODE_KEY);
-        if (value === Claiming_THEME_MODE.ISY) return Claiming_THEME_MODE.ISY;
-        return Claiming_THEME_MODE.Claiming;
+        const value = localStorage.getItem(CLAIMING_THEME_MODE_KEY);
+        if (value === CLAIMING_THEME_MODE.ISY) return CLAIMING_THEME_MODE.ISY;
+        return CLAIMING_THEME_MODE.CLAIMING;
     } catch {
-        return Claiming_THEME_MODE.Claiming;
+        return CLAIMING_THEME_MODE.CLAIMING;
     }
 }
 
 function writeThemeModePreference(mode) {
     try {
-        localStorage.setItem(Claiming_THEME_MODE_KEY, mode);
+        localStorage.setItem(CLAIMING_THEME_MODE_KEY, mode);
     } catch {
         // Ignore persistence errors.
     }
 }
 
-const Claiming_STYLESHEET_ID = 'Claimingmod-theme-styles';
+const CLAIMING_STYLESHEET_ID = 'claimingmod-theme-styles';
 
 function findClaimingExtensionStylesheets() {
     const runtimeId = chrome.runtime?.id;
@@ -120,11 +120,11 @@ function findClaimingExtensionStylesheets() {
 }
 
 function ensureClaimingStylesheetNode() {
-    let node = document.getElementById(Claiming_STYLESHEET_ID);
+    let node = document.getElementById(CLAIMING_STYLESHEET_ID);
     if (node) return node;
 
     node = document.createElement('link');
-    node.id = Claiming_STYLESHEET_ID;
+    node.id = CLAIMING_STYLESHEET_ID;
     node.rel = 'stylesheet';
     node.href = chrome.runtime.getURL('styles.css');
 
@@ -155,7 +155,7 @@ function removeClaimingFooterDecorations() {
     const footer = document.querySelector('.footer');
     if (!footer) return;
     footer.classList.remove('isy-footer-themed');
-    footer.querySelectorAll('.Claimingmod-version').forEach((el) => el.remove());
+    footer.querySelectorAll('.claimingmod-version').forEach((el) => el.remove());
 }
 
 function removeClaimingTimetableClasses() {
@@ -175,11 +175,11 @@ function removeClaimingTimetableClasses() {
 }
 
 function isClaimingModeEnabled() {
-    return ClaimingModeEnabled;
+    return claimingModeEnabled;
 }
 
 function applyClaimingModeStateToDom(enabled) {
-    ClaimingModeEnabled = enabled;
+    claimingModeEnabled = enabled;
     if (document.body) {
         document.body.classList.toggle('ClaimingMod-enabled', enabled);
     }
@@ -579,10 +579,10 @@ function decorateFooter() {
     const rightArea = footer.querySelector('.w-36.text-right') || footer.lastElementChild;
     if (!rightArea) return;
 
-    if (!rightArea.querySelector('.Claimingmod-version')) {
+    if (!rightArea.querySelector('.claimingmod-version')) {
         const versionEl = document.createElement('a');
-        versionEl.className = 'Claimingmod-version';
-        versionEl.href = 'https://github.com/Claimingnine';
+        versionEl.className = 'claimingmod-version';
+        versionEl.href = 'https://github.com/ClaimingNINE';
         versionEl.target = '_blank';
         versionEl.rel = 'noopener noreferrer';
         versionEl.textContent = `ClaimingMod v.${EXTENSION_VERSION}`;
@@ -634,7 +634,7 @@ function getDisplayModeSlider() {
 
 function readClaimingLessonBrightnessSliderValue() {
     try {
-        const value = localStorage.getItem(Claiming_LESSON_BRIGHTNESS_VALUE_KEY);
+        const value = localStorage.getItem(CLAIMING_LESSON_BRIGHTNESS_VALUE_KEY);
         return value;
     } catch {
         return null;
@@ -643,7 +643,7 @@ function readClaimingLessonBrightnessSliderValue() {
 
 function writeClaimingLessonBrightnessSliderValue(value) {
     try {
-        localStorage.setItem(Claiming_LESSON_BRIGHTNESS_VALUE_KEY, String(value));
+        localStorage.setItem(CLAIMING_LESSON_BRIGHTNESS_VALUE_KEY, String(value));
     } catch {
         // Ignore persistence failures.
     }
@@ -672,10 +672,10 @@ function applySavedClaimingBrightnessToSlider(slider, emitEvents = false) {
 }
 
 function ensureClaimingLessonBrightnessStyle() {
-    if (document.getElementById(Claiming_BRIGHTNESS_STYLE_ID)) return;
+    if (document.getElementById(CLAIMING_BRIGHTNESS_STYLE_ID)) return;
 
     const style = document.createElement('style');
-    style.id = Claiming_BRIGHTNESS_STYLE_ID;
+    style.id = CLAIMING_BRIGHTNESS_STYLE_ID;
     style.textContent = `
 body.ClaimingMod-enabled .calendar-week-element-inner,
 body.ClaimingMod-enabled .calendar-week-element .calendar-week-element-inner {
@@ -689,7 +689,7 @@ body.ClaimingMod-enabled .calendar-week-element .calendar-week-element-inner::af
     position: absolute !important;
     inset: 0 !important;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.46)) !important;
-    opacity: var(${Claiming_LESSON_BRIGHTNESS_VAR}, 0) !important;
+    opacity: var(${CLAIMING_LESSON_BRIGHTNESS_VAR}, 0) !important;
     pointer-events: none !important;
     z-index: 0 !important;
 }
@@ -706,7 +706,7 @@ function setClaimingLessonBrightnessFromSlider(slider) {
     const value = Number.parseFloat(slider.value || String(max));
 
     if (!Number.isFinite(min) || !Number.isFinite(max) || max <= min) {
-        document.documentElement.style.setProperty(Claiming_LESSON_BRIGHTNESS_VAR, '1');
+        document.documentElement.style.setProperty(CLAIMING_LESSON_BRIGHTNESS_VAR, '1');
         return;
     }
 
@@ -715,7 +715,7 @@ function setClaimingLessonBrightnessFromSlider(slider) {
     // Slider max keeps current colors (brightest). Lower values add darker overlay.
     const normalized = Math.min(1, Math.max(0, (value - min) / (max - min)));
     const darkenOpacity = 0.48 * (1 - normalized);
-    document.documentElement.style.setProperty(Claiming_LESSON_BRIGHTNESS_VAR, darkenOpacity.toFixed(3));
+    document.documentElement.style.setProperty(CLAIMING_LESSON_BRIGHTNESS_VAR, darkenOpacity.toFixed(3));
 }
 
 function getClaimingDarkSliderValue(slider) {
@@ -758,10 +758,10 @@ function syncClaimingSliderLockState() {
     const slider = getDisplayModeSlider();
     if (!slider) return;
 
-    const ClaimingEnabled = isClaimingModeEnabled();
+    const claimingEnabled = isClaimingModeEnabled();
     slider.disabled = false;
 
-    if (ClaimingEnabled) {
+    if (claimingEnabled) {
         slider.style.opacity = '';
         slider.style.cursor = '';
         slider.title = 'ClaimingMod: Regelt die Helligkeit der Lektionen.';
@@ -770,7 +770,7 @@ function syncClaimingSliderLockState() {
         slider.style.opacity = '';
         slider.style.cursor = '';
         slider.title = '';
-        document.documentElement.style.setProperty(Claiming_LESSON_BRIGHTNESS_VAR, '1');
+        document.documentElement.style.setProperty(CLAIMING_LESSON_BRIGHTNESS_VAR, '1');
     }
 }
 
@@ -783,7 +783,7 @@ function setClaimingModeEnabled(enabled, persist = true) {
     applyClaimingModeStateToDom(enabled);
 
     if (persist) {
-        writeThemeModePreference(enabled ? Claiming_THEME_MODE.Claiming : Claiming_THEME_MODE.ISY);
+        writeThemeModePreference(enabled ? CLAIMING_THEME_MODE.CLAIMING : CLAIMING_THEME_MODE.ISY);
     }
 
     if (enabled) {
@@ -791,7 +791,7 @@ function setClaimingModeEnabled(enabled, persist = true) {
         applySavedClaimingBrightnessToSlider(slider, true);
         initializeClaimingFeatures();
     } else {
-        document.documentElement.style.setProperty(Claiming_LESSON_BRIGHTNESS_VAR, '1');
+        document.documentElement.style.setProperty(CLAIMING_LESSON_BRIGHTNESS_VAR, '1');
     }
 
     syncClaimingModeOptionState();
@@ -808,7 +808,7 @@ function buildClaimingModeOption() {
         wrapper.innerHTML = '<label class="radio-button" for="settingsClaimingMode" tabindex="0"><div class="circle-container mr-1"><div class="outer-circle"><div class="inner-circle"></div></div></div><span>ClaimingMod</span></label><input id="settingsClaimingMode" type="radio" hidden="" name="settingsDisplayMode">';
     }
 
-    wrapper.classList.add('Claimingmod-theme-option');
+    wrapper.classList.add('claimingmod-theme-option');
     wrapper.classList.remove('mr-2');
     wrapper.classList.add('ml-2');
 
@@ -843,17 +843,17 @@ function buildClaimingModeOption() {
 }
 
 function syncClaimingModeOptionState() {
-    const ClaimingInput = document.getElementById('settingsClaimingMode');
-    if (!ClaimingInput) return;
+    const claimingInput = document.getElementById('settingsClaimingMode');
+    if (!claimingInput) return;
 
-    const ClaimingEnabled = isClaimingModeEnabled();
-    ClaimingInput.checked = ClaimingEnabled;
+    const claimingEnabled = isClaimingModeEnabled();
+    claimingInput.checked = claimingEnabled;
 
-    const ClaimingInnerCircle = ClaimingInput
-        .closest('.Claimingmod-theme-option')
+    const claimingInnerCircle = claimingInput
+        .closest('.claimingmod-theme-option')
         ?.querySelector('.inner-circle');
-    if (ClaimingInnerCircle) {
-        ClaimingInnerCircle.style.display = ClaimingEnabled ? '' : 'none';
+    if (claimingInnerCircle) {
+        claimingInnerCircle.style.display = claimingEnabled ? '' : 'none';
     }
 
     // Prevent double-selected visuals: hide native mode dots while Claiming mode is active.
@@ -861,7 +861,7 @@ function syncClaimingModeOptionState() {
         'label[for="settingsWhiteMode"] .inner-circle, label[for="settingsDarkMode"] .inner-circle'
     );
     nativeModeDots.forEach((dot) => {
-        dot.style.display = ClaimingEnabled ? 'none' : '';
+        dot.style.display = claimingEnabled ? 'none' : '';
     });
 
     syncClaimingSliderLockState();
@@ -873,7 +873,7 @@ function ensureClaimingModeOption() {
         || document.querySelector('.display-mode-container > .flex.items-center');
     if (!modeRow) return;
 
-    if (!modeRow.querySelector('.Claimingmod-theme-option')) {
+    if (!modeRow.querySelector('.claimingmod-theme-option')) {
         modeRow.appendChild(buildClaimingModeOption());
     }
 
@@ -886,7 +886,7 @@ function handleThemeModeSelectionEvent(event) {
     const target = event.target;
     if (!(target instanceof Element)) return;
 
-    if (target.closest('#settingsClaimingMode, .Claimingmod-theme-option label')) {
+    if (target.closest('#settingsClaimingMode, .claimingmod-theme-option label')) {
         setClaimingModeEnabled(true, true);
         return;
     }
@@ -1301,22 +1301,22 @@ function ensureTimetableNavigationOverlayHandlers() {
     const nextButton = getTimetableNavigationButton('next');
     const currentButton = getTimetableCurrentWeekButton();
 
-    if (previousButton && !previousButton.dataset.ClaimingOverlayNavBound) {
-        previousButton.dataset.ClaimingOverlayNavBound = '1';
+    if (previousButton && !previousButton.dataset.claimingOverlayNavBound) {
+        previousButton.dataset.claimingOverlayNavBound = '1';
         previousButton.addEventListener('click', () => {
             handleTimetableNavigationOverlay('previous');
         }, true);
     }
 
-    if (nextButton && !nextButton.dataset.ClaimingOverlayNavBound) {
-        nextButton.dataset.ClaimingOverlayNavBound = '1';
+    if (nextButton && !nextButton.dataset.claimingOverlayNavBound) {
+        nextButton.dataset.claimingOverlayNavBound = '1';
         nextButton.addEventListener('click', () => {
             handleTimetableNavigationOverlay('next');
         }, true);
     }
 
-    if (currentButton && !currentButton.dataset.ClaimingOverlayNavBound) {
-        currentButton.dataset.ClaimingOverlayNavBound = '1';
+    if (currentButton && !currentButton.dataset.claimingOverlayNavBound) {
+        currentButton.dataset.claimingOverlayNavBound = '1';
         currentButton.addEventListener('click', () => {
             handleTimetableNavigationOverlay('current');
         }, true);
@@ -1491,7 +1491,7 @@ function applyCachedTimetable() {
 // Global state to track URL (path + query + hash for SPA routes)
 let currentUrl = window.location.href;
 let timetableObserverStarted = false;
-let ClaimingModeObserverStarted = false;
+let claimingModeObserverStarted = false;
 
 function startTimetableObserver() {
     if (timetableObserverStarted) return;
@@ -1677,15 +1677,15 @@ function initializeClaimingFeatures() {
 
 function initializeThemeMode() {
     const mode = readThemeModePreference();
-    applyClaimingModeStateToDom(mode !== Claiming_THEME_MODE.ISY);
+    applyClaimingModeStateToDom(mode !== CLAIMING_THEME_MODE.ISY);
 }
 
 function bootstrapClaimingMod() {
     ensureBaseAbsenceTableFixStyles();
     ensureClaimingLessonBrightnessStyle();
 
-    if (!ClaimingModeObserverStarted) {
-        ClaimingModeObserverStarted = true;
+    if (!claimingModeObserverStarted) {
+        claimingModeObserverStarted = true;
         startClaimingModeOptionObserver();
     }
 
