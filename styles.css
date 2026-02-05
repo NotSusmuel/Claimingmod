@@ -4,68 +4,68 @@
 :root[theme=light],
 :root[theme=dark],
 html.dark {
-    --isy-primary: #2f5ea9;
-    --isy-primary-glow: rgba(47, 94, 169, 0.32);
-    --isy-bg-gradient: linear-gradient(150deg, #02040a 0%, #040816 35%, #0b1630 72%, #122346 100%);
-    --isy-card-bg: rgba(7, 11, 22, 0.9);
-    --isy-text-dark: #dbe7ff;
-    --isy-text-light: #8ea4c5;
+    --isy-primary: #43a92f;
+    --isy-primary-glow: rgba(67, 169, 47, 0.32);
+    --isy-bg-gradient: linear-gradient(150deg, #030a02 0%, #071604 35%, #11300b 72%, #1b4612 100%);
+    --isy-card-bg: rgba(10, 22, 7, 0.9);
+    --isy-text-dark: #e1ffdb;
+    --isy-text-light: #97c58e;
     --isy-radius-lg: 20px;
     --isy-radius-md: 12px;
     --isy-shadow-sm: 0 12px 30px -20px rgba(0, 0, 0, 0.9);
-    --isy-shadow-hover: 0 18px 35px -18px rgba(16, 44, 94, 0.95), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
-    --glass-border: 1px solid rgba(72, 93, 126, 0.16);
-    --isy-border-subtle: rgba(70, 92, 126, 0.13);
+    --isy-shadow-hover: 0 18px 35px -18px rgba(29, 94, 16, 0.95), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
+    --glass-border: 1px solid rgba(81, 126, 72, 0.16);
+    --isy-border-subtle: rgba(79, 126, 70, 0.13);
     --backdrop-blur: blur(12px);
-    --isy-header-bg: linear-gradient(180deg, rgba(8, 16, 34, 0.95), rgba(9, 19, 39, 0.90));
-    --isy-input-bg: rgba(9, 13, 25, 0.8);
-    --isy-item-hover-bg: rgba(45, 83, 150, 0.18);
-    --isy-panel-bg: rgba(10, 14, 26, 0.86);
-    --isy-timetable-card-border: rgba(109, 154, 225, 0.34);
-    --isy-timetable-card-bg: linear-gradient(145deg, rgba(9, 18, 36, 0.97), rgba(22, 44, 84, 0.94));
+    --isy-header-bg: linear-gradient(180deg, rgba(12, 34, 8, 0.95), rgba(14, 39, 9, 0.90));
+    --isy-input-bg: rgba(12, 25, 9, 0.8);
+    --isy-item-hover-bg: rgba(63, 150, 45, 0.18);
+    --isy-panel-bg: rgba(13, 26, 10, 0.86);
+    --isy-timetable-card-border: rgba(128, 225, 109, 0.34);
+    --isy-timetable-card-bg: linear-gradient(145deg, rgba(13, 36, 9, 0.97), rgba(32, 84, 22, 0.94));
     --isy-timetable-card-shadow: 0 10px 22px -16px rgba(0, 0, 0, 0.95);
-    --isy-timetable-card-hover-shadow: 0 14px 26px -14px rgba(20, 53, 109, 0.95);
-    --isy-indicator-glow: rgba(98, 153, 238, 0.35);
+    --isy-timetable-card-hover-shadow: 0 14px 26px -14px rgba(35, 109, 20, 0.95);
+    --isy-indicator-glow: rgba(121, 238, 98, 0.35);
 
     /* Align original ISY vars from style_original.css with the same dark palette */
-    --background: #060a14;
-    --background-contrast: #0d1526;
-    --background-contrast-hover: #15203a;
-    --background-primary-weak: #0e1627;
+    --background: #081406;
+    --background-contrast: #11260d;
+    --background-contrast-hover: #1b3a15;
+    --background-primary-weak: #12270e;
     --font-color: var(--isy-text-dark);
     --font-passive: var(--isy-text-light);
-    --font-color-inverse: #02040a;
-    --font-color-inverse-passive: #212d47;
+    --font-color-inverse: #030a02;
+    --font-color-inverse-passive: #274721;
     --primary-color: var(--isy-primary);
     --primary-color-dark: var(--isy-primary);
-    --primary-contrast: #1d2b42;
-    --primary-secondary-color: #173e78;
-    --primary-weak-color: rgba(47, 94, 169, 0.18);
-    --primary-passive-color: #4575bf;
-    --primary-passive-color-background: rgba(47, 94, 169, 0.32);
-    --primary-passive-color-background-dark: rgba(47, 94, 169, 0.32);
-    --primary-passive-color-background-white: rgba(47, 94, 169, 0.2);
-    --tt-lesson-normal: #1b345c;
+    --primary-contrast: #23421d;
+    --primary-secondary-color: #277817;
+    --primary-weak-color: rgba(67, 169, 47, 0.18);
+    --primary-passive-color: #59bf45;
+    --primary-passive-color-background: rgba(67, 169, 47, 0.32);
+    --primary-passive-color-background-dark: rgba(67, 169, 47, 0.32);
+    --primary-passive-color-background-white: rgba(67, 169, 47, 0.2);
+    --tt-lesson-normal: #265c1b;
     --tt-exam-normal: #6a2131;
     --tt-exam-partly: #7d2a3c;
     --tt-absence-normal: #522a5f;
     --tt-lesson-shifted-normal: #8c4c08;
-    --tt-informative-appointment: #1f4c59;
-    --tt-lesson-canceled: #0f1219;
-    --tt-appointment-manually-created: #45396f;
-    --tt-appointment-registration: #264f86;
-    --tt-room-reserved-open: #273955;
-    --tt-appointment-manually-created-muted: #343d61;
-    --raw-dark-background: #060a14;
-    --raw-dark-background-contrast: #0d1526;
-    --raw-dark-background-contrast-hover: #15203a;
-    --raw-white-background: #060a14;
-    --raw-white-background-contrast: #0d1526;
-    --raw-white-background-contrast-hover: #15203a;
-    --raw-font-color-black: #dbe7ff;
-    --raw-font-color-black-passive: #8ea4c5;
-    --raw-font-color-white: #dbe7ff;
-    --raw-font-color-white-passive: #8ea4c5;
+    --tt-informative-appointment: #29591f;
+    --tt-lesson-canceled: #11190f;
+    --tt-appointment-manually-created: #426f39;
+    --tt-appointment-registration: #368626;
+    --tt-room-reserved-open: #2f5527;
+    --tt-appointment-manually-created-muted: #3b6134;
+    --raw-dark-background: #081406;
+    --raw-dark-background-contrast: #11260d;
+    --raw-dark-background-contrast-hover: #1b3a15;
+    --raw-white-background: #081406;
+    --raw-white-background-contrast: #11260d;
+    --raw-white-background-contrast-hover: #1b3a15;
+    --raw-font-color-black: #e1ffdb;
+    --raw-font-color-black-passive: #97c58e;
+    --raw-font-color-white: #e1ffdb;
+    --raw-font-color-white-passive: #97c58e;
     --raw-white-box-shadow: -3px 10px 20px -2px rgba(0, 0, 0, 0.88);
     --raw-black-box-shadow: -3px 10px 20px -2px rgba(0, 0, 0, 0.94);
     --raw-white-weak-box-shadow: -3px 5px 14px -2px rgba(0, 0, 0, 0.82);
@@ -76,31 +76,31 @@ html.dark {
 
 /* Dark Mode Overrides (Explicit Class) */
 html.dark {
-    --isy-bg-gradient: linear-gradient(150deg, #02040a 0%, #040816 35%, #0b1630 72%, #122346 100%);
-    --isy-card-bg: rgba(7, 11, 22, 0.9);
-    --isy-text-dark: #dbe7ff;
-    --isy-text-light: #8ea4c5;
-    --glass-border: 1px solid rgba(72, 93, 126, 0.16);
+    --isy-bg-gradient: linear-gradient(150deg, #030a02 0%, #071604 35%, #11300b 72%, #1b4612 100%);
+    --isy-card-bg: rgba(10, 22, 7, 0.9);
+    --isy-text-dark: #e1ffdb;
+    --isy-text-light: #97c58e;
+    --glass-border: 1px solid rgba(81, 126, 72, 0.16);
     --isy-shadow-sm: 0 12px 30px -20px rgba(0, 0, 0, 0.9);
-    --isy-shadow-hover: 0 18px 35px -18px rgba(16, 44, 94, 0.95), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
-    --isy-header-bg: linear-gradient(180deg, rgba(8, 16, 34, 0.95), rgba(9, 19, 39, 0.90));
-    --isy-input-bg: rgba(9, 13, 25, 0.8);
-    --isy-item-hover-bg: rgba(45, 83, 150, 0.18);
+    --isy-shadow-hover: 0 18px 35px -18px rgba(29, 94, 16, 0.95), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
+    --isy-header-bg: linear-gradient(180deg, rgba(12, 34, 8, 0.95), rgba(14, 39, 9, 0.90));
+    --isy-input-bg: rgba(12, 25, 9, 0.8);
+    --isy-item-hover-bg: rgba(63, 150, 45, 0.18);
 }
 
 /* Dark Mode Overrides (System Preference) */
 @media (prefers-color-scheme: dark) {
     :root {
-        --isy-bg-gradient: linear-gradient(150deg, #02040a 0%, #040816 35%, #0b1630 72%, #122346 100%);
-        --isy-card-bg: rgba(7, 11, 22, 0.9);
-        --isy-text-dark: #dbe7ff;
-        --isy-text-light: #8ea4c5;
-        --glass-border: 1px solid rgba(72, 93, 126, 0.16);
+        --isy-bg-gradient: linear-gradient(150deg, #030a02 0%, #071604 35%, #11300b 72%, #1b4612 100%);
+        --isy-card-bg: rgba(10, 22, 7, 0.9);
+        --isy-text-dark: #e1ffdb;
+        --isy-text-light: #97c58e;
+        --glass-border: 1px solid rgba(81, 126, 72, 0.16);
         --isy-shadow-sm: 0 12px 30px -20px rgba(0, 0, 0, 0.9);
-        --isy-shadow-hover: 0 18px 35px -18px rgba(16, 44, 94, 0.95), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
-        --isy-header-bg: linear-gradient(180deg, rgba(8, 16, 34, 0.95), rgba(9, 19, 39, 0.90));
-        --isy-input-bg: rgba(9, 13, 25, 0.8);
-        --isy-item-hover-bg: rgba(45, 83, 150, 0.18);
+        --isy-shadow-hover: 0 18px 35px -18px rgba(29, 94, 16, 0.95), 0 14px 24px -14px rgba(0, 0, 0, 0.92);
+        --isy-header-bg: linear-gradient(180deg, rgba(12, 34, 8, 0.95), rgba(14, 39, 9, 0.90));
+        --isy-input-bg: rgba(12, 25, 9, 0.8);
+        --isy-item-hover-bg: rgba(63, 150, 45, 0.18);
     }
 }
 
@@ -144,7 +144,7 @@ body {
 }
 
 .navbar-button:hover {
-    background: rgba(69, 117, 191, 0.18) !important;
+    background: rgba(89, 191, 69, 0.18) !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 8px 16px -12px var(--isy-primary) !important;
 }
@@ -165,33 +165,33 @@ body {
 .navbar-button .navbar-button-border-container .navbar-button-border,
 .navbar-button .navbar-button-border,
 .navbar-button-border {
-    background: linear-gradient(90deg, rgba(146, 186, 247, 0.7), rgba(70, 126, 215, 0.96), rgba(146, 186, 247, 0.7)) !important;
+    background: linear-gradient(90deg, rgba(163, 247, 146, 0.7), rgba(94, 215, 70, 0.96), rgba(163, 247, 146, 0.7)) !important;
     border: none !important;
     border-radius: 999px !important;
-    box-shadow: 0 0 8px -1px var(--isy-indicator-glow), 0 0 16px -5px rgba(70, 126, 215, 0.95) !important;
+    box-shadow: 0 0 8px -1px var(--isy-indicator-glow), 0 0 16px -5px rgba(94, 215, 70, 0.95) !important;
     opacity: 1 !important;
 }
 
 .message-info,
 .form-info {
-    border-left-color: rgba(78, 133, 220, 0.95) !important;
-    box-shadow: inset 2px 0 0 rgba(157, 191, 244, 0.42), 0 0 12px -7px var(--isy-indicator-glow) !important;
+    border-left-color: rgba(102, 220, 78, 0.95) !important;
+    box-shadow: inset 2px 0 0 rgba(172, 244, 157, 0.42), 0 0 12px -7px var(--isy-indicator-glow) !important;
 }
 
 .response-thread-item__content {
-    border-left-color: rgba(78, 133, 220, 0.9) !important;
-    box-shadow: inset 1px 0 0 rgba(157, 191, 244, 0.35), 0 0 10px -7px var(--isy-indicator-glow) !important;
+    border-left-color: rgba(102, 220, 78, 0.9) !important;
+    box-shadow: inset 1px 0 0 rgba(172, 244, 157, 0.35), 0 0 10px -7px var(--isy-indicator-glow) !important;
 }
 
 .message-metadata-container .metadata-element .metadata-value {
-    border-bottom-color: rgba(78, 133, 220, 0.85) !important;
-    box-shadow: inset 0 -1px 0 rgba(78, 133, 220, 0.85), 0 2px 8px -8px var(--isy-indicator-glow) !important;
+    border-bottom-color: rgba(102, 220, 78, 0.85) !important;
+    box-shadow: inset 0 -1px 0 rgba(102, 220, 78, 0.85), 0 2px 8px -8px var(--isy-indicator-glow) !important;
 }
 
 .calendar-week-day-header.today,
 .calendar-week-day .today {
     border-radius: 10px !important;
-    box-shadow: inset 0 -2px 0 rgba(118, 171, 246, 0.85), 0 6px 14px -12px rgba(58, 110, 191, 0.95) !important;
+    box-shadow: inset 0 -2px 0 rgba(139, 246, 118, 0.85), 0 6px 14px -12px rgba(80, 191, 58, 0.95) !important;
 }
 
 /* 3. Dashboard Container Cards */
@@ -211,7 +211,7 @@ body {
 .dashboard__container:hover {
     transform: translateY(-3px) !important;
     box-shadow: var(--isy-shadow-hover) !important;
-    border-color: rgba(69, 117, 191, 0.35) !important;
+    border-color: rgba(89, 191, 69, 0.35) !important;
 }
 
 .container-header {
@@ -235,7 +235,7 @@ body {
     border: 1px solid var(--isy-tt-entry-border, var(--isy-timetable-card-border)) !important;
     background: var(--isy-tt-entry-bg, var(--isy-timetable-card-bg)) !important;
     box-shadow: var(--isy-tt-entry-shadow, var(--isy-timetable-card-shadow)) !important;
-    color: var(--isy-tt-entry-text, #eaf1ff) !important;
+    color: var(--isy-tt-entry-text, #edffea) !important;
     transition: all 0.2s ease !important;
     position: relative !important;
     overflow: hidden !important;
@@ -286,11 +286,11 @@ body {
 .calendar-week-element-inner:has(.line-through),
 .calendar-week-element-inner:has([class*="line-through"]),
 .calendar-week-element-inner:has([style*="line-through"]) {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(6, 8, 12, 0.98), rgba(18, 22, 31, 0.94));
-    --isy-tt-entry-border: rgba(88, 98, 118, 0.5);
-    --isy-tt-entry-text: #8e99ac;
-    --isy-tt-entry-hover-shadow: 0 12px 24px -14px rgba(4, 6, 10, 0.98);
-    --isy-tt-entry-sheen: linear-gradient(to bottom, rgba(144, 154, 173, 0.1), rgba(11, 14, 22, 0.08));
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(7, 12, 6, 0.98), rgba(20, 31, 18, 0.94));
+    --isy-tt-entry-border: rgba(93, 118, 88, 0.5);
+    --isy-tt-entry-text: #93ac8e;
+    --isy-tt-entry-hover-shadow: 0 12px 24px -14px rgba(5, 10, 4, 0.98);
+    --isy-tt-entry-sheen: linear-gradient(to bottom, rgba(149, 173, 144, 0.1), rgba(13, 22, 11, 0.08));
     border-style: dashed !important;
     filter: saturate(0.45) brightness(0.9) !important;
 }
@@ -304,11 +304,11 @@ body {
 .calendar-week-element-inner.calendar-coloring[style*="31,161,219"]:has(.line-through),
 .calendar-week-element-inner.calendar-coloring[style*="31, 161, 219"]:has([style*="line-through"]),
 .calendar-week-element-inner.calendar-coloring[style*="31,161,219"]:has([style*="line-through"]) {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(15, 44, 82, 0.98), rgba(27, 74, 133, 0.95));
-    --isy-tt-entry-border: rgba(122, 177, 243, 0.56);
-    --isy-tt-entry-text: #dbe9ff;
-    --isy-tt-entry-hover-shadow: 0 14px 27px -15px rgba(15, 43, 81, 0.96);
-    --isy-tt-entry-sheen: linear-gradient(to bottom, rgba(168, 205, 252, 0.17), rgba(8, 24, 45, 0.1));
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(26, 82, 15, 0.98), rgba(45, 133, 27, 0.95));
+    --isy-tt-entry-border: rgba(142, 243, 122, 0.56);
+    --isy-tt-entry-text: #e1ffdb;
+    --isy-tt-entry-hover-shadow: 0 14px 27px -15px rgba(26, 81, 15, 0.96);
+    --isy-tt-entry-sheen: linear-gradient(to bottom, rgba(182, 252, 168, 0.17), rgba(14, 45, 8, 0.1));
     border-style: dashed !important;
 }
 
@@ -350,9 +350,9 @@ body {
 .calendar-week-element[style*="--background:var(--tt-informative-appointment)"] .calendar-week-element-inner,
 .calendar-week-element-inner[class*="tt-informative-appointment"],
 .calendar-week-element-inner[style*="tt-informative-appointment"] {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(24, 66, 79, 0.96), rgba(31, 89, 104, 0.93));
-    --isy-tt-entry-border: rgba(125, 196, 218, 0.44);
-    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(31, 89, 104, 0.95);
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(33, 79, 24, 0.96), rgba(43, 104, 31, 0.93));
+    --isy-tt-entry-border: rgba(140, 218, 125, 0.44);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(43, 104, 31, 0.95);
 }
 
 .calendar-week-element-inner.calendar-coloring--isManuallyCreated,
@@ -365,18 +365,18 @@ body {
 .calendar-week-element[style*="--background:var(--tt-appointment-manually-created)"] .calendar-week-element-inner,
 .calendar-week-element-inner[class*="tt-appointment-manually-created"],
 .calendar-week-element-inner[style*="tt-appointment-manually-created"] {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(62, 49, 103, 0.95), rgba(83, 61, 129, 0.93));
-    --isy-tt-entry-border: rgba(184, 157, 246, 0.42);
-    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(83, 61, 129, 0.95);
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(58, 103, 49, 0.95), rgba(72, 129, 61, 0.93));
+    --isy-tt-entry-border: rgba(172, 246, 157, 0.42);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(72, 129, 61, 0.95);
 }
 
 .calendar-week-element[style*="--background: var(--tt-appointment-manually-created-muted)"] .calendar-week-element-inner,
 .calendar-week-element[style*="--background:var(--tt-appointment-manually-created-muted)"] .calendar-week-element-inner,
 .calendar-week-element-inner[class*="tt-appointment-manually-created-muted"],
 .calendar-week-element-inner[style*="tt-appointment-manually-created-muted"] {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(47, 56, 92, 0.95), rgba(60, 72, 111, 0.91));
-    --isy-tt-entry-border: rgba(135, 154, 204, 0.4);
-    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(60, 72, 111, 0.95);
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(55, 92, 47, 0.95), rgba(69, 111, 60, 0.91));
+    --isy-tt-entry-border: rgba(147, 204, 135, 0.4);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(69, 111, 60, 0.95);
 }
 
 .calendar-week-element-inner.calendar-coloring--hasRegistration,
@@ -395,9 +395,9 @@ body {
 .calendar-week-element[style*="--background:var(--tt-room-reserved-open)"] .calendar-week-element-inner,
 .calendar-week-element-inner[class*="tt-room-reserved-open"],
 .calendar-week-element-inner[style*="tt-room-reserved-open"] {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(33, 51, 77, 0.95), rgba(42, 65, 98, 0.92));
-    --isy-tt-entry-border: rgba(126, 160, 208, 0.42);
-    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(42, 65, 98, 0.95);
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(40, 77, 33, 0.95), rgba(51, 98, 42, 0.92));
+    --isy-tt-entry-border: rgba(140, 208, 126, 0.42);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(51, 98, 42, 0.95);
 }
 
 .calendar-week-element-inner.calendar-coloring--isCollection,
@@ -407,28 +407,28 @@ body {
 .calendar-week-element-inner.isy-tt-special-text,
 .calendar-week-element-inner.calendar-coloring[style*="211, 211, 211"],
 .calendar-week-element-inner.calendar-coloring[style*="211,211,211"] {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(44, 49, 60, 0.96), rgba(61, 68, 82, 0.93));
-    --isy-tt-entry-border: rgba(96, 108, 130, 0.28);
-    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(39, 45, 56, 0.96);
-    --isy-tt-entry-text: #d7dde8;
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(47, 60, 44, 0.96), rgba(64, 82, 61, 0.93));
+    --isy-tt-entry-border: rgba(102, 130, 96, 0.28);
+    --isy-tt-entry-hover-shadow: 0 14px 26px -15px rgba(42, 56, 39, 0.96);
+    --isy-tt-entry-text: #dae8d7;
 }
 
 .calendar-week-element-inner.calendar-coloring--muted,
 .calendar-week-element.calendar-coloring--muted .calendar-week-element-inner,
 .calendar-week-element-inner:has(.calendar-coloring--muted),
 .calendar-week-element[data-render-type="line"] .calendar-week-element-inner {
-    --isy-tt-entry-border: rgba(114, 135, 171, 0.32);
-    --isy-tt-entry-text: #c4d2e8;
-    --isy-tt-entry-sheen: linear-gradient(to bottom, rgba(160, 183, 220, 0.14), rgba(10, 17, 31, 0.1));
+    --isy-tt-entry-border: rgba(124, 171, 114, 0.32);
+    --isy-tt-entry-text: #cae8c4;
+    --isy-tt-entry-sheen: linear-gradient(to bottom, rgba(170, 220, 160, 0.14), rgba(14, 31, 10, 0.1));
     filter: saturate(0.8) brightness(0.94) !important;
 }
 
 /* Homework line labels: force cyan instead of transparent */
 .calendar-week-element[data-render-type="line"] .calendar-week-element-inner.single-appointment,
 .calendar-week-element[data-render-type="line"] .calendar-week-element-inner.calendar-coloring.single-appointment {
-    --isy-tt-entry-bg: linear-gradient(145deg, rgba(0, 255, 255, 0.9), rgba(0, 228, 255, 0.9)) !important;
-    background: linear-gradient(145deg, rgba(0, 255, 255, 0.9), rgba(0, 228, 255, 0.9)) !important;
-    border: 1px solid rgba(130, 255, 255, 0.9) !important;
+    --isy-tt-entry-bg: linear-gradient(145deg, rgba(43, 255, 0, 0.9), rgba(43, 255, 0, 0.9)) !important;
+    background: linear-gradient(145deg, rgba(43, 255, 0, 0.9), rgba(43, 255, 0, 0.9)) !important;
+    border: 1px solid rgba(151, 255, 130, 0.9) !important;
     filter: none !important;
 }
 
@@ -484,9 +484,9 @@ body {
 .calendar-week-element-inner.isy-tt-canceled-text,
 .calendar-week-element-inner.calendar-coloring[style*="242, 242, 242"],
 .calendar-week-element-inner.calendar-coloring[style*="242,242,242"] {
-    background: linear-gradient(145deg, rgba(52, 57, 67, 0.96), rgba(74, 81, 95, 0.93)) !important;
-    border: 1px dashed rgba(166, 176, 196, 0.62) !important;
-    color: #e4e9f2 !important;
+    background: linear-gradient(145deg, rgba(55, 67, 52, 0.96), rgba(78, 95, 74, 0.93)) !important;
+    border: 1px dashed rgba(171, 196, 166, 0.62) !important;
+    color: #e6f2e4 !important;
 }
 
 .calendar-week-element-inner.isy-tt-canceled-task-text,
@@ -498,9 +498,9 @@ body {
 .calendar-week-element-inner.calendar-coloring[style*="31,161,219"]:has(.line-through),
 .calendar-week-element-inner.calendar-coloring[style*="31, 161, 219"]:has([style*="line-through"]),
 .calendar-week-element-inner.calendar-coloring[style*="31,161,219"]:has([style*="line-through"]) {
-    background: linear-gradient(145deg, rgba(62, 68, 80, 0.97), rgba(86, 94, 110, 0.94)) !important;
-    border: 1px dashed rgba(175, 185, 205, 0.62) !important;
-    color: #edf1f8 !important;
+    background: linear-gradient(145deg, rgba(65, 80, 62, 0.97), rgba(90, 110, 86, 0.94)) !important;
+    border: 1px dashed rgba(180, 205, 175, 0.62) !important;
+    color: #eff8ed !important;
 }
 
 .time-table-scaffold .calendar-coloring--isShifted,
@@ -519,8 +519,8 @@ body {
 .time-table-scaffold .calendar-coloring--isInformativeAppointment,
 .calendar-week-element.calendar-coloring--isInformativeAppointment,
 .calendar-week-element .calendar-coloring--isInformativeAppointment {
-    background: linear-gradient(145deg, rgba(24, 66, 79, 0.96), rgba(31, 89, 104, 0.93)) !important;
-    border: 1px solid rgba(125, 196, 218, 0.44) !important;
+    background: linear-gradient(145deg, rgba(33, 79, 24, 0.96), rgba(43, 104, 31, 0.93)) !important;
+    border: 1px solid rgba(140, 218, 125, 0.44) !important;
 }
 
 .time-table-scaffold .calendar-coloring--isManuallyCreated,
@@ -529,8 +529,8 @@ body {
 .calendar-week-element.calendar-coloring--roomReservedButNotConfirmed,
 .calendar-week-element .calendar-coloring--isManuallyCreated,
 .calendar-week-element .calendar-coloring--roomReservedButNotConfirmed {
-    background: linear-gradient(145deg, rgba(62, 49, 103, 0.95), rgba(83, 61, 129, 0.93)) !important;
-    border: 1px solid rgba(184, 157, 246, 0.42) !important;
+    background: linear-gradient(145deg, rgba(58, 103, 49, 0.95), rgba(72, 129, 61, 0.93)) !important;
+    border: 1px solid rgba(172, 246, 157, 0.42) !important;
 }
 
 .time-table-scaffold .calendar-coloring--hasRegistration,
@@ -546,9 +546,9 @@ body {
 .calendar-week-element-inner.isy-tt-special-text,
 .calendar-week-element-inner.calendar-coloring[style*="211, 211, 211"],
 .calendar-week-element-inner.calendar-coloring[style*="211,211,211"] {
-    background: linear-gradient(145deg, rgba(44, 49, 60, 0.96), rgba(61, 68, 82, 0.93)) !important;
-    border: 1px solid rgba(96, 108, 130, 0.28) !important;
-    color: #d7dde8 !important;
+    background: linear-gradient(145deg, rgba(47, 60, 44, 0.96), rgba(64, 82, 61, 0.93)) !important;
+    border: 1px solid rgba(102, 130, 96, 0.28) !important;
+    color: #dae8d7 !important;
 }
 
 .calendar-week-element-inner.isy-tt-canceled-text .content-container span,
@@ -561,7 +561,7 @@ body {
 .calendar-week-element.calendar-coloring--isCanceled .content-container div {
     text-decoration: line-through !important;
     text-decoration-thickness: 2px !important;
-    text-decoration-color: rgba(193, 206, 230, 0.7) !important;
+    text-decoration-color: rgba(199, 230, 193, 0.7) !important;
 }
 
 .calendar-week-element .calendar-week-element-inner.isy-tt-past-lesson,
@@ -574,7 +574,7 @@ body {
 .calendar-week-element .calendar-week-element-inner.isy-tt-past-lesson::after,
 .calendar-week-element-inner.calendar-coloring.isy-tt-past-lesson::after,
 .calendar-week-element-inner.calendar-coloring.isy-tt-past-lesson[style]::after {
-    background: linear-gradient(to bottom, rgba(150, 158, 172, 0.1), rgba(6, 8, 11, 0.36)) !important;
+    background: linear-gradient(to bottom, rgba(154, 172, 150, 0.1), rgba(7, 11, 6, 0.36)) !important;
 }
 
 .calendar-week-element .calendar-week-element-inner.isy-tt-past-lesson:hover,
@@ -597,7 +597,7 @@ body {
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    background: var(--isy-tt-entry-sheen, linear-gradient(to bottom, rgba(127, 164, 224, 0.2), rgba(8, 14, 27, 0.1))) !important;
+    background: var(--isy-tt-entry-sheen, linear-gradient(to bottom, rgba(143, 224, 127, 0.2), rgba(11, 27, 8, 0.1))) !important;
     pointer-events: none !important;
 }
 
@@ -616,7 +616,7 @@ body {
 .cl-preview:hover {
     background: var(--isy-item-hover-bg) !important;
     transform: translateY(-2px) !important;
-    border-color: rgba(69, 117, 191, 0.32) !important;
+    border-color: rgba(89, 191, 69, 0.32) !important;
     box-shadow: 0 8px 16px -14px rgba(0, 0, 0, 0.78) !important;
 }
 
@@ -729,14 +729,14 @@ div[class~="flex"][class~="items-center"][class~="box-border"][class~="p-6"][cla
 [data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"]:hover,
 .sidebar-page [data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"]:hover {
     transform: translateY(-2px) !important;
-    border-color: rgba(125, 169, 236, 0.45) !important;
+    border-color: rgba(144, 236, 125, 0.45) !important;
     box-shadow: var(--isy-shadow-hover) !important;
 }
 
 [data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"] img,
 .sidebar-page [data-reka-scroll-area-viewport] [class~="w-1/2"][class~="md:w-50"][class~="cursor-pointer"][class~="grow-0"][class~="shrink-0"] img {
     border-radius: calc(var(--isy-radius-md) - 4px) !important;
-    border: 1px solid rgba(125, 148, 184, 0.28) !important;
+    border: 1px solid rgba(135, 184, 125, 0.28) !important;
 }
 
 a:focus-visible,
@@ -764,15 +764,15 @@ textarea:focus-visible {
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(69, 117, 191, 0.45);
+        box-shadow: 0 0 0 0 rgba(89, 191, 69, 0.45);
     }
 
     70% {
-        box-shadow: 0 0 0 6px rgba(69, 117, 191, 0);
+        box-shadow: 0 0 0 6px rgba(89, 191, 69, 0);
     }
 
     100% {
-        box-shadow: 0 0 0 0 rgba(69, 117, 191, 0);
+        box-shadow: 0 0 0 0 rgba(89, 191, 69, 0);
     }
 }
 
@@ -804,12 +804,12 @@ textarea:focus-visible {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(45, 83, 150, 0.75);
+    background: rgba(63, 150, 45, 0.75);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(69, 117, 191, 0.95);
+    background: rgba(89, 191, 69, 0.95);
 }
 
 /* 8. Hide "Aufgaben" Dashboard Container */
@@ -819,7 +819,7 @@ textarea:focus-visible {
 
 /* 9. Timetable Styling */
 .time-table-scaffold {
-    background: linear-gradient(180deg, rgba(4, 9, 20, 0.9), rgba(10, 22, 44, 0.88)) !important;
+    background: linear-gradient(180deg, rgba(7, 20, 4, 0.9), rgba(16, 44, 10, 0.88)) !important;
     border: none !important;
 }
 
@@ -831,16 +831,16 @@ textarea:focus-visible {
 }
 
 .calendar-week-day-header.today {
-    background: linear-gradient(160deg, rgba(52, 96, 170, 0.32), rgba(26, 54, 104, 0.38)) !important;
-    border: 1px solid rgba(126, 171, 238, 0.45) !important;
-    border-bottom-color: rgba(126, 171, 238, 0.45) !important;
+    background: linear-gradient(160deg, rgba(72, 170, 52, 0.32), rgba(39, 104, 26, 0.38)) !important;
+    border: 1px solid rgba(145, 238, 126, 0.45) !important;
+    border-bottom-color: rgba(145, 238, 126, 0.45) !important;
     border-radius: 10px !important;
-    box-shadow: 0 8px 16px -12px rgba(39, 78, 146, 0.9) !important;
+    box-shadow: 0 8px 16px -12px rgba(57, 146, 39, 0.9) !important;
 }
 
 .calendar-week-day-header.today .cwd-header-label>span,
 .calendar-week-day .today .cwd-header-label>span {
-    color: #e7f1ff !important;
+    color: #ebffe7 !important;
     font-weight: 700 !important;
 }
 
@@ -860,7 +860,7 @@ textarea:focus-visible {
 }
 
 .time-line {
-    border-color: rgba(125, 148, 184, 0.18) !important;
+    border-color: rgba(135, 184, 125, 0.18) !important;
 }
 
 .time-background .current-time {
@@ -924,7 +924,7 @@ body,
 }
 
 .popup-container {
-    background: rgba(2, 4, 10, 0.78) !important;
+    background: rgba(3, 10, 2, 0.78) !important;
 }
 
 .notification {
@@ -958,8 +958,8 @@ body,
 
 .day-view-scaffold::before {
     background-image: repeating-linear-gradient(to right,
-            rgba(70, 92, 126, 0.13) 0,
-            rgba(70, 92, 126, 0.13) 0.06rem,
+            rgba(79, 126, 70, 0.13) 0,
+            rgba(79, 126, 70, 0.13) 0.06rem,
             transparent 0.06rem,
             transparent calc(100% / var(--calendar-week-number-of-days))) !important;
 }
@@ -973,7 +973,7 @@ body,
 /* 11. Footer */
 .footer,
 .footer.isy-footer-themed {
-    background: linear-gradient(150deg, #02040a 0%, #040816 35%, #0b1630 72%, #122346 100%) !important;
+    background: linear-gradient(150deg, #030a02 0%, #071604 35%, #11300b 72%, #1b4612 100%) !important;
     border-top: 1px solid var(--isy-border-subtle) !important;
     color: var(--isy-text-dark) !important;
     box-shadow: 0 -10px 22px -18px rgba(0, 0, 0, 0.95) !important;
@@ -986,18 +986,18 @@ body,
 }
 
 .footer .declaration-label:hover {
-    color: #b8d5ff !important;
+    color: #c4ffb8 !important;
 }
 
 .footer .declaration-separator {
-    background: rgba(184, 213, 255, 0.45) !important;
+    background: rgba(196, 255, 184, 0.45) !important;
 }
 
 .footer .font-semibold[title] {
-    background: rgba(23, 47, 91, 0.65) !important;
-    border: 1px solid rgba(145, 182, 241, 0.35) !important;
+    background: rgba(34, 91, 23, 0.65) !important;
+    border: 1px solid rgba(161, 241, 145, 0.35) !important;
     border-radius: 999px !important;
-    color: #dcebff !important;
+    color: #e2ffdc !important;
 }
 
 .footer .claimingmod-version {
@@ -1006,9 +1006,9 @@ body,
     margin-right: 0.45rem !important;
     padding: 0.22rem 0.55rem !important;
     border-radius: 999px !important;
-    border: 1px solid rgba(145, 182, 241, 0.4) !important;
-    background: rgba(23, 47, 91, 0.55) !important;
-    color: #dcebff !important;
+    border: 1px solid rgba(161, 241, 145, 0.4) !important;
+    background: rgba(34, 91, 23, 0.55) !important;
+    color: #e2ffdc !important;
     font-size: 1rem !important;
     font-weight: 600 !important;
     letter-spacing: 0.02em !important;
@@ -1036,7 +1036,7 @@ body,
 }
 
 [data-v-cab99d68].w-full.h-full.relative.bg-background {
-    background: linear-gradient(180deg, rgba(8, 14, 26, 0.94), rgba(8, 14, 26, 0.94)) !important;
+    background: linear-gradient(180deg, rgba(11, 26, 8, 0.94), rgba(11, 26, 8, 0.94)) !important;
     border: 1px solid var(--isy-border-subtle) !important;
     border-radius: var(--isy-radius-lg) !important;
     overflow: hidden !important;
@@ -1122,7 +1122,7 @@ body,
 
 .footer .claimingmod-version:hover {
     color: #ffffff !important;
-    border-color: rgba(186, 217, 255, 0.7) !important;
+    border-color: rgba(198, 255, 186, 0.7) !important;
 }
 
 
@@ -1131,9 +1131,9 @@ body,
 .calendar-week-element-inner.calendar-coloring[style*="144, 172, 47"],
 .calendar-week-element-inner.calendar-coloring[style*="144,172,47"],
 .calendar-week-element-inner[class*="tt-lesson-normal"] {
-    background: linear-gradient(145deg, rgba(11, 34, 70, 0.98), rgba(21, 58, 110, 0.95)) !important;
-    border: 1px solid rgba(133, 178, 244, 0.55) !important;
-    color: #e7f1ff !important;
+    background: linear-gradient(145deg, rgba(21, 70, 11, 0.98), rgba(36, 110, 21, 0.95)) !important;
+    border: 1px solid rgba(152, 244, 133, 0.55) !important;
+    color: #ebffe7 !important;
 }
 
 /* Pr?fung (turquoise gradient) */
@@ -1141,9 +1141,9 @@ body,
 .calendar-week-element-inner.isy-tt-exam-text,
 .calendar-week-element-inner.calendar-coloring[style*="31, 161, 219"],
 .calendar-week-element-inner.calendar-coloring[style*="31,161,219"] {
-    background: linear-gradient(145deg, rgba(18, 109, 118, 0.97), rgba(24, 158, 169, 0.94)) !important;
-    border: 1px solid rgba(143, 238, 247, 0.6) !important;
-    color: #eaffff !important;
+    background: linear-gradient(145deg, rgba(35, 118, 18, 0.97), rgba(48, 169, 24, 0.94)) !important;
+    border: 1px solid rgba(160, 247, 143, 0.6) !important;
+    color: #edffea !important;
 }
 
 /* Absenz (red gradient) */
@@ -1173,9 +1173,9 @@ body,
 .calendar-week-element-inner.isy-tt-canceled-task-text,
 .calendar-week-element-inner.calendar-coloring[style*="242, 242, 242"],
 .calendar-week-element-inner.calendar-coloring[style*="242,242,242"] {
-    background: linear-gradient(145deg, rgba(78, 84, 95, 0.96), rgba(104, 113, 129, 0.93)) !important;
-    border: 1px dashed rgba(140, 152, 175, 0.40) !important;
-    color: #f3f6fc !important;
+    background: linear-gradient(145deg, rgba(81, 95, 78, 0.96), rgba(108, 129, 104, 0.93)) !important;
+    border: 1px dashed rgba(146, 175, 140, 0.40) !important;
+    color: #f4fcf3 !important;
     position: relative !important;
 }
 
@@ -1212,9 +1212,9 @@ body,
 .time-table-scaffold .calendar-coloring--isManuallyCreated,
 .calendar-week-element.calendar-coloring--isManuallyCreated,
 .calendar-week-element-inner.calendar-coloring[style*="213, 166, 228"] {
-    background: linear-gradient(145deg, rgba(116, 170, 236, 0.97), rgba(149, 194, 246, 0.94)) !important;
-    border: 1px solid rgba(223, 239, 255, 0.74) !important;
-    color: #0f2d57 !important;
+    background: linear-gradient(145deg, rgba(136, 236, 116, 0.97), rgba(165, 246, 149, 0.94)) !important;
+    border: 1px solid rgba(228, 255, 223, 0.74) !important;
+    color: #1b570f !important;
 }
 
 /* Termin mit Registrierung (light blue gradient + dotted outline) */
@@ -1222,9 +1222,9 @@ body,
 .calendar-week-element.calendar-coloring--hasRegistration,
 .calendar-week-element-inner.calendar-coloring[style*="253, 242, 141"],
 .calendar-week-element-inner.calendar-coloring[style*="253,242,141"] {
-    background: linear-gradient(145deg, rgba(112, 167, 236, 0.97), rgba(143, 189, 245, 0.94)) !important;
-    border: 2px dotted rgba(224, 240, 255, 0.8) !important;
-    color: #0e2a52 !important;
+    background: linear-gradient(145deg, rgba(133, 236, 112, 0.97), rgba(160, 245, 143, 0.94)) !important;
+    border: 2px dotted rgba(229, 255, 224, 0.8) !important;
+    color: #19520e !important;
 }
 
 /* Raum reserviert, aber noch nicht best?tigt (light blue gradient) */
@@ -1232,9 +1232,9 @@ body,
 .calendar-week-element.calendar-coloring--roomReservedButNotConfirmed,
 .calendar-week-element-inner.calendar-coloring[style*="211, 211, 211"],
 .calendar-week-element-inner.calendar-coloring[style*="211,211,211"] {
-    background: linear-gradient(145deg, rgba(120, 173, 240, 0.96), rgba(150, 196, 248, 0.93)) !important;
-    border: 1px solid rgba(225, 241, 255, 0.72) !important;
-    color: #0f315d !important;
+    background: linear-gradient(145deg, rgba(140, 240, 120, 0.96), rgba(166, 248, 150, 0.93)) !important;
+    border: 1px solid rgba(230, 255, 225, 0.72) !important;
+    color: #1c5d0f !important;
 }
 
 /* Termin zur Kenntnis (brown gradient) */
@@ -1262,25 +1262,25 @@ body,
 .calendar-week-element-inner.calendar-coloring[style*="0,255,255"],
 .calendar-week-element-inner[class*="task"],
 .calendar-week-element-inner[class*="aufgabe"] {
-    background: linear-gradient(145deg, rgba(13, 150, 159, 0.97), rgba(24, 203, 214, 0.94)) !important;
-    border: 1px solid rgba(163, 251, 255, 0.72) !important;
-    color: #052f33 !important;
+    background: linear-gradient(145deg, rgba(37, 159, 13, 0.97), rgba(56, 214, 24, 0.94)) !important;
+    border: 1px solid rgba(178, 255, 163, 0.72) !important;
+    color: #0d3305 !important;
 }
 
 /* Offener Unterricht icon */
 .color-key-popup .color-key-element .icon,
 .color-key-popup .color-key-element .icon svg {
-    color: #e8f1ff !important;
-    fill: #e8f1ff !important;
+    color: #ecffe8 !important;
+    fill: #ecffe8 !important;
 }
 
 /* Legend remap (same order as ISY list) */
 .color-key-popup .color-key-list .color-key-element:nth-child(1) .color {
-    background: linear-gradient(145deg, rgba(11, 34, 70, 0.98), rgba(21, 58, 110, 0.95)) !important;
+    background: linear-gradient(145deg, rgba(21, 70, 11, 0.98), rgba(36, 110, 21, 0.95)) !important;
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(2) .color {
-    background: linear-gradient(145deg, rgba(18, 109, 118, 0.97), rgba(24, 158, 169, 0.94)) !important;
+    background: linear-gradient(145deg, rgba(35, 118, 18, 0.97), rgba(48, 169, 24, 0.94)) !important;
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(3) .color {
@@ -1292,8 +1292,8 @@ body,
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(5) .custom-element {
-    background: linear-gradient(145deg, rgba(78, 84, 95, 0.96), rgba(104, 113, 129, 0.93)) !important;
-    border: 1px dashed rgba(140, 152, 175, 0.40) !important;
+    background: linear-gradient(145deg, rgba(81, 95, 78, 0.96), rgba(108, 129, 104, 0.93)) !important;
+    border: 1px dashed rgba(146, 175, 140, 0.40) !important;
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(5) .diagonal1,
@@ -1302,16 +1302,16 @@ body,
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(6) .color {
-    background: linear-gradient(145deg, rgba(116, 170, 236, 0.97), rgba(149, 194, 246, 0.94)) !important;
+    background: linear-gradient(145deg, rgba(136, 236, 116, 0.97), rgba(165, 246, 149, 0.94)) !important;
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(7) .color {
-    background: linear-gradient(145deg, rgba(112, 167, 236, 0.97), rgba(143, 189, 245, 0.94)) !important;
-    border: 2px dotted rgba(224, 240, 255, 0.8) !important;
+    background: linear-gradient(145deg, rgba(133, 236, 112, 0.97), rgba(160, 245, 143, 0.94)) !important;
+    border: 2px dotted rgba(229, 255, 224, 0.8) !important;
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(8) .color {
-    background: linear-gradient(145deg, rgba(120, 173, 240, 0.96), rgba(150, 196, 248, 0.93)) !important;
+    background: linear-gradient(145deg, rgba(140, 240, 120, 0.96), rgba(166, 248, 150, 0.93)) !important;
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(9) .color {
@@ -1324,7 +1324,7 @@ body,
 }
 
 .color-key-popup .color-key-list .color-key-element:nth-child(11) .color {
-    background: linear-gradient(145deg, rgba(13, 150, 159, 0.97), rgba(24, 203, 214, 0.94)) !important;
+    background: linear-gradient(145deg, rgba(37, 159, 13, 0.97), rgba(56, 214, 24, 0.94)) !important;
 }
 
 
@@ -1364,8 +1364,8 @@ body.ClaimingMod-enabled .icon-button,
 body.ClaimingMod-enabled .seamless,
 body.ClaimingMod-enabled button,
 body.ClaimingMod-enabled [role="button"] {
-    background: linear-gradient(145deg, rgba(14, 24, 44, 0.94), rgba(24, 42, 74, 0.92)) !important;
-    border-color: rgba(76, 103, 146, 0.22) !important;
+    background: linear-gradient(145deg, rgba(19, 44, 14, 0.94), rgba(32, 74, 24, 0.92)) !important;
+    border-color: rgba(88, 146, 76, 0.22) !important;
     color: var(--isy-text-dark) !important;
 }
 
@@ -1374,8 +1374,8 @@ body.ClaimingMod-enabled select,
 body.ClaimingMod-enabled textarea,
 body.ClaimingMod-enabled .text-input,
 body.ClaimingMod-enabled .range-slider {
-    background: rgba(10, 16, 30, 0.88) !important;
-    border-color: rgba(76, 103, 146, 0.20) !important;
+    background: rgba(13, 30, 10, 0.88) !important;
+    border-color: rgba(88, 146, 76, 0.20) !important;
     color: var(--isy-text-dark) !important;
 }
 
@@ -1387,15 +1387,15 @@ body.ClaimingMod-enabled .calendar-element,
 body.ClaimingMod-enabled .calendarlist__wrapper,
 body.ClaimingMod-enabled .calendarlist__list,
 body.ClaimingMod-enabled .side-slide-container {
-    background: linear-gradient(160deg, rgba(8, 14, 28, 0.96), rgba(16, 30, 56, 0.94)) !important;
-    border-color: rgba(76, 103, 146, 0.20) !important;
+    background: linear-gradient(160deg, rgba(11, 28, 8, 0.96), rgba(23, 56, 16, 0.94)) !important;
+    border-color: rgba(88, 146, 76, 0.20) !important;
     color: var(--isy-text-dark) !important;
 }
 
 body.ClaimingMod-enabled i.isy,
 body.ClaimingMod-enabled .material-symbols-outlined,
 body.ClaimingMod-enabled svg {
-    color: #dce9ff !important;
+    color: #e2ffdc !important;
 }
 
 /* Keep status icons meaningful */
@@ -1423,7 +1423,7 @@ body.ClaimingMod-enabled [class*="bg-white"],
 body.ClaimingMod-enabled [class*="background-white"],
 body.ClaimingMod-enabled [style*="background: rgb(255"],
 body.ClaimingMod-enabled [style*="background-color: rgb(255"] {
-    background-color: rgba(10, 16, 30, 0.9) !important;
+    background-color: rgba(13, 30, 10, 0.9) !important;
     color: var(--isy-text-dark) !important;
 }
 
@@ -1431,33 +1431,33 @@ body.ClaimingMod-enabled [style*="background-color: rgb(255"] {
 /* ClaimingMod token bridge for UI parts still using default utility tokens */
 body.ClaimingMod-enabled {
     /* Utility classes in original ISY css use hsl(var(--token)); keep tokens in HSL triplet format */
-    --background: 220 47% 9% !important;
-    --foreground: 216 100% 94% !important;
-    --card: 219 44% 13% !important;
-    --card-foreground: 216 100% 94% !important;
-    --popover: 219 44% 13% !important;
-    --popover-foreground: 216 100% 94% !important;
-    --primary: 216 70% 56% !important;
-    --primary-foreground: 213 100% 97% !important;
-    --secondary: 214 46% 23% !important;
-    --secondary-foreground: 212 100% 95% !important;
-    --muted: 216 47% 20% !important;
-    --muted-foreground: 214 58% 79% !important;
-    --accent: 214 45% 28% !important;
-    --accent-foreground: 213 100% 96% !important;
+    --background: 110 47% 9% !important;
+    --foreground: 110 100% 94% !important;
+    --card: 110 44% 13% !important;
+    --card-foreground: 110 100% 94% !important;
+    --popover: 110 44% 13% !important;
+    --popover-foreground: 110 100% 94% !important;
+    --primary: 110 70% 56% !important;
+    --primary-foreground: 110 100% 97% !important;
+    --secondary: 110 46% 23% !important;
+    --secondary-foreground: 110 100% 95% !important;
+    --muted: 110 47% 20% !important;
+    --muted-foreground: 110 58% 79% !important;
+    --accent: 110 45% 28% !important;
+    --accent-foreground: 110 100% 96% !important;
     --destructive: 353 52% 47% !important;
     --destructive-foreground: 345 100% 97% !important;
-    --border: 214 24% 24% !important;
-    --input: 212 28% 22% !important;
-    --ring: 210 70% 71% !important;
+    --border: 110 24% 24% !important;
+    --input: 110 28% 22% !important;
+    --ring: 110 70% 71% !important;
 }
 
 /* Specific side filter sheet (Zeitraum- und Filterauswahl) */
 body.ClaimingMod-enabled [data-v-d18ebabc].bg-backgroundContrast {
-    background: linear-gradient(160deg, rgba(9, 16, 30, 0.98), rgba(19, 34, 61, 0.96)) !important;
+    background: linear-gradient(160deg, rgba(13, 30, 9, 0.98), rgba(26, 61, 19, 0.96)) !important;
     color: var(--isy-text-dark) !important;
-    border-left: 1px solid rgba(80, 109, 154, 0.20) !important;
-    box-shadow: -10px 0 24px -16px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(80, 109, 154, 0.10) inset !important;
+    border-left: 1px solid rgba(92, 154, 80, 0.20) !important;
+    box-shadow: -10px 0 24px -16px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(92, 154, 80, 0.10) inset !important;
 }
 
 body.ClaimingMod-enabled [data-v-d18ebabc] [data-v-98694fd9],
@@ -1470,36 +1470,36 @@ body.ClaimingMod-enabled [data-v-d18ebabc] .inline-flex,
 body.ClaimingMod-enabled [data-v-d18ebabc] [class*="bg-background"],
 body.ClaimingMod-enabled [data-v-d18ebabc] [class*="bg-secondary"],
 body.ClaimingMod-enabled [data-v-d18ebabc] [class*="bg-primary"] {
-    border-color: rgba(80, 109, 154, 0.20) !important;
+    border-color: rgba(92, 154, 80, 0.20) !important;
 }
 
 body.ClaimingMod-enabled [data-v-d18ebabc] .bg-background,
 body.ClaimingMod-enabled [data-v-d18ebabc] [class~="bg-background"] {
-    background: rgba(14, 24, 42, 0.92) !important;
+    background: rgba(19, 42, 14, 0.92) !important;
 }
 
 body.ClaimingMod-enabled [data-v-d18ebabc] .bg-secondary,
 body.ClaimingMod-enabled [data-v-d18ebabc] [class~="bg-secondary"] {
-    background: rgba(31, 52, 82, 0.9) !important;
-    color: #eaf2ff !important;
+    background: rgba(40, 82, 31, 0.9) !important;
+    color: #edffea !important;
 }
 
 body.ClaimingMod-enabled [data-v-d18ebabc] .bg-primary,
 body.ClaimingMod-enabled [data-v-d18ebabc] [class~="bg-primary"] {
-    background: linear-gradient(145deg, rgba(44, 84, 146, 0.96), rgba(57, 110, 184, 0.94)) !important;
-    color: #edf4ff !important;
+    background: linear-gradient(145deg, rgba(61, 146, 44, 0.96), rgba(78, 184, 57, 0.94)) !important;
+    color: #f0ffed !important;
 }
 
 body.ClaimingMod-enabled [data-v-d18ebabc] .hover\:bg-accent:hover,
 body.ClaimingMod-enabled [data-v-d18ebabc] [class*="hover:bg-accent"]:hover,
 body.ClaimingMod-enabled [data-v-d18ebabc] .hover\:bg-primary\/90:hover {
-    background: rgba(45, 74, 117, 0.9) !important;
-    color: #f1f6ff !important;
+    background: rgba(57, 117, 45, 0.9) !important;
+    color: #f3fff1 !important;
 }
 
 body.ClaimingMod-enabled [data-v-d18ebabc] .bg-border,
 body.ClaimingMod-enabled [data-v-d18ebabc] [class~="bg-border"] {
-    background: rgba(84, 114, 158, 0.20) !important;
+    background: rgba(96, 158, 84, 0.20) !important;
 }
 
 
@@ -1522,7 +1522,7 @@ body.ClaimingMod-enabled .bg-muted {
 }
 
 body.ClaimingMod-enabled .bg-primary {
-    background: linear-gradient(145deg, rgba(44, 84, 146, 0.96), rgba(57, 110, 184, 0.94)) !important;
+    background: linear-gradient(145deg, rgba(61, 146, 44, 0.96), rgba(78, 184, 57, 0.94)) !important;
 }
 
 body.ClaimingMod-enabled .text-foreground,
@@ -1615,12 +1615,12 @@ body.ClaimingMod-enabled .header-bottom {
 /* Absence/appointment preview cards: darken bright gray reservation-like entries */
 body.ClaimingMod-enabled .appointment-preview,
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring {
-    --background: 220 46% 11% !important;
-    background: linear-gradient(150deg, rgba(9, 16, 30, 0.98), rgba(13, 24, 44, 0.96)) !important;
-    background-color: rgba(10, 18, 34, 0.97) !important;
-    border: 1px solid rgba(108, 143, 198, 0.34) !important;
-    box-shadow: 0 16px 34px -18px rgba(2, 7, 15, 0.95) !important;
-    color: #e4eeff !important;
+    --background: 110 46% 11% !important;
+    background: linear-gradient(150deg, rgba(13, 30, 9, 0.98), rgba(18, 44, 13, 0.96)) !important;
+    background-color: rgba(14, 34, 10, 0.97) !important;
+    border: 1px solid rgba(123, 198, 108, 0.34) !important;
+    box-shadow: 0 16px 34px -18px rgba(4, 15, 2, 0.95) !important;
+    color: #e8ffe4 !important;
 }
 
 body.ClaimingMod-enabled .appointment-preview *,
@@ -1628,21 +1628,21 @@ body.ClaimingMod-enabled .appointment-preview .text-xl,
 body.ClaimingMod-enabled .appointment-preview p,
 body.ClaimingMod-enabled .appointment-preview span,
 body.ClaimingMod-enabled .appointment-preview div {
-    color: #e4eeff !important;
+    color: #e8ffe4 !important;
 }
 
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211, 211, 211"],
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211,211,211"] {
-    background: linear-gradient(145deg, rgba(58, 66, 80, 0.96), rgba(76, 86, 104, 0.93)) !important;
-    border-color: rgba(102, 116, 141, 0.35) !important;
-    color: #d9e2f1 !important;
+    background: linear-gradient(145deg, rgba(62, 80, 58, 0.96), rgba(81, 104, 76, 0.93)) !important;
+    border-color: rgba(109, 141, 102, 0.35) !important;
+    color: #ddf1d9 !important;
 }
 
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211, 211, 211"] .text-xl,
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211,211,211"] .text-xl,
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211, 211, 211"] p,
 body.ClaimingMod-enabled .appointment-preview.calendar-coloring[style*="211,211,211"] p {
-    color: #d9e2f1 !important;
+    color: #ddf1d9 !important;
 }
 
 
@@ -1709,7 +1709,7 @@ body.ClaimingMod-enabled .priority__circle[data-v-83289acc] {
 }
 
 body.ClaimingMod-enabled .priority__circle.circle--normal[data-v-83289acc] {
-    border-color: var(--priority-color-normal, #7aa8e8) !important;
+    border-color: var(--priority-color-normal, #8ce87a) !important;
 }
 
 body.ClaimingMod-enabled .priority__circle.circle--high[data-v-83289acc] {
@@ -1725,7 +1725,7 @@ body.ClaimingMod-enabled .priority__circle.circle--exception[data-v-83289acc] {
 }
 
 body.ClaimingMod-enabled .priority__circle.circle--filled-normal[data-v-83289acc] {
-    background-color: var(--priority-color-normal, #7aa8e8) !important;
+    background-color: var(--priority-color-normal, #8ce87a) !important;
 }
 
 body.ClaimingMod-enabled .priority__circle.circle--filled-high[data-v-83289acc] {
@@ -1749,20 +1749,20 @@ body.ClaimingMod-enabled .header {
 
 /* Split header and timetable menu with distinct gradients */
 body.ClaimingMod-enabled .header-top {
-    background: linear-gradient(180deg, rgba(7, 17, 34, 0.97), rgba(10, 22, 44, 0.93)) !important;
+    background: linear-gradient(180deg, rgba(11, 34, 7, 0.97), rgba(16, 44, 10, 0.93)) !important;
 }
 
 body.ClaimingMod-enabled .header-bottom {
-    background: linear-gradient(180deg, rgba(11, 26, 50, 0.96), rgba(14, 32, 58, 0.93)) !important;
-    border-top: 1px solid rgba(66, 93, 132, 0.24) !important;
-    border-bottom: 1px solid rgba(55, 82, 119, 0.20) !important;
+    background: linear-gradient(180deg, rgba(18, 50, 11, 0.96), rgba(21, 58, 14, 0.93)) !important;
+    border-top: 1px solid rgba(77, 132, 66, 0.24) !important;
+    border-bottom: 1px solid rgba(66, 119, 55, 0.20) !important;
 }
 
 
 /* Top menu: subtle bottom border + soft glow */
 body.ClaimingMod-enabled .header-bottom {
-    border-bottom: 1px solid rgba(96, 136, 196, 0.32) !important;
-    box-shadow: 0 1px 0 rgba(132, 170, 228, 0.16), 0 8px 18px -16px rgba(88, 132, 196, 0.55) !important;
+    border-bottom: 1px solid rgba(113, 196, 96, 0.32) !important;
+    box-shadow: 0 1px 0 rgba(148, 228, 132, 0.16), 0 8px 18px -16px rgba(106, 196, 88, 0.55) !important;
 }
 
 
@@ -1832,16 +1832,16 @@ body.ClaimingMod-enabled [data-v-cab99d68] .flex.print\:hidden>div {
 
 /* Timetable hover tooltip (tippy) */
 body.ClaimingMod-enabled .tippy-box[data-theme~="isy"] {
-    background: linear-gradient(150deg, rgba(9, 16, 30, 0.98), rgba(13, 24, 44, 0.96)) !important;
-    border: 1px solid rgba(108, 143, 198, 0.36) !important;
-    color: #e6efff !important;
-    box-shadow: 0 16px 34px -18px rgba(2, 7, 15, 0.95) !important;
+    background: linear-gradient(150deg, rgba(13, 30, 9, 0.98), rgba(18, 44, 13, 0.96)) !important;
+    border: 1px solid rgba(123, 198, 108, 0.36) !important;
+    color: #eaffe6 !important;
+    box-shadow: 0 16px 34px -18px rgba(4, 15, 2, 0.95) !important;
 }
 
 body.ClaimingMod-enabled .tippy-box[data-theme~="isy"] .tippy-content {
-    color: #e6efff !important;
+    color: #eaffe6 !important;
 }
 
 body.ClaimingMod-enabled .tippy-box[data-theme~="isy"]>.tippy-arrow {
-    color: rgba(11, 20, 37, 0.98) !important;
+    color: rgba(15, 37, 11, 0.98) !important;
 }

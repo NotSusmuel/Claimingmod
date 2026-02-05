@@ -582,7 +582,7 @@ function decorateFooter() {
     if (!rightArea.querySelector('.claimingmod-version')) {
         const versionEl = document.createElement('a');
         versionEl.className = 'claimingmod-version';
-        versionEl.href = 'https://github.com/ClaimingNINE';
+        versionEl.href = 'https://github.com/NotSusmuel';
         versionEl.target = '_blank';
         versionEl.rel = 'noopener noreferrer';
         versionEl.textContent = `ClaimingMod v.${EXTENSION_VERSION}`;
