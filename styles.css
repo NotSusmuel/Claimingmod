@@ -607,7 +607,7 @@ body {
     border: 1px solid transparent !important;
     border-bottom: 1px solid var(--isy-border-subtle) !important;
     padding: 16px !important;
-    transition: background 0.2s ease !important;
+    transition: all 0.2s ease-in-out !important;
     border-radius: 8px !important;
     margin: 4px 8px !important;
 }
@@ -615,7 +615,7 @@ body {
 .message-preview:hover,
 .cl-preview:hover {
     background: var(--isy-item-hover-bg) !important;
-    transform: translateX(4px) !important;
+    transform: translateY(-2px) !important;
     border-color: rgba(69, 117, 191, 0.32) !important;
     box-shadow: 0 8px 16px -14px rgba(0, 0, 0, 0.78) !important;
 }
@@ -625,6 +625,10 @@ body {
     font-weight: 600 !important;
     color: var(--isy-text-dark) !important;
     font-size: 1rem !important;
+}
+
+.left-border {
+    border-radius: 8px !important;
 }
 
 .message-author span,
