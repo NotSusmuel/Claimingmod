@@ -1820,9 +1820,7 @@ if (document.readyState === 'loading') {
     bootstrapClaimingMod();
 }
 
-// =============================================================================
 // CLAIMINGMOD v2: LESSON WIDGET & CAMPUS LIFE SPLIT
-// =============================================================================
 
 const CL_LESSON_WIDGET_ID = 'claimingmod-lesson-widget';
 const CL_NOTEBOOK_PREFIX = 'claimingmod-notebook-';
@@ -1833,11 +1831,9 @@ const CL_GRAPHQL_CACHE_KEY = 'claiming-week-graphql-cache-v1';
  * Called continuously by the observer to ensure persistence during SPA nav.
  */
 function ensureCampusLifeSplitAndWidget() {
-    // 1. Locate Campus Life container
     const campusContainer = document.querySelector('.dashboard__container.campuslife-container');
     if (!campusContainer) return;
 
-    // 2. Adjust Height to 50%
     if (campusContainer.classList.contains('h-2/3')) {
         campusContainer.classList.remove('h-2/3');
         campusContainer.classList.add('h-1/2');
@@ -1846,7 +1842,6 @@ function ensureCampusLifeSplitAndWidget() {
         campusContainer.classList.add('h-1/2');
     }
 
-    // 3. Inject Widget
     if (!document.getElementById(CL_LESSON_WIDGET_ID)) {
         const widget = document.createElement('div');
         widget.id = CL_LESSON_WIDGET_ID;
@@ -1895,7 +1890,7 @@ function handleNotebookAction(e) {
         return;
     }
 
-    const key = CL_NOTEBOOK_PREFIX + subject;
+    const key = CL_NOTEBOOK_PREFIX + subject.split(' ')[0];
     let url = localStorage.getItem(key);
 
     if (url && url.toLowerCase().startsWith('https://onenote:')) {
@@ -1938,7 +1933,7 @@ function updateNotebookButtonState(subject) {
         return;
     }
 
-    const key = CL_NOTEBOOK_PREFIX + subject;
+    const key = CL_NOTEBOOK_PREFIX + subject.split(' ')[0];
     const exists = !!localStorage.getItem(key);
     btnText.textContent = exists ? "Open Notebook" : "Set Notebook";
 }

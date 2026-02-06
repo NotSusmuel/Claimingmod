@@ -223,7 +223,10 @@ body.ClaimingMod-enabled .print\:hidden.button {
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     margin: 8px !important;
     transform: translateY(0) !important;
-    max-height: 100% !important;
+}
+
+.dashboard__container.campuslife-container {
+    max-height: 50% !important;
 }
 
 .dashboard__container:hover {
