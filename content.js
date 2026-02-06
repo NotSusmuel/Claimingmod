@@ -1819,3 +1819,358 @@ if (document.readyState === 'loading') {
 } else {
     bootstrapClaimingMod();
 }
+
+// =============================================================================
+// CLAIMINGMOD v2: LESSON WIDGET & CAMPUS LIFE SPLIT
+// =============================================================================
+
+const CL_LESSON_WIDGET_ID = 'claimingmod-lesson-widget';
+const CL_NOTEBOOK_PREFIX = 'claimingmod-notebook-';
+const CL_GRAPHQL_CACHE_KEY = 'claiming-week-graphql-cache-v1';
+
+/**
+ * Main routine to split the Campus Life container and inject the Lesson Widget.
+ * Called continuously by the observer to ensure persistence during SPA nav.
+ */
+function ensureCampusLifeSplitAndWidget() {
+    // 1. Locate Campus Life container
+    const campusContainer = document.querySelector('.dashboard__container.campuslife-container');
+    if (!campusContainer) return;
+
+    // 2. Adjust Height to 50%
+    if (campusContainer.classList.contains('h-2/3')) {
+        campusContainer.classList.remove('h-2/3');
+        campusContainer.classList.add('h-1/2');
+    } else if (campusContainer.classList.contains('h-1/3')) {
+        campusContainer.classList.remove('h-1/3');
+        campusContainer.classList.add('h-1/2');
+    }
+
+    // 3. Inject Widget
+    if (!document.getElementById(CL_LESSON_WIDGET_ID)) {
+        const widget = document.createElement('div');
+        widget.id = CL_LESSON_WIDGET_ID;
+        widget.className = 'dashboard__container h-1/2 lesson-widget-container relative';
+        widget.style.minHeight = '0';
+
+        widget.innerHTML = `
+            <div class="container-header">
+                <span class="container-header-title">Current Lesson</span>
+            </div>
+            <div class="container-body relative overflow-hidden flex flex-col items-center justify-center p-4 text-center h-full">
+                 <h2 id="cl-lesson-name" class="text-2xl font-bold truncate w-full mb-1" style="color: var(--isy-primary);">Loading...</h2>
+                 <div id="cl-lesson-timer" class="text-5xl font-mono font-light tracking-wider mb-2 tabular-nums">--:--</div>
+                 <div id="cl-lesson-meta" class="text-sm font-medium opacity-75 mb-4">Finding schedule...</div>
+                 
+                 <button id="cl-notebook-btn" class="navbar-button px-6 py-2 rounded-lg font-medium transition-transform hover:scale-105 active:scale-95 shadow-lg flex items-center justify-center gap-2">
+                    <i class="fas fa-book"></i>
+                    <span id="cl-notebook-btn-text">Open Notebook</span>
+                 </button>
+            </div>
+        `;
+
+        campusContainer.parentNode.insertBefore(widget, campusContainer);
+
+        const btn = document.getElementById('cl-notebook-btn');
+        if (btn) btn.addEventListener('click', handleNotebookAction);
+
+        updateLessonWidget();
+    }
+}
+
+/**
+ * Handle Notebook Button Click
+ */
+function handleNotebookAction(e) {
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    const subjectEl = document.getElementById('cl-lesson-name');
+    const subject = subjectEl ? subjectEl.dataset.rawSubject : null;
+
+    if (!subject) {
+        alert("No active subject to open a notebook for.");
+        return;
+    }
+
+    const key = CL_NOTEBOOK_PREFIX + subject;
+    let url = localStorage.getItem(key);
+
+    if (url && url.toLowerCase().startsWith('https://onenote:')) {
+        url = url.substring(8);
+        localStorage.setItem(key, url);
+    }
+
+    if (!url || (e && e.shiftKey)) {
+        const input = prompt(
+            `Enter notebook URL for "${subject}" (e.g. onenote:...):`,
+            url || ''
+        );
+        if (input && input.trim().length > 0) {
+            let newUrl = input.trim();
+            if (!newUrl.match(/^[a-zA-Z]+:/)) {
+                newUrl = 'https://' + newUrl;
+            }
+            localStorage.setItem(key, newUrl);
+            updateNotebookButtonState(subject);
+            if (!url) window.location.href = newUrl;
+        } else if (input === '') {
+            localStorage.removeItem(key);
+            updateNotebookButtonState(subject);
+        }
+    } else {
+        try {
+            window.location.href = url;
+        } catch (err) {
+            alert("Failed to open notebook: " + err);
+        }
+    }
+}
+
+function updateNotebookButtonState(subject) {
+    const btnText = document.getElementById('cl-notebook-btn-text');
+    if (!btnText) return;
+
+    if (!subject) {
+        btnText.textContent = "Notebook";
+        return;
+    }
+
+    const key = CL_NOTEBOOK_PREFIX + subject;
+    const exists = !!localStorage.getItem(key);
+    btnText.textContent = exists ? "Open Notebook" : "Set Notebook";
+}
+
+function getTodayAppointments() {
+    let store = null;
+    try {
+        const raw = localStorage.getItem(CL_GRAPHQL_CACHE_KEY);
+        if (raw) {
+            const parsed = JSON.parse(raw);
+            if (parsed && parsed.entries) {
+                store = parsed.entries;
+            }
+        }
+    } catch (e) {
+        console.warn('ClaimingMod: Failed to read schedule cache', e);
+    }
+
+    if (!store) return [];
+
+    const now = new Date();
+    const todayStr = now.toISOString().split('T')[0];
+    const appointments = [];
+
+    Object.values(store).forEach(entry => {
+        if (!entry.body) return;
+        try {
+            const data = JSON.parse(entry.body);
+            findAppointmentsInObject(data, todayStr, appointments);
+        } catch { }
+    });
+
+    const unique = [];
+    const seen = new Set();
+
+    appointments.forEach(app => {
+        const key = `${app.start}-${app.end}-${app.title}`;
+        if (!seen.has(key)) {
+            seen.add(key);
+            unique.push(app);
+        }
+    });
+
+    return unique.sort((a, b) => new Date(a.start) - new Date(b.start));
+}
+
+/**
+ * Recursive helper to find appointment-like objects in the GraphQL response tree.
+ */
+function findAppointmentsInObject(obj, todayDateStr, results) {
+    if (!obj || typeof obj !== 'object') return;
+
+    if (Array.isArray(obj)) {
+        obj.forEach(item => findAppointmentsInObject(item, todayDateStr, results));
+        return;
+    }
+
+    // GraphQL Response Structure Handling
+    if (obj.node && obj.node.message) {
+        const msg = obj.node.message;
+        const start = msg.dtFrom;
+        const end = msg.dtTo;
+        const title = msg.calculatedTitleShort || msg.title || msg.lessonSubject;
+
+        if (start && end && typeof start === 'string' && typeof end === 'string') {
+            if (start.startsWith(todayDateStr)) {
+                results.push({
+                    start: start,
+                    end: end,
+                    title: title || 'Unnamed Lesson',
+                    original: msg
+                });
+            }
+        }
+    }
+
+    // Checking 'elements' array commonly used in ISY responses to group data
+    if (obj.elements && Array.isArray(obj.elements)) {
+        obj.elements.forEach(item => findAppointmentsInObject(item, todayDateStr, results));
+    }
+
+    // Also check standard edges if we are at a connection point
+    if (obj.edges && Array.isArray(obj.edges)) {
+        obj.edges.forEach(item => findAppointmentsInObject(item, todayDateStr, results));
+    }
+
+    // Legacy/Alternative detection fallback
+    let start, end;
+    const title = obj.title || obj.description || obj.name || (obj.course && obj.course.title) || (obj.element && obj.element.longName);
+
+    if (obj.start && obj.end) {
+        start = obj.start;
+        end = obj.end;
+    } else if (obj.from && obj.to) {
+        start = obj.from;
+        end = obj.to;
+    } else if (obj.date && obj.startTime && obj.endTime) {
+        // Construct ISO string from date + time
+        // date: "2026-02-06", startTime: "08:00" -> "2026-02-06T08:00"
+        start = `${obj.date}T${obj.startTime}`;
+        end = `${obj.date}T${obj.endTime}`;
+    }
+
+    if (start && end && typeof start === 'string' && typeof end === 'string') {
+        // Ensure format is ISO-like or usable by Date constructor
+        if (start.includes(todayDateStr)) {
+            // Check if it's a valid date
+            const dStart = new Date(start);
+            const dEnd = new Date(end);
+            if (!isNaN(dStart) && !isNaN(dEnd)) {
+                results.push({
+                    start: start,
+                    end: end,
+                    title: title || 'Unnamed Lesson',
+                    original: obj
+                });
+            }
+        }
+    }
+
+    // Continue search deeper
+    Object.values(obj).forEach(val => findAppointmentsInObject(val, todayDateStr, results));
+}
+
+/**
+ * The main tick function for the widget.
+ */
+function updateLessonWidget() {
+    const nameEl = document.getElementById('cl-lesson-name');
+    const timerEl = document.getElementById('cl-lesson-timer');
+    const metaEl = document.getElementById('cl-lesson-meta');
+
+    if (!nameEl || !timerEl) return;
+
+    const appointments = getTodayAppointments();
+
+    // Check if we even have a cache store populated
+    const hasCache = !!localStorage.getItem(CL_GRAPHQL_CACHE_KEY);
+
+    if (!hasCache || (appointments.length === 0 && !hasCache)) {
+        nameEl.textContent = "Data Missing";
+        nameEl.dataset.rawSubject = "";
+        timerEl.textContent = "--:--";
+        metaEl.textContent = "Please visit Timetable once to sync.";
+        updateNotebookButtonState(null);
+        return;
+    }
+
+    const now = new Date();
+
+    // Filter out cancellations and duplicates
+    // We strictly filter for things that look like real lessons (have a title).
+    const activeAppointments = appointments.filter(app => {
+        const title = (app.title || '').toLowerCase();
+        return title && !title.includes('entfällt') && !title.includes('cancelled') && !title.includes('absent');
+    });
+
+    let currentApp = null;
+    let nextApp = null;
+
+    // Sort by time
+    activeAppointments.sort((a, b) => new Date(a.start) - new Date(b.start));
+
+    for (const app of activeAppointments) {
+        const start = new Date(app.start);
+        const end = new Date(app.end);
+
+        if (now >= start && now < end) {
+            currentApp = app;
+            break;
+        }
+
+        if (now < start) {
+            // Found the first future appointment
+            nextApp = app;
+            break;
+        }
+    }
+
+    // Render
+    if (currentApp) {
+        nameEl.textContent = currentApp.title;
+        nameEl.dataset.rawSubject = currentApp.title;
+        metaEl.textContent = "Ends in:";
+
+        const end = new Date(currentApp.end);
+        const diff = end - now;
+        timerEl.textContent = formatMs(diff);
+        timerEl.classList.remove('text-passive');
+        timerEl.style.color = 'var(--isy-primary)';
+
+        updateNotebookButtonState(currentApp.title);
+    } else if (nextApp) {
+        nameEl.textContent = nextApp.title;
+        nameEl.dataset.rawSubject = nextApp.title;
+        metaEl.textContent = "Starts in:";
+
+        const start = new Date(nextApp.start);
+        const diff = start - now;
+        timerEl.textContent = formatMs(diff);
+        timerEl.style.color = '';
+        timerEl.classList.add('text-passive');
+
+        updateNotebookButtonState(nextApp.title);
+    } else {
+        nameEl.textContent = activeAppointments.length > 0 ? "No more lessons" : "No lessons found";
+        nameEl.dataset.rawSubject = "";
+        timerEl.textContent = "--:--";
+        metaEl.textContent = activeAppointments.length > 0 ? "Enjoy your free time!" : "Visit Timetable to sync?";
+        updateNotebookButtonState(null);
+    }
+}
+
+function formatMs(ms) {
+    if (ms < 0) return "00:00";
+    const totalSeconds = Math.floor(ms / 1000);
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    const pad = (n) => String(n).padStart(2, '0');
+
+    if (hours > 0) {
+        return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+    }
+    return `${pad(minutes)}:${pad(seconds)}`;
+}
+
+// Start a 1s interval to update the widget
+setInterval(() => {
+    // Attempt injection if navigation happened
+    ensureCampusLifeSplitAndWidget();
+    // Update data
+    updateLessonWidget();
+}, 1000);

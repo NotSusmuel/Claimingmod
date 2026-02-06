@@ -222,8 +222,8 @@ body.ClaimingMod-enabled .print\:hidden.button {
     overflow: hidden !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     margin: 8px !important;
-    height: calc(100% - 16px) !important;
     transform: translateY(0) !important;
+    max-height: 100% !important;
 }
 
 .dashboard__container:hover {
@@ -628,6 +628,10 @@ body.ClaimingMod-enabled .print\:hidden.button {
     transition: all 0.2s ease-in-out !important;
     border-radius: 8px !important;
     margin: 4px 8px !important;
+}
+
+.transition-default {
+    border-radius: 8px !important;
 }
 
 .message-preview:hover,
